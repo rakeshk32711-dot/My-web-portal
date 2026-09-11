@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Web Portal</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f2f5f9;
+    color:#222;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:25px 15px;
+    text-align:center;
+}
+
+header h1{
+    margin:0 0 8px;
+}
+
+.search{
+    width:90%;
+    max-width:500px;
+    padding:13px;
+    border-radius:8px;
+    border:0;
+    font-size:16px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.icon{
+    font-size:35px;
+}
+
+.info{
+    flex:1;
+}
+
+.info h2{
+    margin:0 0 5px;
+}
+
+.info p{
+    margin:0;
+    color:#666;
+}
+
+.open{
+    background:#2563eb;
+    color:white;
+    padding:11px 18px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.open:hover{
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌐 My Web Portal</h1>
+    <p>Useful Websites & Online Tools</p>
+
+    <input
+        class="search"
+        id="search"
+        type="text"
+        placeholder="Website search करें..."
+        onkeyup="searchWebsite()">
+</header>
+
+<div class="container" id="websiteList">
+
+    <div class="card">
+        <div class="icon">🔎</div>
+        <div class="info">
+            <h2>Google</h2>
+            <p>Search करने के लिए</p>
+        </div>
+        <a class="open" href="https://www.google.com" target="_blank">OPEN</a>
+    </div>
+
+    <div class="card">
+        <div class="icon">▶️</div>
+        <div class="info">
+            <h2>YouTube</h2>
+            <p>Videos देखने के लिए</p>
+        </div>
+        <a class="open" href="https://www.youtube.com" target="_blank">OPEN</a>
+    </div>
+
+    <div class="card">
+        <div class="icon">📚</div>
+        <div class="info">
+            <h2>GyanSetu</h2>
+            <p>Study और Quiz</p>
+        </div>
+        <a class="open" href="#" target="_blank">OPEN</a>
+    </div>
+
+    <div class="card">
+        <div class="icon">📰</div>
+        <div class="info">
+            <h2>News</h2>
+            <p>Latest News देखने के लिए</p>
+        </div>
+        <a class="open" href="https://news.google.com" target="_blank">OPEN</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 My Web Portal
+</footer>
+
+<script>
+function searchWebsite(){
+
+    let input =
+        document.getElementById("search")
+        .value.toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+
+        let name =
+            card.querySelector("h2")
+            .innerText
+            .toLowerCase();
+
+        if(name.includes(input)){
+            card.style.display="flex";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+}
+</script>
+
+</body>
+</html>
