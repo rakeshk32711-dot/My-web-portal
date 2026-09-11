@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rakeshk32711-dot.github.io/My-web-portal/sitemap.xml
