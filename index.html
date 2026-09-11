@@ -3,79 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Web Portal</title>
+
+<title>Smart Web India - Useful Websites & Online Tools</title>
+<meta name="description" content="Smart Web India पर Study, Jobs, Government, AI Tools, News और जरूरी Websites एक ही जगह पाएं।">
 
 <style>
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
 
 body{
     margin:0;
     font-family:Arial,sans-serif;
-    background:#f2f5f9;
-    color:#222;
+    background:#f4f7fb;
+    color:#172033;
 }
 
 header{
-    background:#111827;
+    background:linear-gradient(135deg,#111827,#2563eb);
     color:white;
-    padding:25px 15px;
     text-align:center;
+    padding:35px 15px;
 }
 
 header h1{
-    margin:0 0 8px;
+    margin:0;
+    font-size:32px;
 }
 
-.search{
-    width:90%;
-    max-width:500px;
-    padding:13px;
-    border-radius:8px;
-    border:0;
+header p{
+    margin:10px 0 20px;
     font-size:16px;
 }
 
+.search{
+    width:92%;
+    max-width:600px;
+    padding:15px 18px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    outline:none;
+}
+
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
-    padding:20px;
+    padding:25px 15px;
+}
+
+.category-title{
+    margin:25px 0 15px;
+    font-size:22px;
 }
 
 .card{
     background:white;
-    padding:20px;
-    margin-bottom:15px;
-    border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,.1);
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:14px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
     gap:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
 .icon{
-    font-size:35px;
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:#eef4ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
 }
 
 .info{
     flex:1;
 }
 
-.info h2{
+.info h3{
     margin:0 0 5px;
+    font-size:19px;
 }
 
 .info p{
     margin:0;
-    color:#666;
+    color:#667085;
+    font-size:14px;
 }
 
 .open{
     background:#2563eb;
     color:white;
-    padding:11px 18px;
-    border-radius:7px;
     text-decoration:none;
+    padding:10px 16px;
+    border-radius:8px;
     font-weight:bold;
 }
 
@@ -84,9 +108,44 @@ header h1{
 }
 
 footer{
+    margin-top:30px;
+    background:#111827;
+    color:white;
     text-align:center;
-    padding:25px;
-    color:#666;
+    padding:25px 15px;
+}
+
+.no-result{
+    display:none;
+    text-align:center;
+    padding:30px;
+    color:#667085;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    .card{
+        padding:14px;
+    }
+
+    .icon{
+        width:48px;
+        height:48px;
+        font-size:24px;
+    }
+
+    .info h3{
+        font-size:17px;
+    }
+
+    .open{
+        padding:9px 12px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
@@ -94,87 +153,220 @@ footer{
 <body>
 
 <header>
-    <h1>🌐 My Web Portal</h1>
-    <p>Useful Websites & Online Tools</p>
 
-    <input
-        class="search"
-        id="search"
-        type="text"
-        placeholder="Website search करें..."
-        onkeyup="searchWebsite()">
+<h1>🌐 Smart Web India</h1>
+
+<p>Useful Websites & Online Tools — एक ही जगह</p>
+
+<input
+class="search"
+id="search"
+type="text"
+placeholder="Website search करें..."
+onkeyup="searchWebsite()">
+
 </header>
+
 
 <div class="container" id="websiteList">
 
-    <div class="card">
-        <div class="icon">🔎</div>
-        <div class="info">
-            <h2>Google</h2>
-            <p>Search करने के लिए</p>
-        </div>
-        <a class="open" href="https://www.google.com" target="_blank">OPEN</a>
-    </div>
 
-    <div class="card">
-        <div class="icon">▶️</div>
-        <div class="info">
-            <h2>YouTube</h2>
-            <p>Videos देखने के लिए</p>
-        </div>
-        <a class="open" href="https://www.youtube.com" target="_blank">OPEN</a>
-    </div>
+<h2 class="category-title">📚 Study & Education</h2>
 
-    <div class="card">
-        <div class="icon">📚</div>
-        <div class="info">
-            <h2>GyanSetu</h2>
-            <p>Study और Quiz</p>
-        </div>
-        <a class="open" href="#" target="_blank">OPEN</a>
-    </div>
 
-    <div class="card">
-        <div class="icon">📰</div>
-        <div class="info">
-            <h2>News</h2>
-            <p>Latest News देखने के लिए</p>
-        </div>
-        <a class="open" href="https://news.google.com" target="_blank">OPEN</a>
-    </div>
+<div class="card">
+<div class="icon">📖</div>
+
+<div class="info">
+<h3>Google</h3>
+<p>Online search और जानकारी</p>
+</div>
+
+<a class="open" href="https://www.google.com" target="_blank">OPEN</a>
+</div>
+
+
+<div class="card">
+<div class="icon">▶️</div>
+
+<div class="info">
+<h3>YouTube</h3>
+<p>Educational और अन्य videos</p>
+</div>
+
+<a class="open" href="https://www.youtube.com" target="_blank">OPEN</a>
+</div>
+
+
+<h2 class="category-title">💼 Jobs & Career</h2>
+
+
+<div class="card">
+<div class="icon">🏛️</div>
+
+<div class="info">
+<h3>National Career Service</h3>
+<p>Jobs और career information</p>
+</div>
+
+<a class="open" href="https://www.ncs.gov.in" target="_blank">OPEN</a>
+</div>
+
+
+<div class="card">
+<div class="icon">💼</div>
+
+<div class="info">
+<h3>LinkedIn</h3>
+<p>Career और professional opportunities</p>
+</div>
+
+<a class="open" href="https://www.linkedin.com" target="_blank">OPEN</a>
+</div>
+
+
+<h2 class="category-title">🏛️ Government</h2>
+
+
+<div class="card">
+<div class="icon">🇮🇳</div>
+
+<div class="info">
+<h3>MyGov India</h3>
+<p>भारत सरकार की जानकारी</p>
+</div>
+
+<a class="open" href="https://www.mygov.in" target="_blank">OPEN</a>
+</div>
+
+
+<div class="card">
+<div class="icon">🪪</div>
+
+<div class="info">
+<h3>UIDAI</h3>
+<p>Aadhaar से संबंधित सेवाएं</p>
+</div>
+
+<a class="open" href="https://uidai.gov.in" target="_blank">OPEN</a>
+</div>
+
+
+<h2 class="category-title">🤖 AI Tools</h2>
+
+
+<div class="card">
+<div class="icon">🤖</div>
+
+<div class="info">
+<h3>ChatGPT</h3>
+<p>AI से सवाल और काम करें</p>
+</div>
+
+<a class="open" href="https://chatgpt.com" target="_blank">OPEN</a>
+</div>
+
+
+<h2 class="category-title">📰 News</h2>
+
+
+<div class="card">
+<div class="icon">📰</div>
+
+<div class="info">
+<h3>Google News</h3>
+<p>Latest news और updates</p>
+</div>
+
+<a class="open" href="https://news.google.com" target="_blank">OPEN</a>
+</div>
+
+
+<h2 class="category-title">🌐 Popular Websites</h2>
+
+
+<div class="card">
+<div class="icon">📧</div>
+
+<div class="info">
+<h3>Gmail</h3>
+<p>Email भेजने और प्राप्त करने के लिए</p>
+</div>
+
+<a class="open" href="https://mail.google.com" target="_blank">OPEN</a>
+</div>
+
+
+<div class="card">
+<div class="icon">🗺️</div>
+
+<div class="info">
+<h3>Google Maps</h3>
+<p>Maps और रास्ते खोजने के लिए</p>
+</div>
+
+<a class="open" href="https://maps.google.com" target="_blank">OPEN</a>
+</div>
+
+
+<div class="no-result" id="noResult">
+❌ कोई website नहीं मिली।
+</div>
 
 </div>
 
+
 <footer>
-    © 2026 My Web Portal
+
+<strong>🌐 Smart Web India</strong>
+
+<p>Useful Websites & Online Tools — एक ही जगह</p>
+
+© 2026 Smart Web India
+
 </footer>
 
+
 <script>
+
 function searchWebsite(){
 
     let input =
-        document.getElementById("search")
-        .value.toLowerCase();
+    document.getElementById("search")
+    .value.toLowerCase()
+    .trim();
 
     let cards =
-        document.querySelectorAll(".card");
+    document.querySelectorAll(".card");
+
+    let found = false;
 
     cards.forEach(function(card){
 
-        let name =
-            card.querySelector("h2")
-            .innerText
-            .toLowerCase();
+        let text =
+        card.innerText.toLowerCase();
 
-        if(name.includes(input)){
+        if(text.includes(input)){
+
             card.style.display="flex";
+            found=true;
+
         }else{
+
             card.style.display="none";
+
         }
 
     });
+
+    document.getElementById("noResult").style.display =
+    found ? "none" : "block";
+
 }
+
 </script>
 
 </body>
 </html>
+
+
