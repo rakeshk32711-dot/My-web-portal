@@ -9,10 +9,10 @@
 <meta name="google-site-verification"
 content="KZ2k7iaEN8QsI0xAdj3MBTYHNel9X_G4zaJj_8qdYdA">
 
-<title>Smart Web India | Jobs, Scholarship, Government & Useful Websites</title>
+<title>Smart Web India | Jobs, Government Services & Useful Websites</title>
 
 <meta name="description"
-content="Smart Web India पर सरकारी नौकरी, Scholarship, BPSC, SSC, Railway, Government Services, Education, Social Media, AI Tools, Banking और जरूरी websites एक ही जगह खोजें।">
+content="Smart Web India पर सरकारी नौकरी, Scholarship, Government Services, State Services, Education, AI Tools, Banking और जरूरी websites एक ही जगह खोजें।">
 
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
@@ -75,6 +75,8 @@ position:sticky;
 top:0;
 z-index:10;
 box-shadow:0 2px 10px rgba(0,0,0,.08);
+overflow-x:auto;
+white-space:nowrap;
 }
 
 .menu a{
@@ -116,9 +118,28 @@ color:#556070;
 margin-top:32px;
 }
 
+.category-head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+margin-bottom:15px;
+}
+
 .category-title{
 font-size:23px;
-margin-bottom:15px;
+margin:0;
+}
+
+.more{
+background:#111827;
+color:white;
+text-decoration:none;
+padding:8px 13px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+white-space:nowrap;
 }
 
 .card{
@@ -190,6 +211,70 @@ white-space:nowrap;
 background:#1d4ed8;
 }
 
+.more-box{
+background:linear-gradient(135deg,#eef4ff,#ffffff);
+border:1px solid #dbe7ff;
+border-radius:16px;
+padding:18px;
+margin-top:15px;
+text-align:center;
+}
+
+.more-box p{
+margin:5px 0 12px;
+color:#556070;
+}
+
+.more-button{
+display:inline-block;
+background:#2563eb;
+color:white;
+text-decoration:none;
+padding:11px 18px;
+border-radius:9px;
+font-weight:bold;
+}
+
+.state-box{
+background:white;
+border-radius:18px;
+padding:22px;
+box-shadow:0 4px 15px rgba(0,0,0,.07);
+margin-bottom:15px;
+}
+
+.state-box h3{
+margin:0 0 8px;
+font-size:20px;
+}
+
+.state-box p{
+margin:0 0 15px;
+color:#667085;
+}
+
+.state-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.state-link{
+display:block;
+background:#f4f7fb;
+color:#172033;
+text-decoration:none;
+padding:12px;
+border-radius:10px;
+font-weight:bold;
+font-size:14px;
+}
+
+.state-link:hover{
+background:#e8f0ff;
+color:#2563eb;
+}
+
 .no-result{
 display:none;
 text-align:center;
@@ -199,16 +284,40 @@ border-radius:15px;
 margin-top:20px;
 }
 
+.contact-box{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+border-radius:20px;
+padding:30px 20px;
+margin-top:40px;
+}
+
+.contact-box h2{
+margin-top:0;
+}
+
+.contact-box p{
+color:#e5e7eb;
+}
+
+.contact-btn{
+display:inline-block;
+margin:6px;
+padding:11px 17px;
+border-radius:9px;
+background:white;
+color:#111827;
+text-decoration:none;
+font-weight:bold;
+}
+
 footer{
 background:#111827;
 color:white;
 text-align:center;
 padding:30px 15px;
-margin-top:40px;
-}
-
-footer h2{
-margin:0 0 8px;
+margin-top:25px;
 }
 
 footer p{
@@ -227,6 +336,10 @@ font-size:23px;
 
 .category-title{
 font-size:20px;
+}
+
+.category-head{
+align-items:center;
 }
 
 .card{
@@ -254,6 +367,10 @@ padding:8px 11px;
 font-size:12px;
 }
 
+.state-grid{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -266,14 +383,14 @@ font-size:12px;
 <div class="logo">🌐 Smart Web India</div>
 
 <div class="tagline">
-Jobs • Scholarship • Government • Education • Social Media • AI
+Jobs • Government • Scholarship • Education • AI • Useful Websites
 </div>
 
 <input
 class="search"
 id="search"
 type="text"
-placeholder="Scholarship, BPSC, Instagram, Aadhaar, Railway..."
+placeholder="Job, Bihar, Scholarship, Aadhaar, Railway, AI..."
 onkeyup="searchWebsite()">
 
 </header>
@@ -283,6 +400,7 @@ onkeyup="searchWebsite()">
 <a href="#jobs">💼 Jobs</a>
 <a href="#scholarship">🎓 Scholarship</a>
 <a href="#government">🏛️ Government</a>
+<a href="#states">🇮🇳 States</a>
 <a href="#study">📚 Study</a>
 <a href="#social">📱 Social</a>
 <a href="#ai">🤖 AI</a>
@@ -302,20 +420,27 @@ onkeyup="searchWebsite()">
 <p>
 Smart Web India पर आप
 <strong>Government Services, Sarkari Jobs, Scholarship,
-BPSC, SSC, Railway, Education, Social Media, AI,
-Banking और Shopping</strong> की जरूरी websites आसानी से खोज सकते हैं।
+State Government Services, Education, Social Media, AI,
+Banking और दूसरी जरूरी websites</strong> आसानी से खोज सकते हैं।
 </p>
 
 <p>
-जहाँ <strong>Official</strong> लिखा है वहाँ सरकारी संस्था की official website है।
-किसी भी website को खोलने के लिए <strong>OPEN</strong> दबाएँ।
+जहाँ <strong>OFFICIAL</strong> लिखा है वहाँ सरकारी संस्था की
+official website दी गई है। किसी website को खोलने के लिए
+<strong>OPEN</strong> दबाएँ।
 </p>
 
 </section>
 
+
+<!-- JOBS -->
+
 <section class="category" id="jobs">
 
+<div class="category-head">
 <h2 class="category-title">💼 Government Jobs & Career</h2>
+<a class="more" href="#more-jobs">MORE →</a>
+</div>
 
 <div class="card">
 <div class="icon">🇮🇳</div>
@@ -348,7 +473,7 @@ Banking और Shopping</strong> की जरूरी websites आसानी
 <div class="icon">💼</div>
 <div class="info">
 <h3>National Career Service <span class="badge">OFFICIAL</span></h3>
-<p>Government career and employment services</p>
+<p>Government career और employment services</p>
 </div>
 <a class="open" href="https://www.ncs.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
 </div>
@@ -373,9 +498,15 @@ Banking और Shopping</strong> की जरूरी websites आसानी
 
 </section>
 
+
+<!-- SCHOLARSHIP -->
+
 <section class="category" id="scholarship">
 
+<div class="category-head">
 <h2 class="category-title">🎓 Scholarship</h2>
+<a class="more" href="#more-scholarship">MORE →</a>
+</div>
 
 <div class="card">
 <div class="icon">🎓</div>
@@ -406,9 +537,15 @@ Banking और Shopping</strong> की जरूरी websites आसानी
 
 </section>
 
+
+<!-- GOVERNMENT -->
+
 <section class="category" id="government">
 
+<div class="category-head">
 <h2 class="category-title">🏛️ Government Services</h2>
+<a class="more" href="#more-government">MORE →</a>
+</div>
 
 <div class="card">
 <div class="icon">🇮🇳</div>
@@ -475,308 +612,1430 @@ Banking और Shopping</strong> की जरूरी websites आसानी
 
 </section>
 
-        <div class="card">
-        <span>🏦</span>
-        <div>
-          <h3>EPFO</h3>
-          <p>PF और कर्मचारी सेवाएँ</p>
-        </div>
-        <a href="https://www.epfindia.gov.in" target="_blank">Open</a>
-      </div>
 
-      <div class="card">
-        <span>📱</span>
-        <div>
-          <h3>UMANG</h3>
-          <p>सरकारी सेवाएँ एक जगह</p>
-        </div>
-        <a href="https://web.umang.gov.in" target="_blank">Open</a>
-      </div>
+<!-- STATE SECTION START -->
 
-    </div>
-  </section>
+<section class="category" id="states">
 
-  <!-- STUDY -->
-  <section id="study">
-    <h2>📚 Study & Education</h2>
-    <div class="grid">
+<div class="category-head">
+<h2 class="category-title">🇮🇳 State & Government Services</h2>
+<a class="more" href="#all-states">MORE →</a>
+</div>
 
-      <div class="card">
-        <span>🎓</span>
-        <div><h3>CBSE</h3><p>Central Board of Secondary Education</p></div>
-        <a href="https://www.cbse.gov.in" target="_blank">Open</a>
-      </div>
+<div class="state-box">
 
-      <div class="card">
-        <span>📝</span>
-        <div><h3>NTA</h3><p>Entrance और competitive exams</p></div>
-        <a href="https://www.nta.ac.in" target="_blank">Open</a>
-      </div>
+<h3>🏛️ अपने State की सरकारी सेवाएँ खोजें</h3>
 
-      <div class="card">
-        <span>💻</span>
-        <div><h3>SWAYAM</h3><p>Free online courses</p></div>
-        <a href="https://swayam.gov.in" target="_blank">Open</a>
-      </div>
+<p>
+हर State में Government Jobs, Vacancy, Scholarship,
+Government Schemes, Certificate, Education, Health,
+Transport, Agriculture, Labour और दूसरी सरकारी सेवाएँ।
+</p>
 
-      <div class="card">
-        <span>📖</span>
-        <div><h3>Wikipedia</h3><p>Knowledge और जानकारी</p></div>
-        <a href="https://www.wikipedia.org" target="_blank">Open</a>
-      </div>
+<div class="state-grid">
 
-      <div class="card">
-        <span>▶️</span>
-        <div><h3>YouTube</h3><p>Videos और education</p></div>
-        <a href="https://www.youtube.com" target="_blank">Open</a>
-      </div>
+<a class="state-link" href="#bihar">🔵 Bihar</a>
 
-      <div class="card">
-        <span>🔎</span>
-        <div><h3>Google</h3><p>Web search</p></div>
-        <a href="https://www.google.com" target="_blank">Open</a>
-      </div>
+<a class="state-link" href="#jharkhand">🟢 Jharkhand</a>
 
-    </div>
-  </section>
+<a class="state-link" href="#uttar-pradesh">🟠 Uttar Pradesh</a>
 
-  <!-- SOCIAL -->
-  <section id="social">
-    <h2>📱 Social Media</h2>
-    <div class="grid">
+<a class="state-link" href="#west-bengal">🔴 West Bengal</a>
 
-      <div class="card">
-        <span>📸</span>
-        <div><h3>Instagram</h3><p>Photos और videos</p></div>
-        <a href="https://www.instagram.com" target="_blank">Open</a>
-      </div>
+<a class="state-link" href="#delhi">🔷 Delhi</a>
 
-      <div class="card">
-        <span>👥</span>
-        <div><h3>Facebook</h3><p>Social networking</p></div>
-        <a href="https://www.facebook.com" target="_blank">Open</a>
-      </div>
+<a class="state-link" href="#maharashtra">🟣 Maharashtra</a>
 
-      <div class="card">
-        <span>𝕏</span>
-        <div><h3>X</h3><p>Social platform और news</p></div>
-        <a href="https://x.com" target="_blank">Open</a>
-      </div>
+</div>
 
-      <div class="card">
-        <span>💼</span>
-        <div><h3>LinkedIn</h3><p>Jobs और professional network</p></div>
-        <a href="https://www.linkedin.com" target="_blank">Open</a>
-      </div>
+<div class="more-box">
+<p>बाकी सभी States और Union Territories भी देखें</p>
+<a class="more-button" href="#all-states">सभी States देखें →</a>
+</div>
 
-      <div class="card">
-        <span>💬</span>
-        <div><h3>WhatsApp Web</h3><p>WhatsApp computer पर चलाएँ</p></div>
-        <a href="https://web.whatsapp.com" target="_blank">Open</a>
-      </div>
+</div>
 
-    </div>
-  </section>
+</section>
 
-  <!-- AI -->
-  <section id="ai">
-    <h2>🤖 AI Tools</h2>
-    <div class="grid">
 
-      <div class="card">
-        <span>🤖</span>
-        <div><h3>ChatGPT</h3><p>AI assistant</p></div>
-        <a href="https://chatgpt.com" target="_blank">Open</a>
-      </div>
+<!-- MORE GOVERNMENT SERVICES -->
 
-      <div class="card">
-        <span>✨</span>
-        <div><h3>Google Gemini</h3><p>Google AI assistant</p></div>
-        <a href="https://gemini.google.com" target="_blank">Open</a>
-      </div>
+<section class="category" id="more-government">
 
-      <div class="card">
-        <span>🧠</span>
-        <div><h3>Microsoft Copilot</h3><p>AI assistant</p></div>
-        <a href="https://copilot.microsoft.com" target="_blank">Open</a>
-      </div>
+<div class="category-head">
+<h2 class="category-title">🛠️ More Government Services</h2>
+<a class="more" href="#government">← BACK</a>
+</div>
 
-      <div class="card">
-        <span>🎨</span>
-        <div><h3>Canva</h3><p>Design और AI tools</p></div>
-        <a href="https://www.canva.com" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">🏦</div>
+<div class="info">
+<h3>EPFO <span class="badge">OFFICIAL</span></h3>
+<p>PF और कर्मचारी सेवाएँ</p>
+</div>
+<a class="open" href="https://www.epfindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-    </div>
-  </section>
+<div class="card">
+<div class="icon">📱</div>
+<div class="info">
+<h3>UMANG <span class="badge">OFFICIAL</span></h3>
+<p>कई सरकारी सेवाएँ एक जगह</p>
+</div>
+<a class="open" href="https://web.umang.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-  <!-- BANKING -->
-  <section id="banking">
-    <h2>🏦 Banking & Finance</h2>
-    <div class="grid">
+<div class="card">
+<div class="icon">🧑‍💼</div>
+<div class="info">
+<h3>National Career Service <span class="badge">OFFICIAL</span></h3>
+<p>सरकारी रोजगार और career services</p>
+</div>
+<a class="open" href="https://www.ncs.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>🏛️</span>
-        <div><h3>RBI</h3><p>Reserve Bank of India</p></div>
-        <a href="https://www.rbi.org.in" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">🏛️</div>
+<div class="info">
+<h3>Government Services Portal <span class="badge">OFFICIAL</span></h3>
+<p>सरकारी सेवाएँ और online services खोजें</p>
+</div>
+<a class="open" href="https://services.india.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>💳</span>
-        <div><h3>NPCI</h3><p>UPI और digital payments</p></div>
-        <a href="https://www.npci.org.in" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">🇮🇳</div>
+<div class="info">
+<h3>Government Directory <span class="badge">OFFICIAL</span></h3>
+<p>Central और State Government websites</p>
+</div>
+<a class="open" href="https://www.india.gov.in/directory" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>🏦</span>
-        <div><h3>SBI</h3><p>State Bank of India</p></div>
-        <a href="https://sbi.co.in" target="_blank">Open</a>
-      </div>
+</section>
 
-      <div class="card">
-        <span>🏦</span>
-        <div><h3>HDFC Bank</h3><p>Banking services</p></div>
-        <a href="https://www.hdfcbank.com" target="_blank">Open</a>
-      </div>
 
-      <div class="card">
-        <span>🏦</span>
-        <div><h3>ICICI Bank</h3><p>Banking services</p></div>
-        <a href="https://www.icicibank.com" target="_blank">Open</a>
-      </div>
+<!-- MORE JOBS -->
 
-      <div class="card">
-        <span>🏦</span>
-        <div><h3>Punjab National Bank</h3><p>Banking services</p></div>
-        <a href="https://www.pnbindia.in" target="_blank">Open</a>
-      </div>
+<section class="category" id="more-jobs">
 
-    </div>
-  </section>
+<div class="category-head">
+<h2 class="category-title">💼 More Jobs & Career</h2>
+<a class="more" href="#jobs">← BACK</a>
+</div>
 
-  <!-- RAILWAY -->
-  <section id="railway">
-    <h2>🚆 Railway & Travel</h2>
-    <div class="grid">
+<div class="card">
+<div class="icon">🏢</div>
+<div class="info">
+<h3>Employment Services <span class="badge">OFFICIAL</span></h3>
+<p>Employment और career opportunities</p>
+</div>
+<a class="open" href="https://www.ncs.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>🚆</span>
-        <div><h3>Indian Railways</h3><p>Railway information</p></div>
-        <a href="https://indianrailways.gov.in" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">📋</div>
+<div class="info">
+<h3>UPSC <span class="badge">OFFICIAL</span></h3>
+<p>Central Government examinations</p>
+</div>
+<a class="open" href="https://upsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>🎫</span>
-        <div><h3>IRCTC</h3><p>Train ticket booking</p></div>
-        <a href="https://www.irctc.co.in" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">📝</div>
+<div class="info">
+<h3>SSC <span class="badge">OFFICIAL</span></h3>
+<p>Staff Selection Commission examinations</p>
+</div>
+<a class="open" href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>✈️</span>
-        <div><h3>Air India</h3><p>Flight booking</p></div>
-        <a href="https://www.airindia.com" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">🏛️</div>
+<div class="info">
+<h3>BPSC <span class="badge">OFFICIAL</span></h3>
+<p>Bihar Government examinations</p>
+</div>
+<a class="open" href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>🗺️</span>
-        <div><h3>Google Maps</h3><p>Maps और navigation</p></div>
-        <a href="https://maps.google.com" target="_blank">Open</a>
-      </div>
+</section>
 
-    </div>
-  </section>
 
-  <!-- SHOPPING -->
-  <section id="shopping">
-    <h2>🛒 Shopping</h2>
-    <div class="grid">
+<!-- MORE SCHOLARSHIP -->
 
-      <div class="card">
-        <span>📦</span>
-        <div><h3>Amazon India</h3><p>Online shopping</p></div>
-        <a href="https://www.amazon.in" target="_blank">Open</a>
-      </div>
+<section class="category" id="more-scholarship">
 
-      <div class="card">
-        <span>🛍️</span>
-        <div><h3>Flipkart</h3><p>Online shopping</p></div>
-        <a href="https://www.flipkart.com" target="_blank">Open</a>
-      </div>
+<div class="category-head">
+<h2 class="category-title">🎓 More Scholarship</h2>
+<a class="more" href="#scholarship">← BACK</a>
+</div>
 
-    </div>
-  </section>
+<div class="card">
+<div class="icon">🎓</div>
+<div class="info">
+<h3>National Scholarship Portal <span class="badge">OFFICIAL</span></h3>
+<p>Central Government scholarships</p>
+</div>
+<a class="open" href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-  <!-- POPULAR -->
-  <section id="popular">
-    <h2>⭐ Popular Websites</h2>
-    <div class="grid">
+<div class="card">
+<div class="icon">💰</div>
+<div class="info">
+<h3>PFMS <span class="badge">OFFICIAL</span></h3>
+<p>Government payment और scholarship payment</p>
+</div>
+<a class="open" href="https://pfms.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>📧</span>
-        <div><h3>Gmail</h3><p>Email service</p></div>
-        <a href="https://mail.google.com" target="_blank">Open</a>
-      </div>
+<div class="card">
+<div class="icon">📚</div>
+<div class="info">
+<h3>Education Services <span class="badge">OFFICIAL</span></h3>
+<p>Government education services खोजें</p>
+</div>
+<a class="open" href="https://services.india.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
 
-      <div class="card">
-        <span>💻</span>
-        <div><h3>GitHub</h3><p>Code और projects</p></div>
-        <a href="https://github.com" target="_blank">Open</a>
-      </div>
+</section>
 
-      <div class="card">
-        <span>📰</span>
-        <div><h3>Google News</h3><p>Latest news</p></div>
-        <a href="https://news.google.com" target="_blank">Open</a>
-      </div>
 
-      <div class="card">
-        <span>🎬</span>
-        <div><h3>Netflix</h3><p>Movies और shows</p></div>
-        <a href="https://www.netflix.com" target="_blank">Open</a>
-      </div>
+<!-- ALL STATES -->
 
-      <div class="card">
-        <span>🎵</span>
-        <div><h3>Spotify</h3><p>Music और podcasts</p></div>
-        <a href="https://www.spotify.com" target="_blank">Open</a>
-      </div>
+<section class="category" id="all-states">
 
-    </div>
-  </section>
+<div class="category-head">
+<h2 class="category-title">🇮🇳 All States & Union Territories</h2>
+<a class="more" href="#states">← BACK</a>
+</div>
 
-  <div id="noResult">
-    ❌ कोई वेबसाइट नहीं मिली।
+<div class="state-box">
+
+<h3>🔎 अपने राज्य की सरकारी जानकारी</h3>
+
+<p>
+अपने State पर जाएँ। वहाँ Government Jobs, Vacancy,
+Scholarship, Schemes, Certificates, Education, Health,
+Transport, Agriculture और दूसरी सरकारी सेवाओं के official
+portals खोजने का रास्ता मिलेगा।
+</p>
+
+<div class="state-grid">
+
+<a class="state-link" href="#bihar">🔵 Bihar</a>
+<a class="state-link" href="#jharkhand">🟢 Jharkhand</a>
+<a class="state-link" href="#uttar-pradesh">🟠 Uttar Pradesh</a>
+<a class="state-link" href="#west-bengal">🔴 West Bengal</a>
+<a class="state-link" href="#delhi">🔷 Delhi</a>
+<a class="state-link" href="#maharashtra">🟣 Maharashtra</a>
+<a class="state-link" href="#rajasthan">🟤 Rajasthan</a>
+<a class="state-link" href="#madhya-pradesh">🟢 Madhya Pradesh</a>
+<a class="state-link" href="#gujarat">🔶 Gujarat</a>
+<a class="state-link" href="#odisha">🟠 Odisha</a>
+<a class="state-link" href="#assam">🔵 Assam</a>
+<a class="state-link" href="#punjab">🟡 Punjab</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BIHAR -->
+
+<section class="category" id="bihar">
+
+<div class="category-head">
+<h2 class="category-title">🔵 Bihar Government Services</h2>
+<a class="more" href="#all-states">← ALL STATES</a>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<div class="info">
+<h3>Bihar Public Service Commission <span class="badge">OFFICIAL</span></h3>
+<p>BPSC Jobs और examinations</p>
+</div>
+<a class="open" href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+<div class="card">
+<div class="icon">📋</div>
+<div class="info">
+<h3>Bihar Staff Selection Commission <span class="badge">OFFICIAL</span></h3>
+<p>BSSC recruitment और examinations</p>
+</div>
+<a class="open" href="https://bssc.bihar.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<div class="info">
+<h3>Bihar Post Matric Scholarship <span class="badge">OFFICIAL</span></h3>
+<p>Post Matric Scholarship</p>
+</div>
+<a class="open" href="https://pmsonline.bihar.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+<div class="card">
+<div class="icon">🏛️</div>
+<div class="info">
+<h3>Bihar Government Portal <span class="badge">OFFICIAL</span></h3>
+<p>Bihar Government departments और services</p>
+</div>
+<a class="open" href="https://state.bihar.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+<div class="card">
+<div class="icon">👮</div>
+<div class="info">
+<h3>Bihar Police <span class="badge">OFFICIAL</span></h3>
+<p>Police information और services</p>
+</div>
+<a class="open" href="https://police.bihar.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+</section>
+
+
+<!-- JHARKHAND -->
+
+<section class="category" id="jharkhand">
+
+<div class="category-head">
+<h2 class="category-title">🟢 Jharkhand Government Services</h2>
+<a class="more" href="#all-states">← ALL STATES</a>
+</div>
+
+<div class="card">
+<div class="icon">🏛️</div>
+<div class="info">
+<h3>Jharkhand Government <span class="badge">OFFICIAL</span></h3>
+<p>Jharkhand Government का main portal</p>
+</div>
+<a class="open" href="https://www.jharkhand.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<div class="info">
+<h3>Jharkhand JPSC <span class="badge">OFFICIAL</span></h3>
+<p>Jharkhand Public Service Commission</p>
+</div>
+<a class="open" href="https://www.jpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+</section>
+
+
+<!-- UP -->
+
+<section class="category" id="uttar-pradesh">
+
+<div class="category-head">
+<h2 class="category-title">🟠 Uttar Pradesh Government Services</h2>
+<a class="more" href="#all-states">← ALL STATES</a>
+</div>
+
+<div class="card">
+<div class="icon">🏛️</div>
+<div class="info">
+<h3>UP Government <span class="badge">OFFICIAL</span></h3>
+<p>Uttar Pradesh Government portal</p>
+</div>
+<a class="open" href="https://up.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<div class="info">
+<h3>UPPSC <span class="badge">OFFICIAL</span></h3>
+<p>Uttar Pradesh Public Service Commission</p>
+</div>
+<a class="open" href="https://uppsc.up.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+</section>
+
+
+<!-- WEST BENGAL -->
+
+<section class="category" id="west-bengal">
+
+<div class="category-head">
+<h2 class="category-title">🔴 West Bengal Government Services</h2>
+<a class="more" href="#all-states">← ALL STATES</a>
+</div>
+
+<div class="card">
+<div class="icon">🏛️</div>
+<div class="info">
+<h3>West Bengal Government <span class="badge">OFFICIAL</span></h3>
+<p>West Bengal Government portal</p>
+</div>
+<a class="open" href="https://www.wb.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+</div>
+
+</section>
+
+
+<!-- MORE STATE PARTS CONTINUE -->
+
+<!-- ================= PART 3 START ================= -->
+
+<!-- REMAINING STATES & UNION TERRITORIES -->
+<section class="category" id="remaining-states">
+
+  <div class="category-head">
+    <h2>🇮🇳 बाकी States & Union Territories</h2>
   </div>
 
-  <footer>
-    <p>© 2026 Smart Web India</p>
-    <p>Useful & Original Websites — एक जगह</p>
-  </footer>
+  <div class="card">
+    <div class="icon">🇷🇯</div>
+    <div class="info">
+      <h3>Rajasthan Government</h3>
+      <p>Jobs • Schemes • Certificates • Education • Government Services</p>
+    </div>
+    <a class="open" href="https://www.rajasthan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
 
-  <script>
-    function searchWebsite(){
-      let input = document.getElementById("search").value.toLowerCase().trim();
-      let cards = document.querySelectorAll(".card");
-      let found = false;
+  <div class="card">
+    <div class="icon">🇲🇵</div>
+    <div class="info">
+      <h3>Madhya Pradesh Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.mp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
 
-      cards.forEach(function(card){
-        let text = card.innerText.toLowerCase();
+  <div class="card">
+    <div class="icon">🇬🇯</div>
+    <div class="info">
+      <h3>Gujarat Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://gujaratindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
 
-        if(input === "" || text.includes(input)){
-          card.style.display = "flex";
+  <div class="card">
+    <div class="icon">🇴🇩</div>
+    <div class="info">
+      <h3>Odisha Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://odisha.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
 
-          if(input !== ""){
-            found = true;
-          }
-        }else{
-          card.style.display = "none";
-        }
-      });
+  <div class="card">
+    <div class="icon">🇦🇸</div>
+    <div class="info">
+      <h3>Assam Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://assam.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
 
-      document.getElementById("noResult").style.display =
-        input !== "" && !found ? "block" : "none";
+  <div class="card">
+    <div class="icon">🇵🇧</div>
+    <div class="info">
+      <h3>Punjab Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://punjab.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇭🇷</div>
+    <div class="info">
+      <h3>Haryana Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.haryana.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇭🇵</div>
+    <div class="info">
+      <h3>Himachal Pradesh Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://himachal.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇺🇰</div>
+    <div class="info">
+      <h3>Uttarakhand Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://uk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇬🇴</div>
+    <div class="info">
+      <h3>Goa Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.goa.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇹🇱</div>
+    <div class="info">
+      <h3>Telangana Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.telangana.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇦🇵</div>
+    <div class="info">
+      <h3>Andhra Pradesh Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.ap.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇰🇦</div>
+    <div class="info">
+      <h3>Karnataka Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.karnataka.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇰🇱</div>
+    <div class="info">
+      <h3>Kerala Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://kerala.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇹🇳</div>
+    <div class="info">
+      <h3>Tamil Nadu Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://www.tn.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇨🇬</div>
+    <div class="info">
+      <h3>Chhattisgarh Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://cgstate.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇯🇲</div>
+    <div class="info">
+      <h3>Jammu & Kashmir Government</h3>
+      <p>Jobs • Schemes • Services • Education • Certificates</p>
+    </div>
+    <a class="open" href="https://jk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇱🇦</div>
+    <div class="info">
+      <h3>Ladakh Administration</h3>
+      <p>Government Services • Jobs • Schemes • Education</p>
+    </div>
+    <a class="open" href="https://ladakh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇨🇭</div>
+    <div class="info">
+      <h3>Chandigarh Administration</h3>
+      <p>Government Services • Jobs • Certificates • Education</p>
+    </div>
+    <a class="open" href="https://chandigarh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇩🇦</div>
+    <div class="info">
+      <h3>Dadra & Nagar Haveli and Daman & Diu</h3>
+      <p>Government Services • Jobs • Schemes • Certificates</p>
+    </div>
+    <a class="open" href="https://ddd.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇵🇩</div>
+    <div class="info">
+      <h3>Puducherry Government</h3>
+      <p>Government Services • Jobs • Schemes • Education</p>
+    </div>
+    <a class="open" href="https://py.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇦🇳</div>
+    <div class="info">
+      <h3>Andaman & Nicobar Administration</h3>
+      <p>Government Services • Jobs • Schemes • Education</p>
+    </div>
+    <a class="open" href="https://andaman.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🇱🇰</div>
+    <div class="info">
+      <h3>Lakshadweep Administration</h3>
+      <p>Government Services • Jobs • Schemes • Certificates</p>
+    </div>
+    <a class="open" href="https://lakshadweep.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- STUDY -->
+<section class="category" id="study">
+
+  <div class="category-head">
+    <h2>📚 Study & Education</h2>
+    <a class="more" href="#more-study">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎓</div>
+    <div class="info">
+      <h3>CBSE</h3>
+      <p>Board • Results • Circulars • Academic Information</p>
+    </div>
+    <a class="open" href="https://www.cbse.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📝</div>
+    <div class="info">
+      <h3>NTA</h3>
+      <p>Entrance Exams • Results • Admit Cards • Applications</p>
+    </div>
+    <a class="open" href="https://www.nta.ac.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📖</div>
+    <div class="info">
+      <h3>SWAYAM</h3>
+      <p>Free Online Courses • Learning • Certificates</p>
+    </div>
+    <a class="open" href="https://swayam.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔎</div>
+    <div class="info">
+      <h3>Google</h3>
+      <p>Search • Information • Education • Tools</p>
+    </div>
+    <a class="open" href="https://www.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">▶️</div>
+    <div class="info">
+      <h3>YouTube</h3>
+      <p>Educational Videos • Tutorials • Learning</p>
+    </div>
+    <a class="open" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- SOCIAL MEDIA -->
+<section class="category" id="social">
+
+  <div class="category-head">
+    <h2>📱 Social Media</h2>
+    <a class="more" href="#more-social">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📸</div>
+    <div class="info">
+      <h3>Instagram</h3>
+      <p>Photos • Reels • Messages • Social Media</p>
+    </div>
+    <a class="open" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔵</div>
+    <div class="info">
+      <h3>Facebook</h3>
+      <p>Social Network • Pages • Groups • Messages</p>
+    </div>
+    <a class="open" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">𝕏</div>
+    <div class="info">
+      <h3>X</h3>
+      <p>News • Posts • Trends • Social Network</p>
+    </div>
+    <a class="open" href="https://x.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">💼</div>
+    <div class="info">
+      <h3>LinkedIn</h3>
+      <p>Jobs • Careers • Professional Network</p>
+    </div>
+    <a class="open" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">💬</div>
+    <div class="info">
+      <h3>WhatsApp Web</h3>
+      <p>Messages • Groups • Calls • Web Version</p>
+    </div>
+    <a class="open" href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- AI -->
+<section class="category" id="ai">
+
+  <div class="category-head">
+    <h2>🤖 AI Tools</h2>
+    <a class="more" href="#more-ai">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🤖</div>
+    <div class="info">
+      <h3>ChatGPT</h3>
+      <p>AI Assistant • Writing • Learning • Ideas</p>
+    </div>
+    <a class="open" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">✨</div>
+    <div class="info">
+      <h3>Google Gemini</h3>
+      <p>AI Assistant • Research • Writing • Ideas</p>
+    </div>
+    <a class="open" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🧠</div>
+    <div class="info">
+      <h3>Microsoft Copilot</h3>
+      <p>AI Assistant • Search • Writing • Productivity</p>
+    </div>
+    <a class="open" href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎨</div>
+    <div class="info">
+      <h3>Canva</h3>
+      <p>Design • Posters • Presentations • AI Tools</p>
+    </div>
+    <a class="open" href="https://www.canva.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- BANKING -->
+<section class="category" id="banking">
+
+  <div class="category-head">
+    <h2>🏦 Banking & Finance</h2>
+    <a class="more" href="#more-banking">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏦</div>
+    <div class="info">
+      <h3>RBI</h3>
+      <p>Banking Rules • Currency • Financial Information</p>
+    </div>
+    <a class="open" href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">💳</div>
+    <div class="info">
+      <h3>NPCI</h3>
+      <p>UPI • RuPay • Banking Payment Systems</p>
+    </div>
+    <a class="open" href="https://www.npci.org.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏦</div>
+    <div class="info">
+      <h3>SBI</h3>
+      <p>Banking • Internet Banking • Loans • Services</p>
+    </div>
+    <a class="open" href="https://sbi.co.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏦</div>
+    <div class="info">
+      <h3>HDFC Bank</h3>
+      <p>Banking • Loans • Cards • Online Services</p>
+    </div>
+    <a class="open" href="https://www.hdfcbank.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏦</div>
+    <div class="info">
+      <h3>ICICI Bank</h3>
+      <p>Banking • Cards • Loans • Online Services</p>
+    </div>
+    <a class="open" href="https://www.icicibank.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏦</div>
+    <div class="info">
+      <h3>PNB</h3>
+      <p>Banking • Loans • Cards • Online Services</p>
+    </div>
+    <a class="open" href="https://www.pnbindia.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- RAILWAY & TRAVEL -->
+<section class="category" id="railway">
+
+  <div class="category-head">
+    <h2>🚆 Railway & Travel</h2>
+    <a class="more" href="#more-railway">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🚆</div>
+    <div class="info">
+      <h3>Indian Railways</h3>
+      <p>Railway Information • Zones • Services</p>
+    </div>
+    <a class="open" href="https://indianrailways.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎫</div>
+    <div class="info">
+      <h3>IRCTC</h3>
+      <p>Train Tickets • Booking • Tourism • Catering</p>
+    </div>
+    <a class="open" href="https://www.irctc.co.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">✈️</div>
+    <div class="info">
+      <h3>Air India</h3>
+      <p>Flight Booking • Travel • Flight Information</p>
+    </div>
+    <a class="open" href="https://www.airindia.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🗺️</div>
+    <div class="info">
+      <h3>Google Maps</h3>
+      <p>Maps • Directions • Places • Navigation</p>
+    </div>
+    <a class="open" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- SHOPPING -->
+<section class="category" id="shopping">
+
+  <div class="category-head">
+    <h2>🛒 Shopping</h2>
+    <a class="more" href="#more-shopping">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛍️</div>
+    <div class="info">
+      <h3>Amazon India</h3>
+      <p>Online Shopping • Electronics • Books • Home</p>
+    </div>
+    <a class="open" href="https://www.amazon.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛒</div>
+    <div class="info">
+      <h3>Flipkart</h3>
+      <p>Online Shopping • Electronics • Fashion • Home</p>
+    </div>
+    <a class="open" href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- POPULAR -->
+<section class="category" id="popular">
+
+  <div class="category-head">
+    <h2>⭐ Popular Websites</h2>
+    <a class="more" href="#more-popular">MORE →</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">✉️</div>
+    <div class="info">
+      <h3>Gmail</h3>
+      <p>Email • Messages • Google Account</p>
+    </div>
+    <a class="open" href="https://mail.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🐙</div>
+    <div class="info">
+      <h3>GitHub</h3>
+      <p>Code • Projects • Websites • Developers</p>
+    </div>
+    <a class="open" href="https://github.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📰</div>
+    <div class="info">
+      <h3>Google News</h3>
+      <p>Latest News • India • World • Topics</p>
+    </div>
+    <a class="open" href="https://news.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎬</div>
+    <div class="info">
+      <h3>Netflix</h3>
+      <p>Movies • Series • Entertainment</p>
+    </div>
+    <a class="open" href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎵</div>
+    <div class="info">
+      <h3>Spotify</h3>
+      <p>Music • Podcasts • Audio</p>
+    </div>
+    <a class="open" href="https://www.spotify.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+</section>
+
+
+<!-- ================= PART 3 END ================= -->
+
+<!-- ================= PART 4 START ================= -->
+
+<!-- MORE STUDY -->
+<section class="more-box" id="more-study">
+  <h2>📚 More Study & Education</h2>
+
+  <div class="card">
+    <div class="icon">📘</div>
+    <div class="info">
+      <h3>National Digital Library</h3>
+      <p>Books • Study Material • Digital Learning</p>
+    </div>
+    <a class="open" href="https://ndl.iitkgp.ac.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎓</div>
+    <div class="info">
+      <h3>National Academic Depository</h3>
+      <p>Academic Certificates • Digital Records</p>
+    </div>
+    <a class="open" href="https://nad.digilocker.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📖</div>
+    <div class="info">
+      <h3>DIKSHA</h3>
+      <p>School Education • Courses • Learning Material</p>
+    </div>
+    <a class="open" href="https://diksha.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏫</div>
+    <div class="info">
+      <h3>National Scholarship Portal</h3>
+      <p>Scholarship Applications • Status • Student Services</p>
+    </div>
+    <a class="open" href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- MORE SOCIAL -->
+<section class="more-box" id="more-social">
+  <h2>📱 More Social & Communication</h2>
+
+  <div class="card">
+    <div class="icon">💬</div>
+    <div class="info">
+      <h3>Telegram</h3>
+      <p>Messages • Groups • Channels • Communities</p>
+    </div>
+    <a class="open" href="https://telegram.org" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📌</div>
+    <div class="info">
+      <h3>Pinterest</h3>
+      <p>Images • Ideas • Design • Inspiration</p>
+    </div>
+    <a class="open" href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎮</div>
+    <div class="info">
+      <h3>Discord</h3>
+      <p>Communities • Chat • Voice • Groups</p>
+    </div>
+    <a class="open" href="https://discord.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📞</div>
+    <div class="info">
+      <h3>Skype</h3>
+      <p>Communication • Messaging • Calls</p>
+    </div>
+    <a class="open" href="https://www.skype.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- MORE AI -->
+<section class="more-box" id="more-ai">
+  <h2>🤖 More AI Tools</h2>
+
+  <div class="card">
+    <div class="icon">🧠</div>
+    <div class="info">
+      <h3>Perplexity</h3>
+      <p>AI Search • Research • Questions</p>
+    </div>
+    <a class="open" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">💻</div>
+    <div class="info">
+      <h3>GitHub Copilot</h3>
+      <p>AI Coding • Programming • Developer Tools</p>
+    </div>
+    <a class="open" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎨</div>
+    <div class="info">
+      <h3>Adobe Firefly</h3>
+      <p>AI Image • Design • Creative Tools</p>
+    </div>
+    <a class="open" href="https://firefly.adobe.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📝</div>
+    <div class="info">
+      <h3>Grammarly</h3>
+      <p>Writing • Grammar • AI Writing Assistant</p>
+    </div>
+    <a class="open" href="https://www.grammarly.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- MORE BANKING -->
+<section class="more-box" id="more-banking">
+  <h2>🏦 More Banking & Finance</h2>
+
+  <div class="card">
+    <div class="icon">💰</div>
+    <div class="info">
+      <h3>Income Tax e-Filing</h3>
+      <p>Income Tax Return • Tax Services • PAN Related Services</p>
+    </div>
+    <a class="open" href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🪪</div>
+    <div class="info">
+      <h3>EPFO</h3>
+      <p>PF • Pension • UAN • Employee Services</p>
+    </div>
+    <a class="open" href="https://www.epfindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">💳</div>
+    <div class="info">
+      <h3>Jan Dhan Yojana</h3>
+      <p>Financial Inclusion • Bank Account Information</p>
+    </div>
+    <a class="open" href="https://pmjdy.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📊</div>
+    <div class="info">
+      <h3>SEBI</h3>
+      <p>Investor Information • Securities Market • Regulations</p>
+    </div>
+    <a class="open" href="https://www.sebi.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- MORE RAILWAY -->
+<section class="more-box" id="more-railway">
+  <h2>🚆 More Railway & Travel</h2>
+
+  <div class="card">
+    <div class="icon">🚉</div>
+    <div class="info">
+      <h3>National Train Enquiry System</h3>
+      <p>Train Running Status • Train Information</p>
+    </div>
+    <a class="open" href="https://enquiry.indianrail.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🚆</div>
+    <div class="info">
+      <h3>Railway Recruitment Board</h3>
+      <p>Railway Jobs • Recruitment • Examination Information</p>
+    </div>
+    <a class="open" href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🚌</div>
+    <div class="info">
+      <h3>Parivahan</h3>
+      <p>Driving Licence • Vehicle • Transport Services</p>
+    </div>
+    <a class="open" href="https://parivahan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛂</div>
+    <div class="info">
+      <h3>Passport Seva</h3>
+      <p>Passport Application • Appointment • Status</p>
+    </div>
+    <a class="open" href="https://www.passportindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- MORE SHOPPING -->
+<section class="more-box" id="more-shopping">
+  <h2>🛒 More Shopping</h2>
+
+  <div class="card">
+    <div class="icon">🛍️</div>
+    <div class="info">
+      <h3>Myntra</h3>
+      <p>Fashion • Clothing • Shoes • Accessories</p>
+    </div>
+    <a class="open" href="https://www.myntra.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📱</div>
+    <div class="info">
+      <h3>Meesho</h3>
+      <p>Online Shopping • Fashion • Home Products</p>
+    </div>
+    <a class="open" href="https://www.meesho.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛒</div>
+    <div class="info">
+      <h3>AJIO</h3>
+      <p>Fashion • Clothing • Lifestyle</p>
+    </div>
+    <a class="open" href="https://www.ajio.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- MORE POPULAR -->
+<section class="more-box" id="more-popular">
+  <h2>⭐ More Popular Websites</h2>
+
+  <div class="card">
+    <div class="icon">🌐</div>
+    <div class="info">
+      <h3>Microsoft</h3>
+      <p>Windows • Office • Cloud • Technology</p>
+    </div>
+    <a class="open" href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">☁️</div>
+    <div class="info">
+      <h3>Google Drive</h3>
+      <p>Cloud Storage • Documents • Files</p>
+    </div>
+    <a class="open" href="https://drive.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📄</div>
+    <div class="info">
+      <h3>Google Docs</h3>
+      <p>Online Documents • Writing • Collaboration</p>
+    </div>
+    <a class="open" href="https://docs.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📺</div>
+    <div class="info">
+      <h3>Prime Video</h3>
+      <p>Movies • Series • Entertainment</p>
+    </div>
+    <a class="open" href="https://www.primevideo.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎬</div>
+    <div class="info">
+      <h3>ZEE5</h3>
+      <p>Movies • Shows • Entertainment</p>
+    </div>
+    <a class="open" href="https://www.zee5.com" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- CYBER SECURITY -->
+<section class="more-box" id="cyber">
+  <h2>🛡️ Cyber Security & Safety</h2>
+
+  <div class="card">
+    <div class="icon">🚨</div>
+    <div class="info">
+      <h3>National Cyber Crime Reporting Portal</h3>
+      <p>Cyber Crime Complaint • Online Reporting • Cyber Safety</p>
+    </div>
+    <a class="open" href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔎</div>
+    <div class="info">
+      <h3>Cyber Crime Suspect Search</h3>
+      <p>Check Reported Mobile Numbers, Emails, Accounts & Websites</p>
+    </div>
+    <a class="open" href="https://cybercrime.gov.in/Webform/suspect_search_repository.aspx" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📞</div>
+    <div class="info">
+      <h3>Cyber Crime Helpline - 1930</h3>
+      <p>Financial Cyber Fraud Reporting Helpline</p>
+    </div>
+    <a class="open" href="tel:1930">CALL</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔐</div>
+    <div class="info">
+      <h3>CERT-In</h3>
+      <p>Indian Computer Emergency Response Team • Cyber Security</p>
+    </div>
+    <a class="open" href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- GOVERNMENT INFORMATION TOOLS -->
+<section class="more-box" id="gov-tools">
+  <h2>🇮🇳 Government Information & Tools</h2>
+
+  <div class="card">
+    <div class="icon">🇮🇳</div>
+    <div class="info">
+      <h3>India.gov.in</h3>
+      <p>Government Information • Services • Schemes • States</p>
+    </div>
+    <a class="open" href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛠️</div>
+    <div class="info">
+      <h3>National Government Services Portal</h3>
+      <p>Online Government Services from Central & State Governments</p>
+    </div>
+    <a class="open" href="https://services.india.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📱</div>
+    <div class="info">
+      <h3>UMANG</h3>
+      <p>Government Services • Certificates • Pension • Education • More</p>
+    </div>
+    <a class="open" href="https://web.umang.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">📁</div>
+    <div class="info">
+      <h3>DigiLocker</h3>
+      <p>Digital Documents • Certificates • Government Documents</p>
+    </div>
+    <a class="open" href="https://www.digilocker.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-box" id="contact">
+
+  <h2>🌐 अपनी Website Smart Web India पर जोड़ें</h2>
+
+  <p>
+    अगर आपकी अपनी Website है और आप उसे
+    <b>Smart Web India</b> पर जोड़वाना चाहते हैं,
+    तो हमसे संपर्क करें।
+  </p>
+
+  <a class="contact-btn" href="tel:7633868472">
+    📞 7633868472
+  </a>
+
+  <a class="contact-btn" href="mailto:rakeshk32711@gmail.com">
+    📧 rakeshk32711@gmail.com
+  </a>
+
+</section>
+
+
+<!-- NO RESULT -->
+<div class="no-result" id="noResult">
+  ❌ कोई Website नहीं मिली।
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-logo">
+    🌐 Smart Web India
+  </div>
+
+  <p>
+    Jobs • Government • Scholarship • Education • AI • Banking • Railway • Useful Websites
+  </p>
+
+  <p>
+    © 2026 Smart Web India. All Rights Reserved.
+  </p>
+
+  <p>
+    Website जोड़ने के लिए:
+    <a href="tel:7633868472">7633868472</a>
+    |
+    <a href="mailto:rakeshk32711@gmail.com">rakeshk32711@gmail.com</a>
+  </p>
+
+</footer>
+
+
+<!-- SEARCH SCRIPT -->
+<script>
+
+function searchWebsite(){
+
+  let input = document
+    .getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
+
+  let cards = document.querySelectorAll(".card");
+
+  let found = false;
+
+  cards.forEach(function(card){
+
+    let text = card.innerText.toLowerCase();
+
+    if(input === "" || text.includes(input)){
+
+      card.style.display = "flex";
+
+      if(input !== ""){
+        found = true;
+      }
+
+    }else{
+
+      card.style.display = "none";
+
     }
-  </script>
+
+  });
+
+  document.getElementById("noResult").style.display =
+    input !== "" && !found ? "block" : "none";
+
+}
+
+</script>
+
 
 </body>
 </html>
