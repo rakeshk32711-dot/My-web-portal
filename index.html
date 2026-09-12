@@ -4,400 +4,326 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="logo.png">
+<title>Smart Web India | Government, Jobs, Scholarship, Study, AI & Useful Websites</title>
 
-<meta name="google-site-verification"
-content="KZ2k7iaEN8QsI0xAdj3MBTYHNel9X_G4zaJj_8qdYdA">
+<meta name="description" content="Smart Web India पर भारत की Government Services, Sarkari Jobs, Scholarship, Study, AI Tools, Banking, Railway, Editing और राज्यों की जरूरी websites एक जगह खोजें.">
 
-<title>Smart Web India | Jobs, Government Services & Useful Websites</title>
-
-<meta name="description"
-content="Smart Web India पर सरकारी नौकरी, Scholarship, Government Services, State Services, Education, AI Tools, Banking और जरूरी websites एक ही जगह खोजें।">
-
-<!-- SEO -->
-<meta name="keywords" content="Smart Web India, Sarkari Job, Government Job, Bihar Sarkari Job, BPSC, BSSC, Scholarship, Government Services, State Government Services, Railway, Education, AI Tools, Banking, Online Services">
+<meta name="keywords" content="Smart Web India, Government Services India, Sarkari Jobs, Scholarship, Study, AI Tools, Banking, Railway, State Government Websites">
 
 <meta name="author" content="Smart Web India">
-
-<meta property="og:title" content="Smart Web India | Sarkari Jobs, Scholarship & Government Services">
-
-<meta property="og:description" content="Smart Web India पर Sarkari Jobs, Bihar Jobs, Scholarship, Government Services, Railway, Education, AI Tools, Banking और State Government Services के useful official links खोजें।">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url" content="https://rakeshk32711-dot.github.io/My-web-portal/">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Smart Web India",
-  "url": "https://rakeshk32711-dot.github.io/My-web-portal/",
-  "description": "Sarkari Jobs, Scholarship, Government Services, State Services, Railway, Education, AI Tools, Banking और useful websites का portal.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://rakeshk32711-dot.github.io/My-web-portal/?search={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
 
-<link rel="canonical"
-href="https://rakeshk32711-dot.github.io/My-web-portal/">
+<link rel="canonical" href="https://rakeshk32711-dot.github.io/My-web-portal/">
+
+<meta property="og:title" content="Smart Web India">
+<meta property="og:description" content="India की जरूरी Government Services, Jobs, Study, AI और Useful Websites एक जगह.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rakeshk32711-dot.github.io/My-web-portal/">
 
 <style>
 
 *{
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-color:#172033;
-line-height:1.5;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    color:#172033;
+    line-height:1.6;
 }
 
-header{
-background:linear-gradient(135deg,#111827,#2563eb);
-color:white;
-text-align:center;
-padding:42px 15px;
+a{
+    text-decoration:none;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+.main-wrap{
+    width:94%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background:linear-gradient(
+        135deg,
+        #ff9933 0%,
+        #ffffff 50%,
+        #138808 100%
+    );
+    padding:20px 12px;
+    text-align:center;
+    border-bottom:4px solid #0b5d1e;
 }
 
 .logo{
-font-size:36px;
-font-weight:bold;
-margin-bottom:8px;
+    font-size:30px;
+    font-weight:900;
+    color:#172033;
+}
+
+.logo span{
+    display:inline-block;
+    margin-right:5px;
 }
 
 .tagline{
-font-size:16px;
-margin-bottom:25px;
+    font-size:14px;
+    font-weight:600;
+    margin-top:4px;
+    color:#303946;
 }
 
-.search{
-width:92%;
-max-width:720px;
-padding:17px 20px;
-border:none;
-border-radius:30px;
-font-size:16px;
-outline:none;
-box-shadow:0 5px 20px rgba(0,0,0,.18);
+/* ================= SEARCH ================= */
+
+.search-section{
+    margin:22px auto 18px;
+    max-width:850px;
 }
 
-.menu{
-background:white;
-padding:12px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:10;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-overflow-x:auto;
-white-space:nowrap;
+.search-box{
+    background:#ffffff;
+    padding:10px;
+    border-radius:18px;
+    display:flex;
+    gap:8px;
+    box-shadow:0 6px 22px rgba(0,0,0,.10);
 }
 
-.menu a{
-display:inline-block;
-margin:5px;
-padding:9px 14px;
-background:#eef4ff;
-color:#2563eb;
-text-decoration:none;
-border-radius:20px;
-font-size:13px;
-font-weight:bold;
+.search-box input{
+    flex:1;
+    min-width:0;
+    border:2px solid #d7dee8;
+    border-radius:13px;
+    padding:13px 15px;
+    font-size:16px;
+    outline:none;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px 15px;
+.search-box input:focus{
+    border-color:#1677c8;
 }
 
-.intro{
-background:white;
-padding:23px;
-border-radius:16px;
-margin-top:10px;
-box-shadow:0 4px 15px rgba(0,0,0,.06);
+.search-button{
+    border:none;
+    border-radius:13px;
+    background:#1769aa;
+    color:white;
+    min-width:58px;
+    font-size:21px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.intro h1{
-margin-top:0;
-font-size:27px;
+.search-button:hover{
+    background:#0d568e;
 }
 
-.intro p{
-color:#556070;
+/* ================= SEARCH RESULT ================= */
+
+.search-result{
+    display:none;
+    background:#ffffff;
+    margin:12px auto 20px;
+    padding:18px;
+    border-radius:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.search-result h2{
+    font-size:21px;
+    margin-bottom:5px;
+}
+
+.search-result p{
+    color:#596575;
+}
+
+/* ================= TOP TITLE ================= */
+
+.section-heading{
+    text-align:center;
+    margin:18px 0 10px;
+}
+
+.section-heading h2{
+    font-size:22px;
+    font-weight:900;
+}
+
+.section-heading p{
+    color:#687486;
+    font-size:14px;
+}
+
+/* ================= ROUND CATEGORY MENU ================= */
+
+.category-scroll{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding:12px 4px 20px;
+    scroll-behavior:smooth;
+    scrollbar-width:thin;
+}
+
+.category-scroll::-webkit-scrollbar{
+    height:6px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb{
+    background:#aeb9c7;
+    border-radius:20px;
 }
 
 .category{
-margin-top:32px;
+    flex:0 0 92px;
+    width:92px;
+    height:92px;
+    border-radius:50%;
+    border:3px solid white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    font-size:12px;
+    font-weight:800;
+    padding:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,.17);
+    cursor:pointer;
+    transition:.2s;
 }
 
-.category-head{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:10px;
-margin-bottom:15px;
+.category:hover{
+    transform:translateY(-4px) scale(1.04);
 }
 
-.category-title{
-font-size:23px;
-margin:0;
+.category:active{
+    transform:scale(.93);
 }
 
-.more{
-background:#111827;
-color:white;
-text-decoration:none;
-padding:8px 13px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-white-space:nowrap;
+/* अलग-अलग रंग */
+
+.cat-government{background:#087f5b;}
+.cat-jobs{background:#d35400;}
+.cat-scholarship{background:#7d3c98;}
+.cat-study{background:#2874a6;}
+.cat-ai{background:#512e5f;}
+.cat-banking{background:#117864;}
+.cat-railway{background:#922b21;}
+.cat-shopping{background:#b9770e;}
+.cat-cyber{background:#273746;}
+.cat-skills{background:#148f77;}
+.cat-photo{background:#884ea0;}
+.cat-video{background:#c0392b;}
+.cat-audio{background:#2e86c1;}
+.cat-computer{background:#34495e;}
+.cat-mobile{background:#1f618d;}
+.cat-documents{background:#7d6608;}
+.cat-health{background:#148f77;}
+.cat-travel{background:#2471a3;}
+.cat-news{background:#943126;}
+
+/* ================= WELCOME ================= */
+
+.welcome{
+    background:#ffffff;
+    margin:10px 0 30px;
+    padding:25px 20px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 6px 22px rgba(0,0,0,.08);
 }
 
-.card{
-background:white;
-border-radius:15px;
-padding:17px;
-margin-bottom:13px;
-display:flex;
-align-items:center;
-gap:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.07);
-transition:.2s;
+.welcome h1{
+    font-size:26px;
+    margin-bottom:7px;
 }
 
-.card:hover{
-transform:translateY(-2px);
-box-shadow:0 7px 20px rgba(0,0,0,.12);
+.welcome p{
+    max-width:850px;
+    margin:auto;
+    color:#596575;
+    font-size:15px;
 }
 
-.icon{
-width:55px;
-height:55px;
-min-width:55px;
-border-radius:13px;
-background:#eef4ff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
+/* ================= COMMON SECTION ================= */
+
+.site-section{
+    margin:25px 0;
+    background:#ffffff;
+    border-radius:20px;
+    padding:22px;
+    box-shadow:0 6px 22px rgba(0,0,0,.07);
 }
 
-.info{
-flex:1;
+.site-section h2{
+    font-size:23px;
+    margin-bottom:8px;
 }
 
-.info h3{
-margin:0 0 5px;
-font-size:18px;
+.site-section-description{
+    color:#657184;
+    margin-bottom:15px;
 }
 
-.info p{
-margin:0;
-color:#667085;
-font-size:14px;
-}
-
-.badge{
-display:inline-block;
-font-size:10px;
-background:#e8f7ee;
-color:#16803c;
-padding:3px 7px;
-border-radius:10px;
-margin-left:5px;
-}
-
-.open{
-background:#2563eb;
-color:white;
-text-decoration:none;
-padding:10px 16px;
-border-radius:8px;
-font-weight:bold;
-font-size:14px;
-white-space:nowrap;
-}
-
-.open:hover{
-background:#1d4ed8;
-}
-
-.more-box{
-background:linear-gradient(135deg,#eef4ff,#ffffff);
-border:1px solid #dbe7ff;
-border-radius:16px;
-padding:18px;
-margin-top:15px;
-text-align:center;
-}
-
-.more-box p{
-margin:5px 0 12px;
-color:#556070;
-}
-
-.more-button{
-display:inline-block;
-background:#2563eb;
-color:white;
-text-decoration:none;
-padding:11px 18px;
-border-radius:9px;
-font-weight:bold;
-}
-
-.state-box{
-background:white;
-border-radius:18px;
-padding:22px;
-box-shadow:0 4px 15px rgba(0,0,0,.07);
-margin-bottom:15px;
-}
-
-.state-box h3{
-margin:0 0 8px;
-font-size:20px;
-}
-
-.state-box p{
-margin:0 0 15px;
-color:#667085;
-}
-
-.state-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-.state-link{
-display:block;
-background:#f4f7fb;
-color:#172033;
-text-decoration:none;
-padding:12px;
-border-radius:10px;
-font-weight:bold;
-font-size:14px;
-}
-
-.state-link:hover{
-background:#e8f0ff;
-color:#2563eb;
-}
-
-.no-result{
-display:none;
-text-align:center;
-background:white;
-padding:30px;
-border-radius:15px;
-margin-top:20px;
-}
-
-.contact-box{
-background:linear-gradient(135deg,#111827,#2563eb);
-color:white;
-text-align:center;
-border-radius:20px;
-padding:30px 20px;
-margin-top:40px;
-}
-
-.contact-box h2{
-margin-top:0;
-}
-
-.contact-box p{
-color:#e5e7eb;
-}
-
-.contact-btn{
-display:inline-block;
-margin:6px;
-padding:11px 17px;
-border-radius:9px;
-background:white;
-color:#111827;
-text-decoration:none;
-font-weight:bold;
-}
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:30px 15px;
-margin-top:25px;
-}
-
-footer p{
-color:#cbd5e1;
-}
+/* ================= MOBILE ================= */
 
 @media(max-width:600px){
 
-.logo{
-font-size:29px;
-}
+    .logo{
+        font-size:25px;
+    }
 
-.intro h1{
-font-size:23px;
-}
+    .tagline{
+        font-size:13px;
+    }
 
-.category-title{
-font-size:20px;
-}
+    .search-box{
+        padding:8px;
+    }
 
-.category-head{
-align-items:center;
-}
+    .search-box input{
+        font-size:15px;
+        padding:12px;
+    }
 
-.card{
-padding:13px;
-gap:10px;
-}
+    .search-button{
+        min-width:52px;
+    }
 
-.icon{
-width:47px;
-min-width:47px;
-height:47px;
-font-size:23px;
-}
+    .category{
+        flex:0 0 84px;
+        width:84px;
+        height:84px;
+        font-size:11px;
+    }
 
-.info h3{
-font-size:16px;
-}
+    .welcome{
+        padding:20px 15px;
+    }
 
-.info p{
-font-size:12px;
-}
+    .welcome h1{
+        font-size:22px;
+    }
 
-.open{
-padding:8px 11px;
-font-size:12px;
-}
-
-.state-grid{
-grid-template-columns:1fr;
-}
+    .site-section{
+        padding:17px;
+    }
 
 }
 
@@ -406,2237 +332,1880 @@ grid-template-columns:1fr;
 
 <body>
 
-<header>
+<header class="header">
 
-<div class="logo">🌐 Smart Web India</div>
-
-<div class="tagline">
-Jobs • Government • Scholarship • Education • AI • Useful Websites
-</div>
-
-<input
-class="search"
-id="search"
-type="text"
-placeholder="Job, Bihar, Scholarship, Aadhaar, Railway, AI..."
-  <!-- RAJASTHAN -->
-<section class="category" id="rajasthan">
-<div class="category-head">
-<h2 class="category-title">🟤 Rajasthan Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Rajasthan Government <span class="badge">OFFICIAL</span></h3>
-<p>Rajasthan Government departments और online services</p>
-</div>
-<a class="open" href="https://rajasthan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>RPSC <span class="badge">OFFICIAL</span></h3>
-<p>Rajasthan Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://rpsc.rajasthan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MADHYA PRADESH -->
-<section class="category" id="madhya-pradesh">
-<div class="category-head">
-<h2 class="category-title">🟢 Madhya Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Madhya Pradesh Government <span class="badge">OFFICIAL</span></h3>
-<p>MP Government departments और online services</p>
-</div>
-<a class="open" href="https://mp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>MPPSC <span class="badge">OFFICIAL</span></h3>
-<p>Madhya Pradesh Public Service Commission</p>
-</div>
-<a class="open" href="https://mppsc.mp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- GUJARAT -->
-<section class="category" id="gujarat">
-<div class="category-head">
-<h2 class="category-title">🟠 Gujarat Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Gujarat Government <span class="badge">OFFICIAL</span></h3>
-<p>Gujarat Government departments और online services</p>
-</div>
-<a class="open" href="https://gujarat.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>GPSC <span class="badge">OFFICIAL</span></h3>
-<p>Gujarat Public Service Commission</p>
-</div>
-<a class="open" href="https://gpsc.gujarat.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ODISHA -->
-<section class="category" id="odisha">
-<div class="category-head">
-<h2 class="category-title">🟠 Odisha Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Odisha Government <span class="badge">OFFICIAL</span></h3>
-<p>Odisha Government departments और online services</p>
-</div>
-<a class="open" href="https://odisha.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>OPSC <span class="badge">OFFICIAL</span></h3>
-<p>Odisha Public Service Commission</p>
-</div>
-<a class="open" href="https://www.opsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ASSAM -->
-<section class="category" id="assam">
-<div class="category-head">
-<h2 class="category-title">🔵 Assam Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Assam Government <span class="badge">OFFICIAL</span></h3>
-<p>Assam Government departments और online services</p>
-</div>
-<a class="open" href="https://assam.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>APSC <span class="badge">OFFICIAL</span></h3>
-<p>Assam Public Service Commission</p>
-</div>
-<a class="open" href="https://apsc.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- PUNJAB -->
-<section class="category" id="punjab">
-<div class="category-head">
-<h2 class="category-title">🟡 Punjab Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Punjab Government <span class="badge">OFFICIAL</span></h3>
-<p>Punjab Government departments और online services</p>
-</div>
-<a class="open" href="https://punjab.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>PPSC <span class="badge">OFFICIAL</span></h3>
-<p>Punjab Public Service Commission</p>
-</div>
-<a class="open" href="https://ppsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- HARYANA -->
-<section class="category" id="haryana">
-<div class="category-head">
-<h2 class="category-title">🟢 Haryana Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Haryana Government <span class="badge">OFFICIAL</span></h3>
-<p>Haryana Government departments और online services</p>
-</div>
-<a class="open" href="https://www.haryana.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>HPSC <span class="badge">OFFICIAL</span></h3>
-<p>Haryana Public Service Commission</p>
-</div>
-<a class="open" href="https://hpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- HIMACHAL PRADESH -->
-<section class="category" id="himachal-pradesh">
-<div class="category-head">
-<h2 class="category-title">🏔️ Himachal Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Himachal Pradesh Government <span class="badge">OFFICIAL</span></h3>
-<p>Himachal Pradesh Government departments और online services</p>
-</div>
-<a class="open" href="https://himachal.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>HPPSC <span class="badge">OFFICIAL</span></h3>
-<p>Himachal Pradesh Public Service Commission</p>
-</div>
-<a class="open" href="https://hppsc.hp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- UTTARAKHAND -->
-<section class="category" id="uttarakhand">
-<div class="category-head">
-<h2 class="category-title">🏔️ Uttarakhand Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Uttarakhand Government <span class="badge">OFFICIAL</span></h3>
-<p>Uttarakhand Government departments और online services</p>
-</div>
-<a class="open" href="https://uk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>UKPSC <span class="badge">OFFICIAL</span></h3>
-<p>Uttarakhand Public Service Commission</p>
-</div>
-<a class="open" href="https://psc.uk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- GOA -->
-<section class="category" id="goa">
-<div class="category-head">
-<h2 class="category-title">🌴 Goa Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Goa Government <span class="badge">OFFICIAL</span></h3>
-<p>Goa Government departments और online services</p>
-</div>
-<a class="open" href="https://www.goa.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Goa PSC <span class="badge">OFFICIAL</span></h3>
-<p>Goa Public Service Commission</p>
-</div>
-<a class="open" href="https://gpsc.goa.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MAHARASHTRA -->
-<section class="category" id="maharashtra">
-<div class="category-head">
-<h2 class="category-title">🟣 Maharashtra Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Maharashtra Government <span class="badge">OFFICIAL</span></h3>
-<p>Maharashtra Government departments और online services</p>
-</div>
-<a class="open" href="https://www.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>MPSC <span class="badge">OFFICIAL</span></h3>
-<p>Maharashtra Public Service Commission</p>
-</div>
-<a class="open" href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- TELANGANA -->
-<section class="category" id="telangana">
-<div class="category-head">
-<h2 class="category-title">🔷 Telangana Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Telangana Government <span class="badge">OFFICIAL</span></h3>
-<p>Telangana Government departments और online services</p>
-</div>
-<a class="open" href="https://www.telangana.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>TSPSC <span class="badge">OFFICIAL</span></h3>
-<p>Telangana Public Service Commission</p>
-</div>
-<a class="open" href="https://www.tspsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ANDHRA PRADESH -->
-<section class="category" id="andhra-pradesh">
-<div class="category-head">
-<h2 class="category-title">🟠 Andhra Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Andhra Pradesh Government <span class="badge">OFFICIAL</span></h3>
-<p>Andhra Pradesh Government departments और online services</p>
-</div>
-<a class="open" href="https://www.ap.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>APPSC <span class="badge">OFFICIAL</span></h3>
-<p>Andhra Pradesh Public Service Commission</p>
-</div>
-<a class="open" href="https://psc.ap.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- KARNATAKA -->
-<section class="category" id="karnataka">
-<div class="category-head">
-<h2 class="category-title">🔵 Karnataka Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Karnataka Government <span class="badge">OFFICIAL</span></h3>
-<p>Karnataka Government departments और online services</p>
-</div>
-<a class="open" href="https://www.karnataka.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>KPSC <span class="badge">OFFICIAL</span></h3>
-<p>Karnataka Public Service Commission</p>
-</div>
-<a class="open" href="https://kpsc.kar.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- KERALA -->
-<section class="category" id="kerala">
-<div class="category-head">
-<h2 class="category-title">🟢 Kerala Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Kerala Government <span class="badge">OFFICIAL</span></h3>
-<p>Kerala Government departments और online services</p>
-</div>
-<a class="open" href="https://kerala.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Kerala PSC <span class="badge">OFFICIAL</span></h3>
-<p>Kerala Public Service Commission</p>
-</div>
-<a class="open" href="https://www.keralapsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- TAMIL NADU -->
-<section class="category" id="tamil-nadu">
-<div class="category-head">
-<h2 class="category-title">🟠 Tamil Nadu Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Tamil Nadu Government <span class="badge">OFFICIAL</span></h3>
-<p>Tamil Nadu Government departments और online services</p>
-</div>
-<a class="open" href="https://www.tn.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>TNPSC <span class="badge">OFFICIAL</span></h3>
-<p>Tamil Nadu Public Service Commission</p>
-</div>
-<a class="open" href="https://www.tnpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-<!-- RAJASTHAN -->
-<section class="category" id="rajasthan">
-<div class="category-head">
-<h2 class="category-title">🟤 Rajasthan Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Rajasthan Government <span class="badge">OFFICIAL</span></h3>
-<p>Rajasthan Government departments और online services</p>
-</div>
-<a class="open" href="https://www.rajasthan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>RPSC <span class="badge">OFFICIAL</span></h3>
-<p>Rajasthan Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://rpsc.rajasthan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MADHYA PRADESH -->
-<section class="category" id="madhya-pradesh">
-<div class="category-head">
-<h2 class="category-title">🟢 Madhya Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>MP Government <span class="badge">OFFICIAL</span></h3>
-<p>Madhya Pradesh Government departments और online services</p>
-</div>
-<a class="open" href="https://www.mp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>MPESB <span class="badge">OFFICIAL</span></h3>
-<p>Government examinations और recruitment</p>
-</div>
-<a class="open" href="https://esb.mp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- GUJARAT -->
-<section class="category" id="gujarat">
-<div class="category-head">
-<h2 class="category-title">🟠 Gujarat Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Gujarat Government <span class="badge">OFFICIAL</span></h3>
-<p>Gujarat Government departments और online services</p>
-</div>
-<a class="open" href="https://gujaratindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>GPSC <span class="badge">OFFICIAL</span></h3>
-<p>Gujarat Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://gpsc.gujarat.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ODISHA -->
-<section class="category" id="odisha">
-<div class="category-head">
-<h2 class="category-title">🟠 Odisha Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Odisha Government <span class="badge">OFFICIAL</span></h3>
-<p>Odisha Government departments और online services</p>
-</div>
-<a class="open" href="https://odisha.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>OPSC <span class="badge">OFFICIAL</span></h3>
-<p>Odisha Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://www.opsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ASSAM -->
-<section class="category" id="assam">
-<div class="category-head">
-<h2 class="category-title">🔵 Assam Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Assam Government <span class="badge">OFFICIAL</span></h3>
-<p>Assam Government departments और online services</p>
-</div>
-<a class="open" href="https://assam.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>APSC <span class="badge">OFFICIAL</span></h3>
-<p>Assam Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://apscrecruitment.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- PUNJAB -->
-<section class="category" id="punjab">
-<div class="category-head">
-<h2 class="category-title">🟡 Punjab Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Punjab Government <span class="badge">OFFICIAL</span></h3>
-<p>Punjab Government departments और online services</p>
-</div>
-<a class="open" href="https://punjab.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>PPSC <span class="badge">OFFICIAL</span></h3>
-<p>Punjab Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://ppsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- HARYANA -->
-<section class="category" id="haryana">
-<div class="category-head">
-<h2 class="category-title">🟢 Haryana Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Haryana Government <span class="badge">OFFICIAL</span></h3>
-<p>Haryana Government departments और online services</p>
-</div>
-<a class="open" href="https://www.haryana.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>HPSC <span class="badge">OFFICIAL</span></h3>
-<p>Haryana Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://hpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- HIMACHAL PRADESH -->
-<section class="category" id="himachal-pradesh">
-<div class="category-head">
-<h2 class="category-title">🏔️ Himachal Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Himachal Pradesh Government <span class="badge">OFFICIAL</span></h3>
-<p>Himachal Pradesh Government departments और online services</p>
-</div>
-<a class="open" href="https://himachal.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>HPPSC <span class="badge">OFFICIAL</span></h3>
-<p>Himachal Pradesh Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://hppsc.hp.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- UTTARAKHAND -->
-<section class="category" id="uttarakhand">
-<div class="category-head">
-<h2 class="category-title">🏔️ Uttarakhand Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Uttarakhand Government <span class="badge">OFFICIAL</span></h3>
-<p>Uttarakhand Government departments और online services</p>
-</div>
-<a class="open" href="https://uk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>UKPSC <span class="badge">OFFICIAL</span></h3>
-<p>Uttarakhand Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://psc.uk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- GOA -->
-<section class="category" id="goa">
-<div class="category-head">
-<h2 class="category-title">🌴 Goa Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Goa Government <span class="badge">OFFICIAL</span></h3>
-<p>Goa Government departments और online services</p>
-</div>
-<a class="open" href="https://www.goa.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Goa PSC <span class="badge">OFFICIAL</span></h3>
-<p>Government recruitment और examinations</p>
-</div>
-<a class="open" href="https://gpsc.goa.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MAHARASHTRA -->
-<section class="category" id="maharashtra">
-<div class="category-head">
-<h2 class="category-title">🟣 Maharashtra Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Maharashtra Government <span class="badge">OFFICIAL</span></h3>
-<p>Maharashtra Government departments और online services</p>
-</div>
-<a class="open" href="https://www.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>MPSC <span class="badge">OFFICIAL</span></h3>
-<p>Maharashtra Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- TELANGANA -->
-<section class="category" id="telangana">
-<div class="category-head">
-<h2 class="category-title">🔷 Telangana Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Telangana Government <span class="badge">OFFICIAL</span></h3>
-<p>Telangana Government departments और online services</p>
-</div>
-<a class="open" href="https://www.telangana.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>TSPSC <span class="badge">OFFICIAL</span></h3>
-<p>Telangana Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://websitenew.tspsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ANDHRA PRADESH -->
-<section class="category" id="andhra-pradesh">
-<div class="category-head">
-<h2 class="category-title">🟠 Andhra Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Andhra Pradesh Government <span class="badge">OFFICIAL</span></h3>
-<p>Andhra Pradesh Government departments और online services</p>
-</div>
-<a class="open" href="https://www.ap.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>APPSC <span class="badge">OFFICIAL</span></h3>
-<p>Andhra Pradesh Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://psc.ap.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- KARNATAKA -->
-<section class="category" id="karnataka">
-<div class="category-head">
-<h2 class="category-title">🔵 Karnataka Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Karnataka Government <span class="badge">OFFICIAL</span></h3>
-<p>Karnataka Government departments और online services</p>
-</div>
-<a class="open" href="https://www.karnataka.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>KPSC <span class="badge">OFFICIAL</span></h3>
-<p>Karnataka Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://kpsc.kar.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- KERALA -->
-<section class="category" id="kerala">
-<div class="category-head">
-<h2 class="category-title">🟢 Kerala Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Kerala Government <span class="badge">OFFICIAL</span></h3>
-<p>Kerala Government departments और online services</p>
-</div>
-<a class="open" href="https://kerala.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Kerala PSC <span class="badge">OFFICIAL</span></h3>
-<p>Kerala Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://www.keralapsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- TAMIL NADU -->
-<section class="category" id="tamil-nadu">
-<div class="category-head">
-<h2 class="category-title">🟠 Tamil Nadu Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Tamil Nadu Government <span class="badge">OFFICIAL</span></h3>
-<p>Tamil Nadu Government departments और online services</p>
-</div>
-<a class="open" href="https://www.tn.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>TNPSC <span class="badge">OFFICIAL</span></h3>
-<p>Tamil Nadu Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://www.tnpsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- CHHATTISGARH -->
-<section class="category" id="chhattisgarh">
-<div class="category-head">
-<h2 class="category-title">🟢 Chhattisgarh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Chhattisgarh Government <span class="badge">OFFICIAL</span></h3>
-<p>Chhattisgarh Government departments और online services</p>
-</div>
-<a class="open" href="https://cgstate.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>CGPSC <span class="badge">OFFICIAL</span></h3>
-<p>Chhattisgarh Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://psc.cg.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- SIKKIM -->
-<section class="category" id="sikkim">
-<div class="category-head">
-<h2 class="category-title">🏔️ Sikkim Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Sikkim Government <span class="badge">OFFICIAL</span></h3>
-<p>Sikkim Government departments और online services</p>
-</div>
-<a class="open" href="https://sikkim.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>SPSC <span class="badge">OFFICIAL</span></h3>
-<p>Sikkim Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://spsc.sikkim.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-<!-- SIKKIM CONTINUE -->
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>SPSC <span class="badge">OFFICIAL</span></h3>
-<p>SPSC और recruitment</p>
-</div>
-<a class="open" href="https://spsc.sikkim.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ARUNACHAL PRADESH -->
-<section class="category" id="arunachal-pradesh">
-<div class="category-head">
-<h2 class="category-title">🏔️ Arunachal Pradesh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Arunachal Pradesh Government <span class="badge">OFFICIAL</span></h3>
-<p>Arunachal Pradesh Government departments और online services</p>
-</div>
-<a class="open" href="https://arunachalpradesh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>APPSC <span class="badge">OFFICIAL</span></h3>
-<p>Arunachal Pradesh Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://appsc.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- NAGALAND -->
-<section class="category" id="nagaland">
-<div class="category-head">
-<h2 class="category-title">🟢 Nagaland Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Nagaland Government <span class="badge">OFFICIAL</span></h3>
-<p>Nagaland Government departments और online services</p>
-</div>
-<a class="open" href="https://www.nagaland.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>NPSC <span class="badge">OFFICIAL</span></h3>
-<p>Nagaland Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://npsc.nagaland.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MANIPUR -->
-<section class="category" id="manipur">
-<div class="category-head">
-<h2 class="category-title">🟣 Manipur Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Manipur Government <span class="badge">OFFICIAL</span></h3>
-<p>Manipur Government departments और online services</p>
-</div>
-<a class="open" href="https://manipur.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>MPSC <span class="badge">OFFICIAL</span></h3>
-<p>Manipur Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://mpscmanipur.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MIZORAM -->
-<section class="category" id="mizoram">
-<div class="category-head">
-<h2 class="category-title">🟢 Mizoram Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Mizoram Government <span class="badge">OFFICIAL</span></h3>
-<p>Mizoram Government departments और online services</p>
-</div>
-<a class="open" href="https://mizoram.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Mizoram PSC <span class="badge">OFFICIAL</span></h3>
-<p>Mizoram Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://mpsc.mizoram.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- TRIPURA -->
-<section class="category" id="tripura">
-<div class="category-head">
-<h2 class="category-title">🟠 Tripura Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Tripura Government <span class="badge">OFFICIAL</span></h3>
-<p>Tripura Government departments और online services</p>
-</div>
-<a class="open" href="https://tripura.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>TPSC <span class="badge">OFFICIAL</span></h3>
-<p>Tripura Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://tpsc.tripura.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- MEGHALAYA -->
-<section class="category" id="meghalaya">
-<div class="category-head">
-<h2 class="category-title">🟢 Meghalaya Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Meghalaya Government <span class="badge">OFFICIAL</span></h3>
-<p>Meghalaya Government departments और online services</p>
-</div>
-<a class="open" href="https://meghalaya.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Meghalaya PSC <span class="badge">OFFICIAL</span></h3>
-<p>Meghalaya Public Service Commission और recruitment</p>
-</div>
-<a class="open" href="https://mpsc.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- DELHI -->
-<section class="category" id="delhi">
-<div class="category-head">
-<h2 class="category-title">🔷 Delhi Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Delhi Government <span class="badge">OFFICIAL</span></h3>
-<p>Delhi Government departments और online services</p>
-</div>
-<a class="open" href="https://delhi.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>DSSSB <span class="badge">OFFICIAL</span></h3>
-<p>Delhi government jobs और recruitment</p>
-</div>
-<a class="open" href="https://dsssb.delhi.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- JAMMU & KASHMIR -->
-<section class="category" id="jammu-kashmir">
-<div class="category-head">
-<h2 class="category-title">🏔️ Jammu & Kashmir Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>J&K Government <span class="badge">OFFICIAL</span></h3>
-<p>Jammu & Kashmir Government departments और online services</p>
-</div>
-<a class="open" href="https://jk.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>JKSSB <span class="badge">OFFICIAL</span></h3>
-<p>Jammu & Kashmir government recruitment</p>
-</div>
-<a class="open" href="https://jkssb.nic.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- LADAKH -->
-<section class="category" id="ladakh">
-<div class="category-head">
-<h2 class="category-title">🏔️ Ladakh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Ladakh Administration <span class="badge">OFFICIAL</span></h3>
-<p>Ladakh Government departments और online services</p>
-</div>
-<a class="open" href="https://ladakh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Jobs & Recruitment <span class="badge">OFFICIAL</span></h3>
-<p>Government services, jobs और schemes</p>
-</div>
-<a class="open" href="https://ladakh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- CHANDIGARH -->
-<section class="category" id="chandigarh">
-<div class="category-head">
-<h2 class="category-title">🔵 Chandigarh Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Chandigarh Administration <span class="badge">OFFICIAL</span></h3>
-<p>Chandigarh Government departments और online services</p>
-</div>
-<a class="open" href="https://chandigarh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Jobs & Recruitment <span class="badge">OFFICIAL</span></h3>
-<p>Government services और certificates</p>
-</div>
-<a class="open" href="https://chandigarh.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- PUDUCHERRY -->
-<section class="category" id="puducherry">
-<div class="category-head">
-<h2 class="category-title">🟠 Puducherry Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Puducherry Government <span class="badge">OFFICIAL</span></h3>
-<p>Puducherry Government departments और online services</p>
-</div>
-<a class="open" href="https://py.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Jobs & Recruitment <span class="badge">OFFICIAL</span></h3>
-<p>Government services और schemes</p>
-</div>
-<a class="open" href="https://py.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- ANDAMAN & NICOBAR -->
-<section class="category" id="andaman-nicobar">
-<div class="category-head">
-<h2 class="category-title">🌴 Andaman & Nicobar Islands Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Andaman & Nicobar Administration <span class="badge">OFFICIAL</span></h3>
-<p>Government departments और online services</p>
-</div>
-<a class="open" href="https://andaman.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Jobs & Recruitment <span class="badge">OFFICIAL</span></h3>
-<p>Government services और recruitment</p>
-</div>
-<a class="open" href="https://andaman.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- LAKSHADWEEP -->
-<section class="category" id="lakshadweep">
-<div class="category-head">
-<h2 class="category-title">🌊 Lakshadweep Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Lakshadweep Administration <span class="badge">OFFICIAL</span></h3>
-<p>Lakshadweep Government departments और online services</p>
-</div>
-<a class="open" href="https://lakshadweep.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Jobs & Recruitment <span class="badge">OFFICIAL</span></h3>
-<p>Government services और schemes</p>
-</div>
-<a class="open" href="https://lakshadweep.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- DADRA & NAGAR HAVELI AND DAMAN & DIU -->
-<section class="category" id="dadra-nagar-haveli-daman-diu">
-<div class="category-head">
-<h2 class="category-title">🏝️ Dadra & Nagar Haveli and Daman & Diu Government Services</h2>
-<a class="more" href="#all-states">← ALL STATES</a>
-</div>
-
-<div class="card">
-<div class="icon">🏛️</div>
-<div class="info">
-<h3>Dadra & Nagar Haveli and Daman & Diu Administration <span class="badge">OFFICIAL</span></h3>
-<p>Government departments और online services</p>
-</div>
-<a class="open" href="https://ddd.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<div class="info">
-<h3>Jobs & Recruitment <span class="badge">OFFICIAL</span></h3>
-<p>Government services और schemes</p>
-</div>
-<a class="open" href="https://ddd.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-</section>
-
-
-<!-- STUDY -->
-<section class="category" id="study">
-
-<div class="category-head">
-<h2>📚 Study & Education</h2>
-<a class="more" href="#more-study">MORE →</a>
-</div>
-
-<div class="card">
-<div class="icon">🎓</div>
-<div class="info">
-<h3>CBSE</h3>
-<p>Board • Results • Circulars • Academic Information</p>
-</div>
-<a class="open" href="https://www.cbse.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">📝</div>
-<div class="info">
-<h3>NTA</h3>
-<p>Entrance Exams • Results • Admit Cards • Applications</p>
-</div>
-<a class="open" href="https://www.nta.ac.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">📖</div>
-<div class="info">
-<h3>SWAYAM</h3>
-<p>Free Online Courses • Learning • Certificates</p>
-</div>
-<a class="open" href="https://swayam.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">🔎</div>
-<div class="info">
-<h3>Google</h3>
-<p>Search • Information • Education • Tools</p>
-</div>
-<a class="open" href="https://www.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-<div class="card">
-<div class="icon">▶️</div>
-<div class="info">
-<h3>YouTube</h3>
-<p>Educational Videos • Tutorials • Learning</p>
-</div>
-<a class="open" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-
-</section>
-
-
-<!-- SOCIAL MEDIA -->
-<section class="category" id="social">
-
-<div class="category-head">
-<h2>📱 Social Media</h2>
-<a class="more" href="#more-social">MORE →</a>
-</div>
-
-<div class="card">
-<div class="icon">📸</div>
-<div class="info">
-<h3>Instagram</h3>
-<p>Photos • Reels • Messages • Social Media</p>
-</div>
-<a class="open" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-</div>
-<!-- ================= PART 5 START ================= -->
-
-<!-- MORE STUDY -->
-<section class="more-box" id="more-study">
-
-  <h2>📚 More Study & Education</h2>
-
-  <div class="card">
-    <div class="icon">📘</div>
-    <div class="info">
-      <h3>National Digital Library</h3>
-      <p>Books • Study Material • Digital Learning</p>
+    <div class="logo">
+        🇮🇳 Smart Web India
     </div>
-    <a class="open" href="https://ndl.iitkgp.ac.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+
+    <div class="tagline">
+        India की जरूरी Websites और Services एक जगह
+    </div>
+
+</header>
+
+<div class="main-wrap">
+
+    <!-- SEARCH -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="यहाँ कोई भी website या service खोजें..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                class="search-button"
+                id="searchButton">
+                🔍
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH RESULT -->
+
+    <div class="search-result" id="searchResult">
+
+        <h2 id="searchResultTitle">
+            Search Result
+        </h2>
+
+        <p id="searchResultText">
+            यहाँ search result दिखाई देगा।
+        </p>
+
+    </div>
+
+    <!-- CATEGORY HEADING -->
+
+    <section class="section-heading">
+
+        <h2>
+            🔥 मुख्य Categories
+        </h2>
+
+        <p>
+            नीचे के गोल buttons को left-right swipe करें
+        </p>
+
+    </section>
+
+    <!-- ROUND BUTTONS -->
+
+    <nav class="category-scroll" aria-label="Main Categories">
+
+        <a href="#government"
+           class="category cat-government">
+            🏛️<br>Government
+        </a>
+
+        <a href="#jobs"
+           class="category cat-jobs">
+            💼<br>Jobs
+        </a>
+
+        <a href="#scholarship"
+           class="category cat-scholarship">
+            🎓<br>Scholarship
+        </a>
+
+        <a href="#study"
+           class="category cat-study">
+            📚<br>Study
+        </a>
+
+        <a href="#ai"
+           class="category cat-ai">
+            🤖<br>AI Tools
+        </a>
+
+        <a href="#banking"
+           class="category cat-banking">
+            🏦<br>Banking
+        </a>
+
+        <a href="#railway"
+           class="category cat-railway">
+            🚆<br>Railway
+        </a>
+
+        <a href="#shopping"
+           class="category cat-shopping">
+            🛒<br>Shopping
+        </a>
+
+        <a href="#cyber"
+           class="category cat-cyber">
+            🔐<br>Cyber Security
+        </a>
+
+        <a href="#skills"
+           class="category cat-skills">
+            🛠️<br>Skills
+        </a>
+
+        <a href="#photo-editing"
+           class="category cat-photo">
+            🖼️<br>Photo Editing
+        </a>
+
+        <a href="#video-editing"
+           class="category cat-video">
+            🎬<br>Video Editing
+        </a>
+
+        <a href="#audio"
+           class="category cat-audio">
+            🎵<br>Audio / Music
+        </a>
+
+        <a href="#computer"
+           class="category cat-computer">
+            💻<br>Computer
+        </a>
+
+        <a href="#mobile"
+           class="category cat-mobile">
+            📱<br>Mobile / Telecom
+        </a>
+
+        <a href="#documents"
+           class="category cat-documents">
+            📄<br>Documents
+        </a>
+
+        <a href="#health"
+           class="category cat-health">
+            ❤️<br>Health
+        </a>
+
+        <a href="#travel"
+           class="category cat-travel">
+            ✈️<br>Travel
+        </a>
+
+        <a href="#news"
+           class="category cat-news">
+            📰<br>News
+        </a>
+
+    </nav>
+
+    <!-- WELCOME -->
+
+    <section class="welcome">
+
+        <h1>
+            Welcome to Smart Web India 🇮🇳
+        </h1>
+
+        <p>
+            Government Services, Sarkari Jobs, Scholarship,
+            Study, AI Tools, Banking, Railway, Editing,
+            Cyber Security, Skills और भारत के सभी States
+            की जरूरी Websites यहाँ एक जगह मिलेंगी।
+        </p>
+
+    </section>
+
+    <!-- ==================== PART 2 START ==================== -->
+
+<section class="section" id="government">
+  <h2>🏛️ Government Services</h2>
+  <p class="section-subtitle">भारत सरकार की महत्वपूर्ण आधिकारिक वेबसाइटें</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🇮🇳 India Government Portal</h3>
+      <p>भारत सरकार की मुख्य सेवाएं और जानकारी</p>
+      <a href="https://www.india.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🧾 Government Services</h3>
+      <p>केंद्र और राज्य सरकार की ऑनलाइन सेवाएं</p>
+      <a href="https://services.india.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📱 UMANG</h3>
+      <p>एक जगह पर अनेक सरकारी सेवाएं</p>
+      <a href="https://web.umang.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📂 DigiLocker</h3>
+      <p>डिजिटल दस्तावेज और प्रमाणपत्र</p>
+      <a href="https://www.digilocker.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🔎 Government Web Directory</h3>
+      <p>भारत की सरकारी वेबसाइटों की डायरेक्टरी</p>
+      <a href="https://www.india.gov.in/directory/web-directory" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📜 Government Schemes</h3>
+      <p>केंद्र सरकार की योजनाओं की जानकारी</p>
+      <a href="https://www.india.gov.in/my-government/schemes" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="jobs">
+  <h2>💼 Government Jobs</h2>
+  <p class="section-subtitle">सरकारी नौकरी और भर्ती की महत्वपूर्ण वेबसाइटें</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🏛️ UPSC</h3>
+      <p>संघ लोक सेवा आयोग</p>
+      <a href="https://upsc.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📝 SSC</h3>
+      <p>कर्मचारी चयन आयोग</p>
+      <a href="https://ssc.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🚆 Railway Recruitment</h3>
+      <p>रेलवे भर्ती की आधिकारिक जानकारी</p>
+      <a href="https://www.rrbapply.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🏦 IBPS</h3>
+      <p>बैंकिंग भर्ती परीक्षा</p>
+      <a href="https://www.ibps.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🏦 SBI Careers</h3>
+      <p>State Bank of India की भर्ती</p>
+      <a href="https://sbi.co.in/web/careers" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🇮🇳 Employment News</h3>
+      <p>सरकारी नौकरी और रोजगार समाचार</p>
+      <a href="https://www.employmentnews.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="scholarship">
+  <h2>🎓 Scholarship</h2>
+  <p class="section-subtitle">छात्रवृत्ति और विद्यार्थी योजनाएं</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🎓 National Scholarship Portal</h3>
+      <p>केंद्र सरकार का छात्रवृत्ति पोर्टल</p>
+      <a href="https://scholarships.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📚 National Education Portal</h3>
+      <p>शिक्षा से जुड़ी सरकारी जानकारी</p>
+      <a href="https://www.education.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🧑‍🎓 UGC</h3>
+      <p>विश्वविद्यालय अनुदान आयोग</p>
+      <a href="https://www.ugc.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🏫 AICTE</h3>
+      <p>तकनीकी शिक्षा की आधिकारिक जानकारी</p>
+      <a href="https://www.aicte-india.org/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="study">
+  <h2>📚 Study & Education</h2>
+  <p class="section-subtitle">पढ़ाई, परीक्षा और शिक्षा के उपयोगी पोर्टल</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>📖 DIKSHA</h3>
+      <p>डिजिटल शिक्षा और learning resources</p>
+      <a href="https://diksha.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📝 NTA</h3>
+      <p>राष्ट्रीय परीक्षा एजेंसी</p>
+      <a href="https://exams.nta.ac.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📕 NCERT</h3>
+      <p>स्कूल शिक्षा और पाठ्य सामग्री</p>
+      <a href="https://ncert.nic.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🎓 SWAYAM</h3>
+      <p>ऑनलाइन courses और learning</p>
+      <a href="https://swayam.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🏫 e-Pathshala</h3>
+      <p>NCERT की डिजिटल किताबें और सामग्री</p>
+      <a href="https://epathshala.nic.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🔬 NPTEL</h3>
+      <p>ऑनलाइन technical education</p>
+      <a href="https://nptel.ac.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== PART 3 START ==================== -->
+
+<section class="section" id="ai">
+  <h2>🤖 AI Tools</h2>
+  <p class="section-subtitle">AI से जुड़े उपयोगी और original websites</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🤖 ChatGPT</h3>
+      <p>AI assistant, writing, learning और questions</p>
+      <a href="https://chatgpt.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🎨 Canva</h3>
+      <p>AI design, presentation और creative tools</p>
+      <a href="https://www.canva.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>✨ Google Gemini</h3>
+      <p>Google का AI assistant</p>
+      <a href="https://gemini.google.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🧠 Microsoft Copilot</h3>
+      <p>AI assistant और productivity tools</p>
+      <a href="https://copilot.microsoft.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🎬 Adobe Firefly</h3>
+      <p>AI image और creative generation</p>
+      <a href="https://firefly.adobe.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🗣️ ElevenLabs</h3>
+      <p>AI voice और audio tools</p>
+      <a href="https://elevenlabs.io/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="photo-editing">
+  <h2>📸 Photo Editing</h2>
+  <p class="section-subtitle">Photo editing के लिए original websites</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🎨 Canva Photo Editor</h3>
+      <p>Online photo editing और design</p>
+      <a href="https://www.canva.com/photo-editor/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🖼️ Adobe Express</h3>
+      <p>Photo editing और graphic design</p>
+      <a href="https://www.adobe.com/express/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>✂️ Pixlr</h3>
+      <p>Online photo editor</p>
+      <a href="https://pixlr.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🪄 Photopea</h3>
+      <p>Browser में advanced photo editing</p>
+      <a href="https://www.photopea.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="video-editing">
+  <h2>🎬 Video Editing</h2>
+  <p class="section-subtitle">Video editing के लिए useful original websites</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🎬 Adobe Express</h3>
+      <p>Online video editing और creation</p>
+      <a href="https://www.adobe.com/express/create/video" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🎨 Canva Video Editor</h3>
+      <p>Video editing और social media videos</p>
+      <a href="https://www.canva.com/video-editor/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>✂️ Clipchamp</h3>
+      <p>Online video editor</p>
+      <a href="https://clipchamp.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🎥 VEED</h3>
+      <p>Online video editing और subtitles</p>
+      <a href="https://www.veed.io/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="banking">
+  <h2>🏦 Banking</h2>
+  <p class="section-subtitle">Banking और financial services</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🏦 SBI</h3>
+      <p>State Bank of India</p>
+      <a href="https://sbi.co.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🏦 RBI</h3>
+      <p>Reserve Bank of India</p>
+      <a href="https://www.rbi.org.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>💳 NPCI</h3>
+      <p>UPI और digital payment infrastructure</p>
+      <a href="https://www.npci.org.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>💰 Income Tax</h3>
+      <p>Income Tax Department portal</p>
+      <a href="https://www.incometax.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="railway">
+  <h2>🚆 Railway</h2>
+  <p class="section-subtitle">Indian Railway की महत्वपूर्ण websites</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🚆 Indian Railways</h3>
+      <p>भारतीय रेलवे की official website</p>
+      <a href="https://indianrailways.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🎫 IRCTC</h3>
+      <p>Train ticket booking और railway services</p>
+      <a href="https://www.irctc.co.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📝 Railway Recruitment</h3>
+      <p>Railway भर्ती आवेदन portal</p>
+      <a href="https://www.rrbapply.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="shopping">
+  <h2>🛒 Shopping</h2>
+  <p class="section-subtitle">Online shopping के लिए popular platforms</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🛍️ Amazon</h3>
+      <p>Online shopping</p>
+      <a href="https://www.amazon.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🛒 Flipkart</h3>
+      <p>Online shopping</p>
+      <a href="https://www.flipkart.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>👕 Myntra</h3>
+      <p>Fashion और lifestyle shopping</p>
+      <a href="https://www.myntra.com/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="cyber-security">
+  <h2>🔐 Cyber Security</h2>
+  <p class="section-subtitle">Online सुरक्षा और cyber awareness</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🛡️ Cyber Crime Portal</h3>
+      <p>Cyber crime report करने का सरकारी portal</p>
+      <a href="https://cybercrime.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🚨 CERT-In</h3>
+      <p>Indian Computer Emergency Response Team</p>
+      <a href="https://www.cert-in.org.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>🔒 Cyber Swachhta Kendra</h3>
+      <p>Cyber security और botnet cleaning awareness</p>
+      <a href="https://www.csk.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="skills">
+  <h2>🛠️ Skills & Courses</h2>
+  <p class="section-subtitle">Skill development और online learning</p>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <h3>🧑‍💻 Skill India</h3>
+      <p>Skill development और training</p>
+      <a href="https://www.skillindiadigital.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>📚 SWAYAM</h3>
+      <p>Government-supported online courses</p>
+      <a href="https://swayam.gov.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="link-card">
+      <h3>💻 NPTEL</h3>
+      <p>Online technical courses</p>
+      <a href="https://nptel.ac.in/" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== PART 4 START ==================== -->
+
+<section class="section" id="states">
+  <h2>🇮🇳 States & Union Territories</h2>
+  <p class="section-subtitle">राज्य या केंद्र शासित प्रदेश चुनें</p>
+
+  <div class="state-grid">
+
+    <!-- 28 STATES -->
+
+    <button class="state-btn" onclick="showState('andhra')">🌾 Andhra Pradesh</button>
+    <button class="state-btn" onclick="showState('arunachal')">🏔️ Arunachal Pradesh</button>
+    <button class="state-btn" onclick="showState('assam')">🌿 Assam</button>
+    <button class="state-btn" onclick="showState('bihar')">🏛️ Bihar</button>
+    <button class="state-btn" onclick="showState('chhattisgarh')">🌳 Chhattisgarh</button>
+    <button class="state-btn" onclick="showState('goa')">🏖️ Goa</button>
+    <button class="state-btn" onclick="showState('gujarat')">🦁 Gujarat</button>
+    <button class="state-btn" onclick="showState('haryana')">🌾 Haryana</button>
+    <button class="state-btn" onclick="showState('himachal')">🏔️ Himachal Pradesh</button>
+    <button class="state-btn" onclick="showState('jharkhand')">🌲 Jharkhand</button>
+    <button class="state-btn" onclick="showState('karnataka')">🌴 Karnataka</button>
+    <button class="state-btn" onclick="showState('kerala')">🌴 Kerala</button>
+    <button class="state-btn" onclick="showState('madhya')">🐅 Madhya Pradesh</button>
+    <button class="state-btn" onclick="showState('maharashtra')">🏙️ Maharashtra</button>
+    <button class="state-btn" onclick="showState('manipur')">🌺 Manipur</button>
+    <button class="state-btn" onclick="showState('meghalaya')">🌧️ Meghalaya</button>
+    <button class="state-btn" onclick="showState('mizoram')">🌿 Mizoram</button>
+    <button class="state-btn" onclick="showState('nagaland')">🌄 Nagaland</button>
+    <button class="state-btn" onclick="showState('odisha')">🏛️ Odisha</button>
+    <button class="state-btn" onclick="showState('punjab')">🌾 Punjab</button>
+    <button class="state-btn" onclick="showState('rajasthan')">🏜️ Rajasthan</button>
+    <button class="state-btn" onclick="showState('sikkim')">🏔️ Sikkim</button>
+    <button class="state-btn" onclick="showState('tamilnadu')">🛕 Tamil Nadu</button>
+    <button class="state-btn" onclick="showState('telangana')">🏙️ Telangana</button>
+    <button class="state-btn" onclick="showState('tripura')">🌿 Tripura</button>
+    <button class="state-btn" onclick="showState('uttarpradesh')">🏛️ Uttar Pradesh</button>
+    <button class="state-btn" onclick="showState('uttarakhand')">🏔️ Uttarakhand</button>
+    <button class="state-btn" onclick="showState('westbengal')">🌉 West Bengal</button>
+
+    <!-- 8 UNION TERRITORIES -->
+
+    <button class="state-btn" onclick="showState('andaman')">🏝️ Andaman & Nicobar Islands</button>
+    <button class="state-btn" onclick="showState('chandigarh')">🏙️ Chandigarh</button>
+    <button class="state-btn" onclick="showState('dadra')">🌴 Dadra & Nagar Haveli and Daman & Diu</button>
+    <button class="state-btn" onclick="showState('delhi')">🏛️ Delhi</button>
+    <button class="state-btn" onclick="showState('jammu')">🏔️ Jammu & Kashmir</button>
+    <button class="state-btn" onclick="showState('ladakh')">🏔️ Ladakh</button>
+    <button class="state-btn" onclick="showState('lakshadweep')">🏝️ Lakshadweep</button>
+    <button class="state-btn" onclick="showState('puducherry')">🌴 Puducherry</button>
+
+  </div>
+</section>
+
+
+<!-- STATE RESULT AREA -->
+
+<section class="state-result" id="state-result">
+
+  <div class="state-result-header">
+    <h2 id="state-title">🇮🇳 State / UT</h2>
+    <p>नीचे अपने राज्य की जरूरी सेवाएं चुनें</p>
   </div>
 
-  <div class="card">
-    <div class="icon">🎓</div>
-    <div class="info">
-      <h3>National Academic Depository</h3>
-      <p>Academic Certificates • Digital Records</p>
-    </div>
-    <a class="open" href="https://nad.digilocker.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
+  <div class="state-links">
 
-  <div class="card">
-    <div class="icon">📖</div>
-    <div class="info">
-      <h3>DIKSHA</h3>
-      <p>School Education • Courses • Learning Material</p>
+    <div class="state-link-card">
+      <span>🏛️</span>
+      <div>
+        <h3>Government</h3>
+        <p>राज्य सरकार की आधिकारिक वेबसाइट</p>
+      </div>
+      <a id="state-gov" href="#" target="_blank" class="open-btn">OPEN</a>
     </div>
-    <a class="open" href="https://diksha.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
 
-  <div class="card">
-    <div class="icon">🏫</div>
-    <div class="info">
-      <h3>National Scholarship Portal</h3>
-      <p>Scholarship Applications • Status • Student Services</p>
+    <div class="state-link-card">
+      <span>💼</span>
+      <div>
+        <h3>Sarkari Jobs</h3>
+        <p>सरकारी नौकरी और भर्ती</p>
+      </div>
+      <a id="state-jobs" href="#" target="_blank" class="open-btn">OPEN</a>
     </div>
-    <a class="open" href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
+
+    <div class="state-link-card">
+      <span>📢</span>
+      <div>
+        <h3>Vacancy</h3>
+        <p>नई भर्ती और vacancies</p>
+      </div>
+      <a id="state-vacancy" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>📊</span>
+      <div>
+        <h3>Result</h3>
+        <p>परीक्षा और भर्ती परिणाम</p>
+      </div>
+      <a id="state-result-link" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>🎓</span>
+      <div>
+        <h3>Admission</h3>
+        <p>कॉलेज और विश्वविद्यालय admission</p>
+      </div>
+      <a id="state-admission" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>🪪</span>
+      <div>
+        <h3>Admit Card</h3>
+        <p>परीक्षा admit card</p>
+      </div>
+      <a id="state-admit" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>🎓</span>
+      <div>
+        <h3>Scholarship</h3>
+        <p>राज्य की छात्रवृत्ति योजनाएं</p>
+      </div>
+      <a id="state-scholarship" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>📜</span>
+      <div>
+        <h3>Schemes</h3>
+        <p>राज्य सरकार की योजनाएं</p>
+      </div>
+      <a id="state-schemes" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>📄</span>
+      <div>
+        <h3>Certificates & Services</h3>
+        <p>प्रमाणपत्र और ऑनलाइन सेवाएं</p>
+      </div>
+      <a id="state-services" href="#" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
+    <div class="state-link-card">
+      <span>🔗</span>
+      <div>
+        <h3>More Official Links</h3>
+        <p>अन्य जरूरी सरकारी वेबसाइट</p>
+      </div>
+      <a id="state-more" href="https://www.india.gov.in/directory/web-directory/state-uts" target="_blank" class="open-btn">OPEN</a>
+    </div>
+
   </div>
 
 </section>
 
+<!-- ==================== PART 5 START ==================== -->
 
-<!-- MORE SOCIAL -->
-<section class="more-box" id="more-social">
-
-  <h2>📱 More Social & Communication</h2>
-
-  <div class="card">
-    <div class="icon">💬</div>
-    <div class="info">
-      <h3>Telegram</h3>
-      <p>Messages • Groups • Channels • Communities</p>
-    </div>
-    <a class="open" href="https://telegram.org" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📌</div>
-    <div class="info">
-      <h3>Pinterest</h3>
-      <p>Images • Ideas • Design • Inspiration</p>
-    </div>
-    <a class="open" href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🎮</div>
-    <div class="info">
-      <h3>Discord</h3>
-      <p>Communities • Chat • Voice • Groups</p>
-    </div>
-    <a class="open" href="https://discord.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📞</div>
-    <div class="info">
-      <h3>Skype</h3>
-      <p>Communication • Messaging • Calls</p>
-    </div>
-    <a class="open" href="https://www.skype.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- MORE AI -->
-<section class="more-box" id="more-ai">
-
-  <h2>🤖 More AI Tools</h2>
-
-  <div class="card">
-    <div class="icon">🧠</div>
-    <div class="info">
-      <h3>Perplexity</h3>
-      <p>AI Search • Research • Questions</p>
-    </div>
-    <a class="open" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">💻</div>
-    <div class="info">
-      <h3>GitHub Copilot</h3>
-      <p>AI Coding • Programming • Developer Tools</p>
-    </div>
-    <a class="open" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🎨</div>
-    <div class="info">
-      <h3>Adobe Firefly</h3>
-      <p>AI Image • Design • Creative Tools</p>
-    </div>
-    <a class="open" href="https://firefly.adobe.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📝</div>
-    <div class="info">
-      <h3>Grammarly</h3>
-      <p>Writing • Grammar • AI Writing Assistant</p>
-    </div>
-    <a class="open" href="https://www.grammarly.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- MORE BANKING -->
-<section class="more-box" id="more-banking">
-
-  <h2>🏦 More Banking & Finance</h2>
-
-  <div class="card">
-    <div class="icon">💰</div>
-    <div class="info">
-      <h3>Income Tax e-Filing</h3>
-      <p>Income Tax Return • Tax Services • PAN Related Services</p>
-    </div>
-    <a class="open" href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🪪</div>
-    <div class="info">
-      <h3>EPFO</h3>
-      <p>PF • Pension • UAN • Employee Services</p>
-    </div>
-    <a class="open" href="https://www.epfindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">💳</div>
-    <div class="info">
-      <h3>Jan Dhan Yojana</h3>
-      <p>Financial Inclusion • Bank Account Information</p>
-    </div>
-    <a class="open" href="https://pmjdy.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📊</div>
-    <div class="info">
-      <h3>SEBI</h3>
-      <p>Investor Information • Securities Market • Regulations</p>
-    </div>
-    <a class="open" href="https://www.sebi.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- MORE RAILWAY -->
-<section class="more-box" id="more-railway">
-
-  <h2>🚆 More Railway & Travel</h2>
-
-  <div class="card">
-    <div class="icon">🚉</div>
-    <div class="info">
-      <h3>National Train Enquiry System</h3>
-      <p>Train Running Status • Train Information</p>
-    </div>
-    <a class="open" href="https://enquiry.indianrail.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🚆</div>
-    <div class="info">
-      <h3>Railway Recruitment Board</h3>
-      <p>Railway Jobs • Recruitment • Examination Information</p>
-    </div>
-    <a class="open" href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🚌</div>
-    <div class="info">
-      <h3>Parivahan</h3>
-      <p>Driving Licence • Vehicle • Transport Services</p>
-    </div>
-    <a class="open" href="https://parivahan.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🛂</div>
-    <div class="info">
-      <h3>Passport Seva</h3>
-      <p>Passport Application • Appointment • Status</p>
-    </div>
-    <a class="open" href="https://www.passportindia.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- MORE SHOPPING -->
-<section class="more-box" id="more-shopping">
-
-  <h2>🛒 More Shopping</h2>
-
-  <div class="card">
-    <div class="icon">🛍️</div>
-    <div class="info">
-      <h3>Myntra</h3>
-      <p>Fashion • Clothing • Shoes • Accessories</p>
-    </div>
-    <a class="open" href="https://www.myntra.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📱</div>
-    <div class="info">
-      <h3>Meesho</h3>
-      <p>Online Shopping • Fashion • Home Products</p>
-    </div>
-    <a class="open" href="https://www.meesho.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🛒</div>
-    <div class="info">
-      <h3>AJIO</h3>
-      <p>Fashion • Clothing • Lifestyle</p>
-    </div>
-    <a class="open" href="https://www.ajio.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- MORE POPULAR -->
-<section class="more-box" id="more-popular">
-
-  <h2>⭐ More Popular Websites</h2>
-
-  <div class="card">
-    <div class="icon">🌐</div>
-    <div class="info">
-      <h3>Microsoft</h3>
-      <p>Windows • Office • Cloud • Technology</p>
-    </div>
-    <a class="open" href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">☁️</div>
-    <div class="info">
-      <h3>Google Drive</h3>
-      <p>Cloud Storage • Documents • Files</p>
-    </div>
-    <a class="open" href="https://drive.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📄</div>
-    <div class="info">
-      <h3>Google Docs</h3>
-      <p>Online Documents • Writing • Collaboration</p>
-    </div>
-    <a class="open" href="https://docs.google.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📺</div>
-    <div class="info">
-      <h3>Prime Video</h3>
-      <p>Movies • Series • Entertainment</p>
-    </div>
-    <a class="open" href="https://www.primevideo.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🎬</div>
-    <div class="info">
-      <h3>ZEE5</h3>
-      <p>Movies • Shows • Entertainment</p>
-    </div>
-    <a class="open" href="https://www.zee5.com" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- CYBER SECURITY -->
-<section class="more-box" id="cyber">
-
-  <h2>🛡️ Cyber Security & Safety</h2>
-
-  <div class="card">
-    <div class="icon">🚨</div>
-    <div class="info">
-      <h3>National Cyber Crime Reporting Portal</h3>
-      <p>Cyber Crime Complaint • Online Reporting • Cyber Safety</p>
-    </div>
-    <a class="open" href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🔎</div>
-    <div class="info">
-      <h3>Cyber Crime Suspect Search</h3>
-      <p>Check Reported Mobile Numbers, Emails, Accounts & Websites</p>
-    </div>
-    <a class="open" href="https://cybercrime.gov.in/Webform/suspect_search_repository.aspx" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📞</div>
-    <div class="info">
-      <h3>Cyber Crime Helpline - 1930</h3>
-      <p>Financial Cyber Fraud Reporting Helpline</p>
-    </div>
-    <a class="open" href="tel:1930">CALL</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🔐</div>
-    <div class="info">
-      <h3>CERT-In</h3>
-      <p>Indian Computer Emergency Response Team • Cyber Security</p>
-    </div>
-    <a class="open" href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- GOVERNMENT INFORMATION TOOLS -->
-<section class="more-box" id="gov-tools">
-
-  <h2>🇮🇳 Government Information & Tools</h2>
-
-  <div class="card">
-    <div class="icon">🇮🇳</div>
-    <div class="info">
-      <h3>India.gov.in</h3>
-      <p>Government Information • Services • Schemes • States</p>
-    </div>
-    <a class="open" href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🛠️</div>
-    <div class="info">
-      <h3>National Government Services Portal</h3>
-      <p>Online Government Services from Central & State Governments</p>
-    </div>
-    <a class="open" href="https://services.india.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📱</div>
-    <div class="info">
-      <h3>UMANG</h3>
-      <p>Government Services • Certificates • Pension • Education • More</p>
-    </div>
-    <a class="open" href="https://web.umang.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📁</div>
-    <div class="info">
-      <h3>DigiLocker</h3>
-      <p>Digital Documents • Certificates • Government Documents</p>
-    </div>
-    <a class="open" href="https://www.digilocker.gov.in" target="_blank" rel="noopener noreferrer">OPEN</a>
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section class="contact-box" id="contact">
-
-  <h2>🌐 अपनी Website Smart Web India पर जोड़ें</h2>
-
-  <p>
-    अगर आपकी अपनी Website है और आप उसे
-    <b>Smart Web India</b> पर जोड़वाना चाहते हैं,
-    तो हमसे संपर्क करें।
-  </p>
-
-  <a class="contact-btn" href="tel:7633868472">
-    📞 7633868472
-  </a>
-
-  <a class="contact-btn" href="mailto:rakeshk32711@gmail.com">
-    📧 rakeshk32711@gmail.com
-  </a>
-
-</section>
-
-
-<!-- NO RESULT -->
-<div class="no-result" id="noResult">
-  ❌ कोई Website नहीं मिली।
-</div><!-- FOOTER -->
-<footer>
-
-  <div class="footer-logo">
-    🌐 Smart Web India
-  </div>
-
-  <p>
-    Jobs • Government • Scholarship • Education • AI • Banking • Railway • Useful Websites
-  </p>
-
-  <p>
-    © 2026 Smart Web India. All Rights Reserved.
-  </p>
-
-  <p>
-    Website जोड़ने के लिए:
-    <a href="tel:7633868472">7633868472</a>
-    |
-    <a href="mailto:rakeshk32711@gmail.com">rakeshk32711@gmail.com</a>
-  </p>
-
-</footer>
-
-
-<!-- SEARCH SCRIPT -->
 <script>
+/* =========================================================
+   SMART WEB INDIA
+   ALL STATES + UNION TERRITORIES DATA
+   ========================================================= */
+
+const stateData = {
+
+  andhra: {
+    name: "Andhra Pradesh",
+    gov: "https://www.ap.gov.in/",
+    jobs: "https://psc.ap.gov.in/",
+    vacancy: "https://www.ap.gov.in/",
+    result: "https://psc.ap.gov.in/",
+    admission: "https://cets.apsche.ap.gov.in/",
+    admit: "https://psc.ap.gov.in/",
+    scholarship: "https://jnanabhumi.ap.gov.in/",
+    schemes: "https://www.ap.gov.in/",
+    services: "https://www.ap.gov.in/"
+  },
+
+  arunachal: {
+    name: "Arunachal Pradesh",
+    gov: "https://arunachalpradesh.gov.in/",
+    jobs: "https://appsc.gov.in/",
+    vacancy: "https://appsc.gov.in/",
+    result: "https://appsc.gov.in/",
+    admission: "https://arunachalpradesh.gov.in/",
+    admit: "https://appsc.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://arunachalpradesh.gov.in/",
+    services: "https://arunachalpradesh.gov.in/"
+  },
+
+  assam: {
+    name: "Assam",
+    gov: "https://assam.gov.in/",
+    jobs: "https://apscrecruitment.in/",
+    vacancy: "https://assam.gov.in/",
+    result: "https://apscrecruitment.in/",
+    admission: "https://dhe.assam.gov.in/",
+    admit: "https://apscrecruitment.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://assam.gov.in/",
+    services: "https://assam.gov.in/"
+  },
+
+  bihar: {
+    name: "Bihar",
+    gov: "https://state.bihar.gov.in/",
+    jobs: "https://www.bpsc.bih.nic.in/",
+    vacancy: "https://www.bssc.bihar.gov.in/",
+    result: "https://www.bpsc.bih.nic.in/",
+    admission: "https://ofssbihar.net/",
+    admit: "https://www.bpsc.bih.nic.in/",
+    scholarship: "https://pmsonline.bih.nic.in/",
+    schemes: "https://serviceonline.bihar.gov.in/",
+    services: "https://serviceonline.bihar.gov.in/"
+  },
+
+  chhattisgarh: {
+    name: "Chhattisgarh",
+    gov: "https://cgstate.gov.in/",
+    jobs: "https://psc.cg.gov.in/",
+    vacancy: "https://vyapam.cgstate.gov.in/",
+    result: "https://psc.cg.gov.in/",
+    admission: "https://dte.cg.gov.in/",
+    admit: "https://vyapam.cgstate.gov.in/",
+    scholarship: "https://schoolscholarship.cg.nic.in/",
+    schemes: "https://cgstate.gov.in/",
+    services: "https://cgedistrict.nic.in/"
+  },
+
+  goa: {
+    name: "Goa",
+    gov: "https://www.goa.gov.in/",
+    jobs: "https://gpsc.goa.gov.in/",
+    vacancy: "https://www.goa.gov.in/",
+    result: "https://gpsc.goa.gov.in/",
+    admission: "https://dhe.goa.gov.in/",
+    admit: "https://gpsc.goa.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://www.goa.gov.in/",
+    services: "https://goaonline.gov.in/"
+  },
+
+  gujarat: {
+    name: "Gujarat",
+    gov: "https://gujaratindia.gov.in/",
+    jobs: "https://gpsc.gujarat.gov.in/",
+    vacancy: "https://ojas.gujarat.gov.in/",
+    result: "https://gpsc.gujarat.gov.in/",
+    admission: "https://gujac.org.in/",
+    admit: "https://ojas.gujarat.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://gujaratindia.gov.in/",
+    services: "https://www.digitalgujarat.gov.in/"
+  },
+
+  haryana: {
+    name: "Haryana",
+    gov: "https://www.haryana.gov.in/",
+    jobs: "https://hpsc.gov.in/",
+    vacancy: "https://hssc.gov.in/",
+    result: "https://hssc.gov.in/",
+    admission: "https://admissions.highereduhry.ac.in/",
+    admit: "https://hpsc.gov.in/",
+    scholarship: "https://haryanascbc.gov.in/",
+    schemes: "https://www.haryana.gov.in/",
+    services: "https://saralharyana.gov.in/"
+  },
+
+  himachal: {
+    name: "Himachal Pradesh",
+    gov: "https://himachal.nic.in/",
+    jobs: "https://hppsc.hp.gov.in/",
+    vacancy: "https://hprca.hp.gov.in/",
+    result: "https://hppsc.hp.gov.in/",
+    admission: "https://hpuniv.ac.in/",
+    admit: "https://hppsc.hp.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://himachal.nic.in/",
+    services: "https://edistrict.hp.gov.in/"
+  },
+
+  jharkhand: {
+    name: "Jharkhand",
+    gov: "https://www.jharkhand.gov.in/",
+    jobs: "https://jpsc.gov.in/",
+    vacancy: "https://jssc.nic.in/",
+    result: "https://jpsc.gov.in/",
+    admission: "https://jceceb.jharkhand.gov.in/",
+    admit: "https://jssc.nic.in/",
+    scholarship: "https://ekalyan.cgg.gov.in/",
+    schemes: "https://www.jharkhand.gov.in/",
+    services: "https://jharsewa.jharkhand.gov.in/"
+  },
+
+  karnataka: {
+    name: "Karnataka",
+    gov: "https://www.karnataka.gov.in/",
+    jobs: "https://kpsc.kar.nic.in/",
+    vacancy: "https://kpsc.kar.nic.in/",
+    result: "https://kpsc.kar.nic.in/",
+    admission: "https://kea.kar.nic.in/",
+    admit: "https://kpsc.kar.nic.in/",
+    scholarship: "https://ssp.postmatric.karnataka.gov.in/",
+    schemes: "https://www.karnataka.gov.in/",
+    services: "https://sevasindhu.karnataka.gov.in/"
+  },
+
+  kerala: {
+    name: "Kerala",
+    gov: "https://kerala.gov.in/",
+    jobs: "https://www.keralapsc.gov.in/",
+    vacancy: "https://www.keralapsc.gov.in/",
+    result: "https://www.keralapsc.gov.in/",
+    admission: "https://cee.kerala.gov.in/",
+    admit: "https://www.keralapsc.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://kerala.gov.in/",
+    services: "https://edistrict.kerala.gov.in/"
+  },
+
+  madhya: {
+    name: "Madhya Pradesh",
+    gov: "https://www.mp.gov.in/",
+    jobs: "https://mppsc.mp.gov.in/",
+    vacancy: "https://esb.mp.gov.in/",
+    result: "https://mppsc.mp.gov.in/",
+    admission: "https://dme.mponline.gov.in/",
+    admit: "https://esb.mp.gov.in/",
+    scholarship: "https://scholarshipportal.mp.nic.in/",
+    schemes: "https://www.mp.gov.in/",
+    services: "https://mpedistrict.gov.in/"
+  },
+
+  maharashtra: {
+    name: "Maharashtra",
+    gov: "https://www.maharashtra.gov.in/",
+    jobs: "https://mpsc.gov.in/",
+    vacancy: "https://www.mahapariksha.gov.in/",
+    result: "https://mpsc.gov.in/",
+    admission: "https://cetcell.mahacet.org/",
+    admit: "https://mpsc.gov.in/",
+    scholarship: "https://mahadbt.maharashtra.gov.in/",
+    schemes: "https://www.maharashtra.gov.in/",
+    services: "https://aaplesarkar.mahaonline.gov.in/"
+  },
+
+  manipur: {
+    name: "Manipur",
+    gov: "https://manipur.gov.in/",
+    jobs: "https://mpscmanipur.gov.in/",
+    vacancy: "https://manipur.gov.in/",
+    result: "https://mpscmanipur.gov.in/",
+    admission: "https://manipuruniv.ac.in/",
+    admit: "https://mpscmanipur.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://manipur.gov.in/",
+    services: "https://edistrictmanipur.gov.in/"
+  },
+
+  meghalaya: {
+    name: "Meghalaya",
+    gov: "https://meghalaya.gov.in/",
+    jobs: "https://mpsc.nic.in/",
+    vacancy: "https://meghalaya.gov.in/",
+    result: "https://mpsc.nic.in/",
+    admission: "https://nehu.ac.in/",
+    admit: "https://mpsc.nic.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://meghalaya.gov.in/",
+    services: "https://meghalaya.gov.in/"
+  },
+
+  mizoram: {
+    name: "Mizoram",
+    gov: "https://mizoram.gov.in/",
+    jobs: "https://mpsc.mizoram.gov.in/",
+    vacancy: "https://mizoram.gov.in/",
+    result: "https://mpsc.mizoram.gov.in/",
+    admission: "https://mizoramuniversity.ac.in/",
+    admit: "https://mpsc.mizoram.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://mizoram.gov.in/",
+    services: "https://mizoram.gov.in/"
+  },
+
+  nagaland: {
+    name: "Nagaland",
+    gov: "https://nagaland.gov.in/",
+    jobs: "https://npsc.nagaland.gov.in/",
+    vacancy: "https://nagaland.gov.in/",
+    result: "https://npsc.nagaland.gov.in/",
+    admission: "https://nagalanduniversity.ac.in/",
+    admit: "https://npsc.nagaland.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://nagaland.gov.in/",
+    services: "https://nagaland.gov.in/"
+  },
+
+  odisha: {
+    name: "Odisha",
+    gov: "https://odisha.gov.in/",
+    jobs: "https://www.opsc.gov.in/",
+    vacancy: "https://ossc.gov.in/",
+    result: "https://www.opsc.gov.in/",
+    admission: "https://dhe.odisha.gov.in/",
+    admit: "https://ossc.gov.in/",
+    scholarship: "https://scholarship.odisha.gov.in/",
+    schemes: "https://odisha.gov.in/",
+    services: "https://edistrict.odisha.gov.in/"
+  },
+
+  punjab: {
+    name: "Punjab",
+    gov: "https://punjab.gov.in/",
+    jobs: "https://ppsc.gov.in/",
+    vacancy: "https://sssb.punjab.gov.in/",
+    result: "https://ppsc.gov.in/",
+    admission: "https://punjab.gov.in/",
+    admit: "https://ppsc.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://punjab.gov.in/",
+    services: "https://eservices.punjab.gov.in/"
+  },
+
+  rajasthan: {
+    name: "Rajasthan",
+    gov: "https://rajasthan.gov.in/",
+    jobs: "https://rpsc.rajasthan.gov.in/",
+    vacancy: "https://rssb.rajasthan.gov.in/",
+    result: "https://rpsc.rajasthan.gov.in/",
+    admission: "https://hte.rajasthan.gov.in/",
+    admit: "https://rpsc.rajasthan.gov.in/",
+    scholarship: "https://scholarship.rajasthan.gov.in/",
+    schemes: "https://rajasthan.gov.in/",
+    services: "https://sso.rajasthan.gov.in/"
+  },
+
+  sikkim: {
+    name: "Sikkim",
+    gov: "https://sikkim.gov.in/",
+    jobs: "https://spsc.sikkim.gov.in/",
+    vacancy: "https://sikkim.gov.in/",
+    result: "https://spsc.sikkim.gov.in/",
+    admission: "https://cus.ac.in/",
+    admit: "https://spsc.sikkim.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://sikkim.gov.in/",
+    services: "https://sikkim.gov.in/"
+  },
+
+  tamilnadu: {
+    name: "Tamil Nadu",
+    gov: "https://www.tn.gov.in/",
+    jobs: "https://www.tnpsc.gov.in/",
+    vacancy: "https://www.tnpsc.gov.in/",
+    result: "https://www.tnpsc.gov.in/",
+    admission: "https://www.tneaonline.org/",
+    admit: "https://www.tnpsc.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://www.tn.gov.in/",
+    services: "https://www.tnesevai.tn.gov.in/"
+  },
+
+  telangana: {
+    name: "Telangana",
+    gov: "https://www.telangana.gov.in/",
+    jobs: "https://www.tspsc.gov.in/",
+    vacancy: "https://www.tslprb.in/",
+    result: "https://www.tspsc.gov.in/",
+    admission: "https://dost.cgg.gov.in/",
+    admit: "https://www.tspsc.gov.in/",
+    scholarship: "https://telanganaepass.cgg.gov.in/",
+    schemes: "https://www.telangana.gov.in/",
+    services: "https://ts.meeseva.telangana.gov.in/"
+  },
+
+  tripura: {
+    name: "Tripura",
+    gov: "https://tripura.gov.in/",
+    jobs: "https://tpsc.tripura.gov.in/",
+    vacancy: "https://tripura.gov.in/",
+    result: "https://tpsc.tripura.gov.in/",
+    admission: "https://tripurauniv.ac.in/",
+    admit: "https://tpsc.tripura.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://tripura.gov.in/",
+    services: "https://edistrict.tripura.gov.in/"
+  },
+
+  uttarpradesh: {
+    name: "Uttar Pradesh",
+    gov: "https://up.gov.in/",
+    jobs: "https://uppsc.up.nic.in/",
+    vacancy: "https://upsssc.gov.in/",
+    result: "https://uppsc.up.nic.in/",
+    admission: "https://upbed.nic.in/",
+    admit: "https://uppsc.up.nic.in/",
+    scholarship: "https://scholarship.up.gov.in/",
+    schemes: "https://up.gov.in/",
+    services: "https://edistrict.up.gov.in/"
+  },
+
+  uttarakhand: {
+    name: "Uttarakhand",
+    gov: "https://uk.gov.in/",
+    jobs: "https://psc.uk.gov.in/",
+    vacancy: "https://sssc.uk.gov.in/",
+    result: "https://psc.uk.gov.in/",
+    admission: "https://ukadmission.samarth.ac.in/",
+    admit: "https://psc.uk.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://uk.gov.in/",
+    services: "https://eservices.uk.gov.in/"
+  },
+
+  westbengal: {
+    name: "West Bengal",
+    gov: "https://wb.gov.in/",
+    jobs: "https://psc.wb.gov.in/",
+    vacancy: "https://www.wbpolice.gov.in/",
+    result: "https://psc.wb.gov.in/",
+    admission: "https://wbcap.in/",
+    admit: "https://psc.wb.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://wb.gov.in/",
+    services: "https://edistrict.wb.gov.in/"
+  },
+
+
+  /* ================= UNION TERRITORIES ================= */
+
+  andaman: {
+    name: "Andaman & Nicobar Islands",
+    gov: "https://andaman.gov.in/",
+    jobs: "https://andaman.gov.in/",
+    vacancy: "https://andaman.gov.in/",
+    result: "https://andaman.gov.in/",
+    admission: "https://andaman.gov.in/",
+    admit: "https://andaman.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://andaman.gov.in/",
+    services: "https://edistrict.andaman.gov.in/"
+  },
+
+  chandigarh: {
+    name: "Chandigarh",
+    gov: "https://chandigarh.gov.in/",
+    jobs: "https://chandigarh.gov.in/",
+    vacancy: "https://chandigarh.gov.in/",
+    result: "https://chandigarh.gov.in/",
+    admission: "https://chandigarh.gov.in/",
+    admit: "https://chandigarh.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://chandigarh.gov.in/",
+    services: "https://chandigarh.gov.in/"
+  },
+
+  dadra: {
+    name: "Dadra & Nagar Haveli and Daman & Diu",
+    gov: "https://ddd.gov.in/",
+    jobs: "https://ddd.gov.in/",
+    vacancy: "https://ddd.gov.in/",
+    result: "https://ddd.gov.in/",
+    admission: "https://ddd.gov.in/",
+    admit: "https://ddd.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://ddd.gov.in/",
+    services: "https://ddd.gov.in/"
+  },
+
+  delhi: {
+    name: "Delhi",
+    gov: "https://delhi.gov.in/",
+    jobs: "https://dsssb.delhi.gov.in/",
+    vacancy: "https://dsssb.delhi.gov.in/",
+    result: "https://dsssb.delhi.gov.in/",
+    admission: "https://admission.uod.ac.in/",
+    admit: "https://dsssb.delhi.gov.in/",
+    scholarship: "https://edistrict.delhigovt.nic.in/",
+    schemes: "https://delhi.gov.in/",
+    services: "https://edistrict.delhigovt.nic.in/"
+  },
+
+  jammu: {
+    name: "Jammu & Kashmir",
+    gov: "https://jk.gov.in/",
+    jobs: "https://jkssb.nic.in/",
+    vacancy: "https://jkssb.nic.in/",
+    result: "https://jkssb.nic.in/",
+    admission: "https://jkadmission.samarth.ac.in/",
+    admit: "https://jkssb.nic.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://jk.gov.in/",
+    services: "https://jansugam.jk.gov.in/"
+  },
+
+  ladakh: {
+    name: "Ladakh",
+    gov: "https://ladakh.gov.in/",
+    jobs: "https://ladakh.gov.in/",
+    vacancy: "https://ladakh.gov.in/",
+    result: "https://ladakh.gov.in/",
+    admission: "https://ladakh.gov.in/",
+    admit: "https://ladakh.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://ladakh.gov.in/",
+    services: "https://ladakh.gov.in/"
+  },
+
+  lakshadweep: {
+    name: "Lakshadweep",
+    gov: "https://lakshadweep.gov.in/",
+    jobs: "https://lakshadweep.gov.in/",
+    vacancy: "https://lakshadweep.gov.in/",
+    result: "https://lakshadweep.gov.in/",
+    admission: "https://lakshadweep.gov.in/",
+    admit: "https://lakshadweep.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://lakshadweep.gov.in/",
+    services: "https://lakshadweep.gov.in/"
+  },
+
+  puducherry: {
+    name: "Puducherry",
+    gov: "https://py.gov.in/",
+    jobs: "https://dpar.py.gov.in/",
+    vacancy: "https://py.gov.in/",
+    result: "https://py.gov.in/",
+    admission: "https://www.centacpuducherry.in/",
+    admit: "https://py.gov.in/",
+    scholarship: "https://scholarships.gov.in/",
+    schemes: "https://py.gov.in/",
+    services: "https://edistrict.py.gov.in/"
+  }
+
+};
+
+  <!-- ==================== PART 6 START ==================== -->
+
+<style>
+
+/* STATE GRID */
+.state-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+
+/* STATE BUTTON */
+.state-btn{
+  border:none;
+  border-radius:18px;
+  padding:16px 10px;
+  min-height:72px;
+  background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+  color:#111;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+  transition:.25s;
+}
+
+.state-btn:hover{
+  transform:translateY(-4px) scale(1.02);
+}
+
+.state-btn:active{
+  transform:scale(.96);
+}
+
+/* STATE RESULT */
+.state-result{
+  display:none;
+  margin:30px auto;
+  max-width:1000px;
+  padding:24px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#fff7ed,#eefbf2);
+  box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.state-result-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.state-result-header h2{
+  margin:0 0 8px;
+  font-size:27px;
+}
+
+.state-result-header p{
+  margin:0;
+  color:#555;
+}
+
+/* STATE LINKS */
+.state-links{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:15px;
+}
+
+.state-link-card{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,.09);
+  border:1px solid #eee;
+}
+
+.state-link-card > span{
+  font-size:30px;
+  min-width:38px;
+}
+
+.state-link-card div{
+  flex:1;
+}
+
+.state-link-card h3{
+  margin:0 0 4px;
+  font-size:17px;
+}
+
+.state-link-card p{
+  margin:0;
+  font-size:12px;
+  color:#666;
+}
+
+.open-btn{
+  text-decoration:none;
+  background:linear-gradient(135deg,#ff6b00,#ff9800);
+  color:white;
+  padding:9px 13px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:12px;
+  white-space:nowrap;
+}
+
+.open-btn:hover{
+  opacity:.85;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .state-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .state-btn{
+    min-height:78px;
+    padding:10px 6px;
+    font-size:12px;
+    border-radius:16px;
+  }
+
+  .state-result{
+    margin:20px 10px;
+    padding:16px;
+    border-radius:20px;
+  }
+
+  .state-links{
+    grid-template-columns:1fr;
+  }
+
+  .state-link-card{
+    padding:13px;
+  }
+
+  .state-link-card > span{
+    font-size:25px;
+  }
+
+  .state-link-card h3{
+    font-size:15px;
+  }
+
+  .open-btn{
+    padding:8px 11px;
+  }
+}
+
+</style>
+
+
+<script>
+
+/* =========================================================
+   STATE OPEN FUNCTION
+   ========================================================= */
+
+function showState(stateKey){
+
+  const data = stateData[stateKey];
+
+  if(!data){
+    alert("इस राज्य की जानकारी अभी उपलब्ध नहीं है।");
+    return;
+  }
+
+  document.getElementById("state-title").textContent =
+    "🇮🇳 " + data.name;
+
+  document.getElementById("state-gov").href =
+    data.gov;
+
+  document.getElementById("state-jobs").href =
+    data.jobs;
+
+  document.getElementById("state-vacancy").href =
+    data.vacancy;
+
+  document.getElementById("state-result-link").href =
+    data.result;
+
+  document.getElementById("state-admission").href =
+    data.admission;
+
+  document.getElementById("state-admit").href =
+    data.admit;
+
+  document.getElementById("state-scholarship").href =
+    data.scholarship;
+
+  document.getElementById("state-schemes").href =
+    data.schemes;
+
+  document.getElementById("state-services").href =
+    data.services;
+
+  document.getElementById("state-result").style.display =
+    "block";
+
+  document.getElementById("state-result").scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+
+/* =========================================================
+   TOPIC BUTTON CLICK
+   ========================================================= */
+
+function openTopic(topicId){
+
+  const target = document.getElementById(topicId);
+
+  if(target){
+
+    target.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  }
+
+}
+
+
+/* =========================================================
+   SEARCH FUNCTION
+   ========================================================= */
 
 function searchWebsite(){
 
-    const input = document.getElementById("search")
-        .value
-        .toLowerCase()
-        .trim();
+  const input =
+    document.getElementById("searchInput");
 
-    const cards = document.querySelectorAll(".card");
-    const stateBoxes = document.querySelectorAll(".state-box");
-    const stateLinks = document.querySelectorAll(".state-link");
-    const categories = document.querySelectorAll(".category");
-    const noResult = document.getElementById("noResult");
+  if(!input) return;
 
-    /* Search खाली है */
-    if(input === ""){
+  const query =
+    input.value.trim().toLowerCase();
 
-        cards.forEach(function(card){
-            card.style.display = "flex";
-        });
+  if(query === ""){
+    alert("कृपया कुछ खोजें।");
+    return;
+  }
 
-        stateBoxes.forEach(function(box){
-            box.style.display = "";
-        });
+  const allSections =
+    document.querySelectorAll("section");
 
-        stateLinks.forEach(function(link){
-            link.style.display = "";
-        });
+  let found = false;
 
-        categories.forEach(function(category){
-            category.style.display = "";
-        });
+  for(const section of allSections){
 
-        if(noResult){
-            noResult.style.display = "none";
-        }
+    const text =
+      section.innerText.toLowerCase();
 
-        return;
+    if(text.includes(query)){
+
+      section.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+      found = true;
+      break;
     }
+  }
 
-    let found = false;
+  if(!found){
 
-
-    /* =========================
-       CARDS SEARCH
-    ========================= */
-
-    cards.forEach(function(card){
-
-        const text = card.innerText.toLowerCase();
-
-        if(text.includes(input)){
-
-            card.style.display = "flex";
-            found = true;
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-
-    /* =========================
-       STATE LINKS SEARCH
-    ========================= */
-
-    stateLinks.forEach(function(link){
-
-        const text = link.innerText.toLowerCase();
-
-        if(text.includes(input)){
-
-            link.style.display = "block";
-            found = true;
-
-        }else{
-
-            link.style.display = "none";
-
-        }
-
-    });
-
-
-    /* =========================
-       STATE BOX SEARCH
-    ========================= */
-
-    stateBoxes.forEach(function(box){
-
-        const text = box.innerText.toLowerCase();
-
-        if(text.includes(input)){
-
-            box.style.display = "";
-            found = true;
-
-        }
-
-    });
-
-
-    /* =========================
-       CATEGORY NAME SEARCH
-    ========================= */
-
-    categories.forEach(function(category){
-
-        const text = category.innerText.toLowerCase();
-
-        const visibleCards =
-            category.querySelectorAll(".card");
-
-        const visibleLinks =
-            category.querySelectorAll(".state-link");
-
-        let categoryFound = false;
-
-
-        visibleCards.forEach(function(card){
-
-            if(card.style.display !== "none"){
-                categoryFound = true;
-            }
-
-        });
-
-
-        visibleLinks.forEach(function(link){
-
-            if(link.style.display !== "none"){
-                categoryFound = true;
-            }
-
-        });
-
-
-        /* Heading/text में search मिला */
-
-        if(text.includes(input)){
-            categoryFound = true;
-        }
-
-
-        if(categoryFound){
-
-            category.style.display = "";
-
-        }else{
-
-            category.style.display = "none";
-
-        }
-
-    });
-
-
-    /* =========================
-       RELATED SEARCH
-    ========================= */
-
-    const related = {
-
-        "jharkhand": [
-            "jharkhand",
-            "झारखंड",
-            "jpsc",
-            "jssc",
-            "jac",
-            "jharsewa",
-            "ranchi"
-        ],
-
-        "झारखंड": [
-            "jharkhand",
-            "jpsc",
-            "jssc",
-            "jac",
-            "jharsewa"
-        ],
-
-        "bihar": [
-            "bihar",
-            "बिहार",
-            "bpsc",
-            "bssc",
-            "patna"
-        ],
-
-        "बिहार": [
-            "bihar",
-            "bpsc",
-            "bssc",
-            "patna"
-        ],
-
-        "uttar pradesh": [
-            "uttar pradesh",
-            "up",
-            "uppsc",
-            "upsssc",
-            "lucknow"
-        ],
-
-        "up": [
-            "uttar pradesh",
-            "uppsc",
-            "upsssc"
-        ],
-
-        "west bengal": [
-            "west bengal",
-            "wb",
-            "wbpsc",
-            "kolkata"
-        ],
-
-        "maharashtra": [
-            "maharashtra",
-            "mumbai",
-            "pune",
-            "mpsc"
-        ],
-
-        "rajasthan": [
-            "rajasthan",
-            "jaipur",
-            "rpsc"
-        ],
-
-        "madhya pradesh": [
-            "madhya pradesh",
-            "mp",
-            "bhopal",
-            "mppsc"
-        ],
-
-        "gujarat": [
-            "gujarat",
-            "ahmedabad",
-            "gpsc"
-        ],
-
-        "odisha": [
-            "odisha",
-            "opsc",
-            "ossc"
-        ],
-
-        "assam": [
-            "assam",
-            "apsc",
-            "guwahati"
-        ],
-
-        "punjab": [
-            "punjab",
-            "ppsc",
-            "chandigarh"
-        ],
-
-        "haryana": [
-            "haryana",
-            "hpsc"
-        ],
-
-        "job": [
-            "job",
-            "jobs",
-            "नौकरी",
-            "सरकारी नौकरी",
-            "sarkari",
-            "recruitment",
-            "vacancy",
-            "career"
-        ],
-
-        "sarkari job": [
-            "job",
-            "jobs",
-            "government",
-            "सरकारी",
-            "recruitment",
-            "vacancy"
-        ],
-
-        "sarkari naukri": [
-            "job",
-            "jobs",
-            "सरकारी नौकरी",
-            "government",
-            "recruitment"
-        ],
-
-        "scholarship": [
-            "scholarship",
-            "छात्रवृत्ति",
-            "student",
-            "students",
-            "scholar"
-        ],
-
-        "college": [
-            "college",
-            "university",
-            "विश्वविद्यालय",
-            "education",
-            "admission"
-        ],
-
-        "railway": [
-            "railway",
-            "रेलवे",
-            "rrb",
-            "ntpc",
-            "group d",
-            "train"
-        ],
-
-        "ai": [
-            "ai",
-            "artificial intelligence",
-            "chatgpt",
-            "gemini",
-            "copilot"
-        ],
-
-        "bank": [
-            "bank",
-            "banking",
-            "finance",
-            "sbi",
-            "hdfc",
-            "pnb"
-        ]
-
-    };
-
-
-    /* =========================
-       RELATED SEARCH
-    ========================= */
-
-    if(related[input]){
-
-        const keywords = related[input];
-
-        cards.forEach(function(card){
-
-            const text = card.innerText.toLowerCase();
-
-            for(let i = 0; i < keywords.length; i++){
-
-                if(text.includes(keywords[i])){
-
-                    card.style.display = "flex";
-                    found = true;
-                    break;
-
-                }
-
-            }
-
-        });
-
-    }
-
-
-    /* =========================
-       NO RESULT
-    ========================= */
+    const noResult =
+      document.getElementById("no-result");
 
     if(noResult){
 
-        if(found){
+      noResult.style.display="block";
 
-            noResult.style.display = "none";
+      const resultText =
+        document.getElementById("no-result-text");
 
-        }else{
+      if(resultText){
+        resultText.textContent =
+          "“" + input.value +
+          "” के लिए कोई परिणाम नहीं मिला।";
+      }
 
-            noResult.style.display = "block";
+      noResult.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
 
-        }
+    }else{
+
+      alert(
+        "“" + input.value +
+        "” के लिए कोई परिणाम नहीं मिला।"
+      );
 
     }
+
+  }
+
+}
+
+
+/* ENTER KEY SEARCH */
+
+document.addEventListener("DOMContentLoaded",function(){
+
+  const searchInput =
+    document.getElementById("searchInput");
+
+  if(searchInput){
+
+    searchInput.addEventListener(
+      "keydown",
+      function(event){
+
+        if(event.key === "Enter"){
+          searchWebsite();
+        }
+
+      }
+    );
+
+  }
+
+});
+
+
+/* =========================================================
+   CLOSE SEARCH RESULT MESSAGE
+   ========================================================= */
+
+function closeNoResult(){
+
+  const box =
+    document.getElementById("no-result");
+
+  if(box){
+    box.style.display="none";
+  }
 
 }
 
 </script>
 
+
+<!-- NO RESULT BOX -->
+
+<section id="no-result"
+         style="
+         display:none;
+         margin:25px auto;
+         max-width:800px;
+         padding:25px;
+         text-align:center;
+         background:#fff3cd;
+         border-radius:20px;
+         box-shadow:0 5px 15px rgba(0,0,0,.10);
+         ">
+
+  <h2>🔎 परिणाम नहीं मिला</h2>
+
+  <p id="no-result-text">
+    आपके खोजे गए शब्द के लिए कोई परिणाम नहीं मिला।
+  </p>
+
+  <button
+    onclick="closeNoResult()"
+    style="
+    border:none;
+    padding:10px 18px;
+    border-radius:12px;
+    background:#ff9800;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    ">
+    बंद करें
+  </button>
+
+</section>
+
+
+<!-- ==================== PART 7 START ==================== -->
+
+<!-- CONTACT SECTION -->
+<section class="section" id="contact">
+  <div class="section-title">
+    <h2>📞 संपर्क / Contact</h2>
+    <p>Smart Web India से जुड़ी जानकारी और सुझाव के लिए संपर्क करें।</p>
+  </div>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <div class="link-info">
+        <h3>🇮🇳 Smart Web India</h3>
+        <p>भारत की उपयोगी सरकारी, शिक्षा, नौकरी, AI, बैंकिंग और डिजिटल सेवाओं की वेबसाइटों का एक आसान पोर्टल।</p>
+      </div>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <h3>📧 Email</h3>
+        <p>वेबसाइट से संबंधित सुझाव या जानकारी के लिए अपना संपर्क ईमेल यहाँ जोड़ा जा सकता है।</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT WEBSITE -->
+<section class="section">
+  <div class="info-box">
+
+    <div class="chakra">☸️</div>
+
+    <h2>🇮🇳 Smart Web India</h2>
+
+    <p>
+      Smart Web India का उद्देश्य भारत और दुनिया की उपयोगी वेबसाइटों,
+      सरकारी सेवाओं, शिक्षा, नौकरी, AI Tools, बैंकिंग, रेलवे,
+      साइबर सुरक्षा और डिजिटल सेवाओं को एक ही जगह आसानी से उपलब्ध कराना है।
+    </p>
+
+    <p>
+      सरकारी सेवाओं के लिए आधिकारिक सरकारी वेबसाइटों को प्राथमिकता दी जाती है।
+    </p>
+
+  </div>
+</section>
+
+
+<!-- QUICK LINKS -->
+<section class="section">
+
+  <div class="section-title">
+    <h2>🔗 महत्वपूर्ण लिंक</h2>
+  </div>
+
+  <div class="link-grid">
+
+    <div class="link-card">
+      <div class="link-info">
+        <h3>🇮🇳 भारत सरकार</h3>
+        <p>भारत सरकार की सेवाएं और जानकारी</p>
+      </div>
+      <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">
+        <button>OPEN</button>
+      </a>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <h3>📝 सरकारी सेवाएं</h3>
+        <p>National Government Services Portal</p>
+      </div>
+      <a href="https://services.india.gov.in/" target="_blank" rel="noopener noreferrer">
+        <button>OPEN</button>
+      </a>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <h3>📁 सरकारी वेबसाइट Directory</h3>
+        <p>भारत की सरकारी वेबसाइटों की सूची</p>
+      </div>
+      <a href="https://www.india.gov.in/directory/web-directory" target="_blank" rel="noopener noreferrer">
+        <button>OPEN</button>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL FOOTER -->
+<footer class="site-footer">
+
+  <div class="footer-flag">
+    🇮🇳
+  </div>
+
+  <h2>Smart Web India</h2>
+
+  <p>
+    भारत की उपयोगी वेबसाइटों का डिजिटल पोर्टल
+  </p>
+
+  <div class="footer-chakra">
+    ☸️
+  </div>
+
+  <p class="copyright">
+    © 2026 Smart Web India. All Rights Reserved.
+  </p>
+
+  <p class="footer-small">
+    Made for India 🇮🇳
+  </p>
+
+</footer>
+
+
+<!-- ==================== SEO STRUCTURED DATA ==================== -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Smart Web India",
+  "url": "https://rakeshk32711-dot.github.io/My-web-portal/",
+  "description": "Smart Web India पर सरकारी सेवाएं, नौकरी, शिक्षा, AI Tools, बैंकिंग, रेलवे, साइबर सुरक्षा और भारत के राज्यों की उपयोगी वेबसाइटें एक जगह उपलब्ध हैं।",
+  "inLanguage": "hi-IN"
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Smart Web India",
+  "url": "https://rakeshk32711-dot.github.io/My-web-portal/"
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Smart Web India Main Categories",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Government"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Jobs"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Scholarship"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Study"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "AI Tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Banking"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Railway"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Shopping"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Cyber Security"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Skills"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Photo Editing"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Video Editing"
+    }
+  ]
+}
+</script>
+
+
+<!-- ==================== FINAL CLOSE ==================== -->
+
 </body>
 </html>
+
+<!-- ==================== PART 7 END ==================== -->
+  
