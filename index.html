@@ -2024,350 +2024,516 @@ portals खोजने का रास्ता मिलेगा।
 <!-- SEARCH SCRIPT -->
 <script>
 
-const searchGroups = {
-
-  /* STATES */
-  "bihar": ["bihar","बिहार","patna","bpsc","bssc","bihar job","bihar scholarship","bihar result"],
-  "jharkhand": ["jharkhand","झारखंड","ranchi","jpsc","jssc","jac","jharsewa"],
-  "uttar pradesh": ["uttar pradesh","up","उत्तर प्रदेश","lucknow","uppsc","upsssc"],
-  "west bengal": ["west bengal","wb","पश्चिम बंगाल","kolkata","wbpsc","wbcsc"],
-  "rajasthan": ["rajasthan","राजस्थान","jaipur","rpsc","rssb"],
-  "madhya pradesh": ["madhya pradesh","mp","मध्य प्रदेश","bhopal","mppsc","esb"],
-  "maharashtra": ["maharashtra","महाराष्ट्र","mumbai","pune","mpsc"],
-  "gujarat": ["gujarat","गुजरात","ahmedabad","gpsc"],
-  "odisha": ["odisha","ଓଡିଶା","odisha job","opsc","ossc"],
-  "assam": ["assam","অসম","guwahati","apsc"],
-  "punjab": ["punjab","ਪੰਜਾਬ","chandigarh","ppsc"],
-  "haryana": ["haryana","हरियाणा","chandigarh","hpsc"],
-  "himachal": ["himachal","himachal pradesh","shimla","hppsc"],
-  "uttarakhand": ["uttarakhand","उत्तराखंड","dehradun","ukpsc"],
-  "goa": ["goa","panaji","gpsc"],
-  "telangana": ["telangana","तेलंगाना","hyderabad","tspsc"],
-  "andhra pradesh": ["andhra pradesh","आंध्र प्रदेश","vijayawada","psc"],
-  "karnataka": ["karnataka","ಕರ್ನಾಟಕ","bangalore","kpsc"],
-  "kerala": ["kerala","കേരളം","thiruvananthapuram","psc"],
-  "tamil nadu": ["tamil nadu","தமிழ்நாடு","chennai","tnpsc"],
-  "chhattisgarh": ["chhattisgarh","छत्तीसगढ़","raipur","cgpsc"],
-  "jammu": ["jammu","jammu kashmir","j&k","jkssb"],
-  "ladakh": ["ladakh","leh"],
-  "chandigarh": ["chandigarh"],
-  "puducherry": ["puducherry","pondicherry"],
-  "andaman": ["andaman","andaman nicobar"],
-  "lakshadweep": ["lakshadweep"],
-  "dadra": ["dadra","daman","diu","dnhdd"],
-
-  /* JOBS */
-  "job": [
-    "job","jobs","नौकरी","नोकरी","sarkari job","sarkari naukri",
-    "government job","सरकारी नौकरी","recruitment","vacancy",
-    "bharti","career","employment","rojgar"
-  ],
-
-  "sarkari job": [
-    "job","jobs","government","सरकारी","नौकरी",
-    "recruitment","vacancy","bharti","career"
-  ],
-
-  "sarkari naukri": [
-    "job","jobs","सरकारी नौकरी","government job",
-    "recruitment","vacancy","bharti"
-  ],
-
-  "government job": [
-    "job","jobs","sarkari","सरकारी नौकरी",
-    "recruitment","vacancy","career"
-  ],
-
-  "police": [
-    "police","पुलिस","constable","daroga","si",
-    "sub inspector","police recruitment"
-  ],
-
-  "teacher": [
-    "teacher","शिक्षक","teaching","school","teacher recruitment",
-    "tet","ctet","bed"
-  ],
-
-  /* EXAMS */
-  "bpsc": ["bpsc","bihar","public service commission"],
-  "bssc": ["bssc","bihar","staff selection"],
-  "jpsc": ["jpsc","jharkhand","public service commission"],
-  "jssc": ["jssc","jharkhand","staff selection"],
-  "upsc": ["upsc","union public service commission","civil service"],
-  "ssc": ["ssc","staff selection commission","government job"],
-  "railway job": ["railway","rrb","railway recruitment","train"],
-  "bank job": ["bank","banking","ibps","sbi","rbi","bank job"],
-
-  /* SCHOLARSHIP */
-  "scholarship": [
-    "scholarship","छात्रवृत्ति","student","students",
-    "nsp","national scholarship","pms","education"
-  ],
-
-  "student": [
-    "student","students","scholarship","education",
-    "school","college","exam"
-  ],
-
-  /* RESULT */
-  "result": [
-    "result","रिजल्ट","परिणाम","exam result",
-    "jpsc","jssc","bpsc","bssc","jac","ssc"
-  ],
-
-  "admit card": [
-    "admit card","प्रवेश पत्र","hall ticket",
-    "exam","jpsc","jssc","bpsc","ssc"
-  ],
-
-  "exam": [
-    "exam","परीक्षा","result","admit card",
-    "entrance","recruitment"
-  ],
-
-  /* RAILWAY */
-  "railway": [
-    "railway","रेलवे","train","ट्रेन","irctc",
-    "rrb","ticket","railway job","reservation"
-  ],
-
-  "train": [
-    "train","ट्रेन","railway","irctc","ticket",
-    "reservation","pnr"
-  ],
-
-  "irctc": [
-    "irctc","railway","train","ticket","pnr",
-    "reservation"
-  ],
-
-  "ticket": [
-    "ticket","train","railway","irctc",
-    "bus","flight","booking"
-  ],
-
-  /* EDUCATION */
-  "education": [
-    "education","शिक्षा","school","college",
-    "student","exam","result","study",
-    "university","board"
-  ],
-
-  "school": [
-    "school","विद्यालय","education","student",
-    "exam","result","scholarship"
-  ],
-
-  "college": [
-    "college","university","education",
-    "admission","student","scholarship"
-  ],
-
-  /* GOVERNMENT SERVICES */
-  "government": [
-    "government","सरकार","sarkari",
-    "government services","online service",
-    "india","state"
-  ],
-
-  "sarkari": [
-    "government","सरकारी","government service",
-    "job","scheme","service"
-  ],
-
-  "service": [
-    "service","सेवा","government service",
-    "online service","certificate"
-  ],
-
-  "certificate": [
-    "certificate","प्रमाण पत्र","income",
-    "caste","जाति","residence","निवास",
-    "birth","death","domicile"
-  ],
-
-  "aadhaar": [
-    "aadhaar","आधार","uidai","identity"
-  ],
-
-  "pan": [
-    "pan","pan card","income tax","nsdl"
-  ],
-
-  "driving licence": [
-    "driving","driving licence","driving license",
-    "dl","parivahan","transport"
-  ],
-
-  "ration": [
-    "ration","राशन","food","food department",
-    "ration card"
-  ],
-
-  "pension": [
-    "pension","पेंशन","old age","widow",
-    "disability","social security"
-  ],
-
-  /* BANKING */
-  "bank": [
-    "bank","बैंक","banking","sbi","pnb",
-    "hdfc","icici","axis","rbi","npci",
-    "ibps","net banking"
-  ],
-
-  "sbi": ["sbi","state bank","bank","yono"],
-  "pnb": ["pnb","punjab national bank","bank"],
-  "rbi": ["rbi","reserve bank","banking","upi"],
-  "upi": ["upi","npci","payment","bank"],
-
-  /* AI */
-  "ai": [
-    "ai","artificial intelligence","chatgpt",
-    "gemini","copilot","claude","ai tools"
-  ],
-
-  "chatgpt": ["chatgpt","ai","artificial intelligence"],
-  "gemini": ["gemini","google ai","ai"],
-  "copilot": ["copilot","microsoft","ai"],
-
-  /* SOCIAL MEDIA */
-  "social": [
-    "social media","facebook","instagram","youtube",
-    "whatsapp","telegram","twitter","x","linkedin"
-  ],
-
-  "facebook": ["facebook","social media"],
-  "instagram": ["instagram","social media"],
-  "youtube": ["youtube","video","social media"],
-  "whatsapp": ["whatsapp","messaging","social media"],
-  "telegram": ["telegram","messaging","social media"],
-
-  /* SHOPPING */
-  "shopping": [
-    "shopping","online shopping","amazon","flipkart",
-    "myntra","meesho","shop"
-  ],
-
-  "amazon": ["amazon","shopping","online shopping"],
-  "flipkart": ["flipkart","shopping","online shopping"],
-  "myntra": ["myntra","shopping","fashion"],
-  "meesho": ["meesho","shopping","online shopping"],
-
-  /* CYBER SECURITY */
-  "cyber": [
-    "cyber","cyber security","cyber crime",
-    "online fraud","1930","cert-in","security"
-  ],
-
-  "cyber crime": [
-    "cyber crime","online fraud","1930",
-    "cyber security","complaint"
-  ],
-
-  "fraud": [
-    "fraud","online fraud","cyber crime",
-    "1930","complaint","security"
-  ],
-
-  /* POPULAR */
-  "website": [
-    "website","websites","official website",
-    "online service","popular"
-  ],
-
-  "online": [
-    "online","online service","government",
-    "shopping","banking","education"
-  ]
-
-};
-
-
 function searchWebsite(){
 
-  let input = document
-    .getElementById("search")
-    .value
-    .toLowerCase()
-    .trim();
+    const input = document.getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
 
-  let cards = document.querySelectorAll(".card");
-  let noResult = document.getElementById("noResult");
+    const cards = document.querySelectorAll(".card");
+    const stateBoxes = document.querySelectorAll(".state-box");
+    const stateLinks = document.querySelectorAll(".state-link");
+    const categories = document.querySelectorAll(".category");
+    const noResult = document.getElementById("noResult");
 
-  /* Search box empty */
-  if(input === ""){
+    /* Search खाली है */
+    if(input === ""){
+
+        cards.forEach(function(card){
+            card.style.display = "flex";
+        });
+
+        stateBoxes.forEach(function(box){
+            box.style.display = "";
+        });
+
+        stateLinks.forEach(function(link){
+            link.style.display = "";
+        });
+
+        categories.forEach(function(category){
+            category.style.display = "";
+        });
+
+        if(noResult){
+            noResult.style.display = "none";
+        }
+
+        return;
+    }
+
+    let found = false;
+
+    /* =========================
+       CARDS SEARCH
+    ========================= */
 
     cards.forEach(function(card){
-      card.style.display = "flex";
-    });
 
-    noResult.style.display = "none";
-    return;
-  }
+        const text = card.innerText.toLowerCase();
 
-  let searchTerms = [input];
+        if(text.includes(input)){
 
-  /* Related keywords */
-  Object.keys(searchGroups).forEach(function(key){
+            card.style.display = "flex";
+            found = true;
 
-    if(input.includes(key) || key.includes(input)){
+        }else{
 
-      searchTerms =
-        searchTerms.concat(searchGroups[key]);
+            card.style.display = "none";
 
-    }
-
-  });
-
-  /* Input ke alag-alag words bhi search karo */
-  input.split(/\s+/).forEach(function(word){
-
-    if(word.length >= 2){
-      searchTerms.push(word);
-    }
-
-  });
-
-  /* Duplicate keywords remove */
-  searchTerms = [...new Set(searchTerms)];
-
-  let found = false;
-
-  cards.forEach(function(card){
-
-    let text = (
-      card.innerText +
-      " " +
-      (card.dataset.keywords || "")
-    ).toLowerCase();
-
-    let match = searchTerms.some(function(term){
-
-      return text.includes(term);
+        }
 
     });
 
-    if(match){
 
-      card.style.display = "flex";
-      found = true;
+    /* =========================
+       STATE LINKS SEARCH
+    ========================= */
 
-    }else{
+    stateLinks.forEach(function(link){
 
-      card.style.display = "none";
+        const text = link.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            link.style.display = "block";
+            found = true;
+
+        }else{
+
+            link.style.display = "none";
+
+        }
+
+    });
+
+
+    /* =========================
+       STATE BOX SEARCH
+    ========================= */
+
+    stateBoxes.forEach(function(box){
+
+        const text = box.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            box.style.display = "";
+            found = true;
+
+        }
+
+    });
+
+
+    /* =========================
+       CATEGORY NAME SEARCH
+    ========================= */
+
+    categories.forEach(function(category){
+
+        const text = category.innerText.toLowerCase();
+
+        /*
+        अगर category के अंदर कोई matching
+        card/state link मिला है तो category दिखाई देगी
+        */
+
+        const visibleCards =
+            category.querySelectorAll(".card");
+
+        const visibleLinks =
+            category.querySelectorAll(".state-link");
+
+        let categoryFound = false;
+
+        visibleCards.forEach(function(card){
+
+            if(card.style.display !== "none"){
+                categoryFound = true;
+            }
+
+        });
+
+        visibleLinks.forEach(function(link){
+
+            if(link.style.display !== "none"){
+                categoryFound = true;
+            }
+
+        });
+
+
+        /* Heading/text में search मिला */
+        if(text.includes(input)){
+            categoryFound = true;
+        }
+
+
+        if(categoryFound){
+
+            category.style.display = "";
+
+        }else{
+
+            category.style.display = "none";
+
+        }
+
+    });
+
+
+    /* =========================
+       RELATED SEARCH
+    ========================= */
+
+    const related = {
+
+        "jharkhand": [
+            "jharkhand",
+            "झारखंड",
+            "jpsc",
+            "jssc",
+            "jac",
+            "jharsewa",
+            "ranchi"
+        ],
+
+        "झारखंड": [
+            "jharkhand",
+            "jpsc",
+            "jssc",
+            "jac",
+            "jharsewa"
+        ],
+
+        "bihar": [
+            "bihar",
+            "बिहार",
+            "bpsc",
+            "bssc",
+            "patna"
+        ],
+
+        "बिहार": [
+            "bihar",
+            "bpsc",
+            "bssc",
+            "patna"
+        ],
+
+        "uttar pradesh": [
+            "uttar pradesh",
+            "up",
+            "uppsc",
+            "upsssc",
+            "lucknow"
+        ],
+
+        "up": [
+            "uttar pradesh",
+            "uppsc",
+            "upsssc"
+        ],
+
+        "west bengal": [
+            "west bengal",
+            "wb",
+            "wbpsc",
+            "kolkata"
+        ],
+
+        "maharashtra": [
+            "maharashtra",
+            "mumbai",
+            "pune",
+            "mpsc"
+        ],
+
+        "rajasthan": [
+            "rajasthan",
+            "jaipur",
+            "rpsc"
+        ],
+
+        "madhya pradesh": [
+            "madhya pradesh",
+            "mp",
+            "bhopal",
+            "mppsc"
+        ],
+
+        "gujarat": [
+            "gujarat",
+            "ahmedabad",
+            "gpsc"
+        ],
+
+        "odisha": [
+            "odisha",
+            "opsc",
+            "ossc"
+        ],
+
+        "assam": [
+            "assam",
+            "apsc",
+            "guwahati"
+        ],
+
+        "punjab": [
+            "punjab",
+            "ppsc",
+            "chandigarh"
+        ],
+
+        "haryana": [
+            "haryana",
+            "hpsc"
+        ],
+
+        "job": [
+            "job",
+            "jobs",
+            "नौकरी",
+            "सरकारी नौकरी",
+            "sarkari",
+            "recruitment",
+            "vacancy",
+            "career"
+        ],
+
+        "sarkari job": [
+            "job",
+            "jobs",
+            "government",
+            "सरकारी",
+            "recruitment",
+            "vacancy"
+        ],
+
+        "sarkari naukri": [
+            "job",
+            "jobs",
+            "सरकारी नौकरी",
+            "government",
+            "recruitment"
+        ],
+
+        "scholarship": [
+            "scholarship",
+            "छात्रवृत्ति",
+            "student",
+            "education",
+            "nsp",
+            "pms"
+        ],
+
+        "railway": [
+            "railway",
+            "रेलवे",
+            "train",
+            "ट्रेन",
+            "irctc",
+            "rrb",
+            "ticket"
+        ],
+
+        "train": [
+            "train",
+            "ट्रेन",
+            "railway",
+            "irctc",
+            "ticket",
+            "pnr"
+        ],
+
+        "irctc": [
+            "irctc",
+            "railway",
+            "train",
+            "ticket",
+            "pnr"
+        ],
+
+        "ai": [
+            "ai",
+            "artificial intelligence",
+            "chatgpt",
+            "gemini",
+            "copilot"
+        ],
+
+        "chatgpt": [
+            "chatgpt",
+            "ai",
+            "artificial intelligence"
+        ],
+
+        "bank": [
+            "bank",
+            "बैंक",
+            "banking",
+            "sbi",
+            "pnb",
+            "rbi",
+            "upi"
+        ],
+
+        "aadhaar": [
+            "aadhaar",
+            "आधार",
+            "uidai"
+        ],
+
+        "driving licence": [
+            "driving",
+            "driving licence",
+            "driving license",
+            "parivahan",
+            "transport"
+        ],
+
+        "driving license": [
+            "driving",
+            "driving licence",
+            "parivahan",
+            "transport"
+        ],
+
+        "cyber crime": [
+            "cyber",
+            "cyber crime",
+            "online fraud",
+            "1930",
+            "security"
+        ],
+
+        "cyber": [
+            "cyber",
+            "cyber crime",
+            "security",
+            "1930"
+        ],
+
+        "education": [
+            "education",
+            "शिक्षा",
+            "school",
+            "college",
+            "student",
+            "exam",
+            "result"
+        ],
+
+        "exam": [
+            "exam",
+            "परीक्षा",
+            "result",
+            "admit card",
+            "recruitment"
+        ],
+
+        "result": [
+            "result",
+            "रिजल्ट",
+            "परिणाम",
+            "exam",
+            "jpsc",
+            "jssc",
+            "bpsc",
+            "bssc"
+        ],
+
+        "admit card": [
+            "admit card",
+            "hall ticket",
+            "exam",
+            "recruitment"
+        ],
+
+        "social media": [
+            "social",
+            "facebook",
+            "instagram",
+            "youtube",
+            "whatsapp",
+            "telegram"
+        ],
+
+        "shopping": [
+            "shopping",
+            "amazon",
+            "flipkart",
+            "myntra",
+            "meesho"
+        ],
+
+        "government": [
+            "government",
+            "सरकार",
+            "सरकारी",
+            "government services",
+            "online services"
+        ]
+
+    };
+
+
+    /* Related search मिलने पर matching cards दिखाओ */
+
+    Object.keys(related).forEach(function(key){
+
+        if(input === key || input.includes(key)){
+
+            related[key].forEach(function(keyword){
+
+                cards.forEach(function(card){
+
+                    const text =
+                        card.innerText.toLowerCase();
+
+                    if(text.includes(keyword)){
+
+                        card.style.display = "flex";
+                        found = true;
+
+                    }
+
+                });
+
+                stateLinks.forEach(function(link){
+
+                    const text =
+                        link.innerText.toLowerCase();
+
+                    if(text.includes(keyword)){
+
+                        link.style.display = "block";
+                        found = true;
+
+                    }
+
+                });
+
+            });
+
+        }
+
+    });
+
+
+    /* =========================
+       NO RESULT
+    ========================= */
+
+    if(noResult){
+
+        noResult.style.display =
+            found ? "none" : "block";
 
     }
-
-  });
-
-  /* No result */
-  if(noResult){
-
-    noResult.style.display =
-      found ? "none" : "block";
-
-  }
 
 }
 
