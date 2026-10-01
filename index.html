@@ -3115,4 +3115,327 @@ a{
                 });
 
             </script>
+              <script>
+
+/* ==============================
+   STATE CATEGORY CHILD NODES
+   ============================== */
+
+const stateCategoryNodes = {
+
+    government: [
+        {
+            id: "govJobsNode",
+            key: "government-jobs",
+            title: "Government Jobs",
+            icon: "💼"
+        },
+        {
+            id: "govSchemeNode",
+            key: "schemes",
+            title: "Government Schemes",
+            icon: "📋"
+        },
+        {
+            id: "govCertificateNode",
+            key: "certificates",
+            title: "Certificates",
+            icon: "📜"
+        },
+        {
+            id: "govOfficialNode",
+            key: "official-websites",
+            title: "Official Websites",
+            icon: "🌐"
+        }
+    ],
+
+    education: [
+        {
+            id: "educationScholarshipNode",
+            key: "scholarship",
+            title: "Scholarship",
+            icon: "🎓"
+        },
+        {
+            id: "educationStudyNode",
+            key: "education",
+            title: "Education",
+            icon: "📚"
+        }
+    ]
+
+};
+
+
+/* ==============================
+   CREATE CHILD NODE
+   ============================== */
+
+function createChildNode(data, parentBranch) {
+
+    const node = document.createElement("div");
+
+    node.className =
+        "node child-node node-hidden";
+
+    node.id = data.id;
+
+    node.dataset.category =
+        data.key;
+
+    node.dataset.parent =
+        parentBranch;
+
+    node.tabIndex = 0;
+
+    node.innerHTML =
+        '<span class="node-icon">' +
+        data.icon +
+        '</span>' +
+
+        '<span>' +
+        data.title +
+        '</span>';
+
+    node.addEventListener(
+        "click",
+        function() {
+
+            showCategoryData(
+                data.key
+            );
+
+        }
+    );
+
+    node.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                node.click();
+
+            }
+
+        }
+    );
+
+    networkMap.appendChild(node);
+
+    return node;
+}
+
+
+/* ==============================
+   BUILD CHILD NODES
+   ============================== */
+
+Object.keys(stateCategoryNodes).forEach(
+    function(branch) {
+
+        stateCategoryNodes[branch].forEach(
+            function(item) {
+
+                createChildNode(
+                    item,
+                    branch
+                );
+
+            }
+        );
+
+    }
+);
+
+</script>
+            <script>
+
+/* ==============================
+   CHILD NODE POSITIONS
+   ============================== */
+
+const childPositions = {
+
+    "govJobsNode": {
+        left: 70,
+        top: 420
+    },
+
+    "govSchemeNode": {
+        left: 285,
+        top: 420
+    },
+
+    "govCertificateNode": {
+        left: 500,
+        top: 420
+    },
+
+    "govOfficialNode": {
+        left: 715,
+        top: 420
+    },
+
+    "educationScholarshipNode": {
+        left: 825,
+        top: 420
+    },
+
+    "educationStudyNode": {
+        left: 1030,
+        top: 420
+    }
+
+};
+
+
+/* ==============================
+   APPLY CHILD POSITIONS
+   ============================== */
+
+Object.keys(childPositions).forEach(
+    function(nodeId) {
+
+        const node =
+            document.getElementById(nodeId);
+
+        const position =
+            childPositions[nodeId];
+
+        if (!node) {
+            return;
+        }
+
+        node.style.left =
+            position.left + "px";
+
+        node.style.top =
+            position.top + "px";
+
+    }
+);
+
+
+/* ==============================
+   SHOW CHILD NODES
+   ============================== */
+
+function showChildNodes(branch) {
+
+    document
+        .querySelectorAll(
+            ".child-node"
+        )
+        .forEach(
+            function(node) {
+
+                if (
+                    node.dataset.parent === branch
+                ) {
+
+                    node.classList.remove(
+                        "node-hidden"
+                    );
+
+                    node.classList.add(
+                        "node-visible"
+                    );
+
+                }
+
+            }
+        );
+
+}
+
+
+/* ==============================
+   HIDE CHILD NODES
+   ============================== */
+
+function hideChildNodes(branch) {
+
+    document
+        .querySelectorAll(
+            ".child-node"
+        )
+        .forEach(
+            function(node) {
+
+                if (
+                    node.dataset.parent === branch
+                ) {
+
+                    node.classList.remove(
+                        "node-visible"
+                    );
+
+                    node.classList.add(
+                        "node-hidden"
+                    );
+
+                }
+
+            }
+        );
+
+}
+
+
+/* ==============================
+   TOGGLE CHILD NODES
+   ============================== */
+
+function toggleChildNodes(branch) {
+
+    const children =
+        document.querySelectorAll(
+            '.child-node[data-parent="' +
+            branch +
+            '"]'
+        );
+
+    if (!children.length) {
+        return;
+    }
+
+    let isVisible = false;
+
+    children.forEach(
+        function(node) {
+
+            if (
+                node.classList.contains(
+                    "node-visible"
+                )
+            ) {
+
+                isVisible = true;
+
+            }
+
+        }
+    );
+
+    if (isVisible) {
+
+        hideChildNodes(branch);
+
+    } else {
+
+        showChildNodes(branch);
+
+    }
+
+}
+
+            </script>
+              
             
