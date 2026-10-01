@@ -1,2281 +1,3118 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Smart Web India | Government Services Framework</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Smart Web India</title>
 
 <meta name="description"
-content="Smart Web India - Government services, States and Union Territories के official online portals एक जगह।">
+      content="Smart Web India - भारत की सरकारी और जरूरी ऑनलाइन सेवाओं का स्मार्ट नेटवर्क।">
 
 <style>
 
+/* ==============================
+   BASIC RESET
+   ============================== */
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#07111f;
-    color:#e8f1ff;
     min-height:100vh;
+    overflow-x:hidden;
+    font-family:
+        Arial,
+        Helvetica,
+        "Noto Sans Devanagari",
+        sans-serif;
+    background:#087cff;
+    color:#ff1111;
 }
 
-/* TOP BAR */
 
-.topbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#081522;
-    border-bottom:1px solid #18344d;
-    padding:14px 18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+/* ==============================
+   ANIMATED BLUE BACKGROUND
+   ============================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-10;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0067df,
+            #0794ff,
+            #005bc7
+        );
+}
+
+
+/* ==============================
+   MOVING GRID
+   ============================== */
+
+.background::before{
+    content:"";
+    position:absolute;
+    inset:-100px;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.10) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.10) 1px,
+            transparent 1px
+        );
+
+    background-size:50px 50px;
+
+    transform:
+        perspective(500px)
+        rotateX(55deg);
+
+    animation:gridMove 12s linear infinite;
+}
+
+@keyframes gridMove{
+
+    from{
+        transform:
+            perspective(500px)
+            rotateX(55deg)
+            translateY(0);
+    }
+
+    to{
+        transform:
+            perspective(500px)
+            rotateX(55deg)
+            translateY(50px);
+    }
+}
+
+
+/* ==============================
+   BACKGROUND GLOW
+   ============================== */
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:.30;
+    animation:glowMove 10s ease-in-out infinite alternate;
+}
+
+.glow-one{
+    width:300px;
+    height:300px;
+    background:#00ffff;
+    left:5%;
+    top:5%;
+}
+
+.glow-two{
+    width:350px;
+    height:350px;
+    background:#ffffff;
+    right:5%;
+    top:35%;
+    animation-delay:2s;
+}
+
+.glow-three{
+    width:280px;
+    height:280px;
+    background:#00ff99;
+    left:35%;
+    bottom:-50px;
+    animation-delay:4s;
+}
+
+@keyframes glowMove{
+
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    50%{
+        transform:translate(70px,-40px) scale(1.15);
+    }
+
+    100%{
+        transform:translate(-40px,60px) scale(.9);
+    }
+}
+
+
+/* ==============================
+   BLACK ANIMATED WORDS
+   ============================== */
+
+.bg-word{
+    position:absolute;
+    color:#000000;
+    font-weight:900;
+    white-space:nowrap;
+    opacity:.18;
+    pointer-events:none;
+    user-select:none;
+
+    animation:
+        wordMove linear infinite;
+}
+
+.word-one{
+    top:12%;
+    left:-30%;
+    font-size:30px;
+    animation-duration:20s;
+}
+
+.word-two{
+    top:30%;
+    left:-35%;
+    font-size:24px;
+    animation-duration:25s;
+    animation-delay:3s;
+}
+
+.word-three{
+    top:50%;
+    left:-30%;
+    font-size:32px;
+    animation-duration:22s;
+    animation-delay:5s;
+}
+
+.word-four{
+    top:72%;
+    left:-35%;
+    font-size:25px;
+    animation-duration:27s;
+    animation-delay:2s;
+}
+
+.word-five{
+    top:88%;
+    left:-30%;
+    font-size:21px;
+    animation-duration:24s;
+    animation-delay:6s;
+}
+
+@keyframes wordMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(150vw);
+    }
+}
+
+
+/* ==============================
+   PARTICLES
+   ============================== */
+
+.particle{
+    position:absolute;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:#ffffff;
+    opacity:.7;
+
+    animation:
+        particleMove linear infinite;
+}
+
+.particle-one{
+    left:5%;
+    top:80%;
+    animation-duration:11s;
+}
+
+.particle-two{
+    left:15%;
+    top:40%;
+    animation-duration:14s;
+}
+
+.particle-three{
+    left:27%;
+    top:70%;
+    animation-duration:17s;
+}
+
+.particle-four{
+    left:40%;
+    top:25%;
+    animation-duration:12s;
+}
+
+.particle-five{
+    left:52%;
+    top:75%;
+    animation-duration:15s;
+}
+
+.particle-six{
+    left:64%;
+    top:35%;
+    animation-duration:13s;
+}
+
+.particle-seven{
+    left:76%;
+    top:82%;
+    animation-duration:18s;
+}
+
+.particle-eight{
+    left:88%;
+    top:45%;
+    animation-duration:11s;
+}
+
+@keyframes particleMove{
+
+    0%{
+        transform:
+            translateY(0)
+            translateX(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    50%{
+        transform:
+            translateY(-130px)
+            translateX(30px);
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-260px)
+            translateX(-20px);
+        opacity:0;
+    }
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.header{
+    width:100%;
+    padding:20px 15px 10px;
+    text-align:center;
+    position:relative;
+    z-index:5;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    color:#ff1111;
+    font-size:clamp(28px,6vw,48px);
+    font-weight:1000;
+
+    text-shadow:
+        0 2px 0 #ffffff,
+        0 0 12px rgba(255,255,255,.8);
+
+    animation:logoPulse 3s ease-in-out infinite;
 }
 
-.logo-icon{
-    width:38px;
-    height:38px;
-    border:1px solid #1e88c8;
-    border-radius:8px;
+@keyframes logoPulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.03);
+    }
+}
+
+.tagline{
+    margin-top:7px;
+    color:#000000;
+    font-size:clamp(13px,3vw,18px);
+    font-weight:900;
+}
+
+.header-line{
+    width:min(700px,90%);
+    height:3px;
+    margin:12px auto 0;
+
+    background:#ff1111;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 8px rgba(255,0,0,.8),
+        0 0 20px rgba(255,0,0,.5);
+}
+
+
+/* ==============================
+   SEARCH
+   ============================== */
+
+.search-area{
+    width:min(650px,92%);
+    margin:15px auto;
+    position:relative;
+    z-index:10;
+}
+
+.search-box{
+    width:100%;
+    height:48px;
+
+    padding:
+        0 50px
+        0 20px;
+
+    border:
+        3px solid #ff1111;
+
+    border-radius:30px;
+
+    outline:none;
+
+    background:#ffffff;
+
+    color:#000000;
+
+    font-size:16px;
+    font-weight:700;
+
+    box-shadow:
+        0 0 12px rgba(255,0,0,.55);
+}
+
+.search-box::placeholder{
+    color:#555555;
+}
+
+.search-icon{
+    position:absolute;
+    right:17px;
+    top:10px;
+
+    font-size:24px;
+    color:#ff1111;
+}
+
+
+/* ==============================
+   STATUS
+   ============================== */
+
+.status-bar{
+    width:min(900px,94%);
+    margin:10px auto;
+
     display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.status-item{
+    padding:6px 11px;
+
+    border:
+        2px solid #ff1111;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.9);
+
+    color:#000000;
+
+    font-size:12px;
+    font-weight:900;
+}
+
+.status-dot{
+    display:inline-block;
+
+    width:8px;
+    height:8px;
+
+    margin-right:4px;
+
+    border-radius:50%;
+
+    background:#00a000;
+
+    animation:
+        statusBlink 1s infinite;
+}
+
+@keyframes statusBlink{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.25;
+    }
+}
+
+
+/* ==============================
+   MAIN MAP START
+   ============================== */
+
+.map-wrapper{
+    width:100%;
+    padding:10px 10px 70px;
+    position:relative;
+    z-index:2;
+}
+
+.map-scroll{
+    width:100%;
+    overflow:auto;
+    padding:20px 10px 50px;
+}
+
+.map{
+    position:relative;
+
+    width:1200px;
+    min-width:1200px;
+
+    min-height:760px;
+
+    margin:0 auto;
+}
+
+
+/* ==============================
+   CONNECTION SVG
+   ============================== */
+
+.connections{
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:1200px;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+.connection{
+    fill:none;
+
+    stroke:#ff1111;
+
+    stroke-width:3;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:10 8;
+
+    filter:
+        drop-shadow(
+            0 0 3px
+            rgba(255,0,0,.9)
+        );
+
+    animation:
+        dashMove 1.5s linear infinite;
+}
+
+@keyframes dashMove{
+
+    to{
+        stroke-dashoffset:-36;
+    }
+}
+
+
+/* ==============================
+   NODE BASE
+   ============================== */
+
+.node{
+    position:absolute;
+
+    z-index:5;
+
+    min-width:180px;
+    max-width:230px;
+    min-height:58px;
+
+    padding:10px 14px;
+
+    display:flex;
+
     align-items:center;
     justify-content:center;
-    background:#0b2235;
-    font-size:21px;
-}
 
-.logo-text{
-    font-size:19px;
-    font-weight:bold;
-    letter-spacing:.5px;
-}
+    text-align:center;
 
-.logo-sub{
-    font-size:11px;
-    color:#7190a9;
-    margin-top:2px;
-}
+    border:
+        3px solid #ff1111;
 
-/* MAIN */
-
-.wrapper{
-    width:100%;
-    max-width:1100px;
-    margin:auto;
-    padding:20px 14px 50px;
-}
-
-/* HERO */
-
-.hero{
-    border:1px solid #183c59;
-    background:#0a1928;
-    border-radius:12px;
-    padding:22px;
-    margin-bottom:18px;
-}
-
-.hero h1{
-    font-size:25px;
-    margin-bottom:8px;
-}
-
-.hero p{
-    color:#91a9bd;
-    font-size:14px;
-    line-height:1.6;
-}
-
-/* BREADCRUMB */
-
-.breadcrumb{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:7px;
-    color:#6f91a9;
-    font-size:12px;
-    margin:15px 3px;
-}
-
-.breadcrumb span{
-    cursor:pointer;
-}
-
-.breadcrumb span:hover{
-    color:#4bb8ff;
-}
-
-/* FRAMEWORK */
-
-.framework{
-    border:1px solid #173b57;
-    border-radius:12px;
-    background:#081624;
-    padding:18px;
-    min-height:400px;
-}
-
-.framework-title{
-    color:#587a92;
-    font-size:11px;
-    letter-spacing:1.5px;
-    margin-bottom:15px;
-    text-transform:uppercase;
-}
-
-/* LEVELS */
-
-.level{
-    display:none;
-}
-
-.level.active{
-    display:block;
-}
-
-/* ROOT NODE */
-
-.root-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-}
-
-.main-node{
-    width:100%;
-    min-height:115px;
-    border:1px solid #205276;
     border-radius:10px;
-    background:#0b1d2d;
-    color:#fff;
+
+    background:#050505;
+
+    color:#ff2222;
+
+    font-size:15px;
+    font-weight:900;
+
+    line-height:1.25;
+
     cursor:pointer;
-    padding:20px;
-    text-align:left;
-    transition:.2s;
+
+    user-select:none;
+
+    box-shadow:
+        0 0 8px rgba(255,0,0,.75),
+        0 0 20px rgba(255,0,0,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
 }
 
-.main-node:hover{
-    border-color:#299fe3;
-    background:#0e263a;
-    transform:translateY(-2px);
+.node:hover{
+    transform:scale(1.06);
+
+    background:#111111;
+
+    box-shadow:
+        0 0 12px rgba(255,0,0,1),
+        0 0 30px rgba(255,0,0,.55);
 }
 
 .node-icon{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.node-title{
-    font-size:17px;
-    font-weight:bold;
-}
-
-.node-desc{
-    font-size:12px;
-    color:#7894a8;
-    margin-top:5px;
-    line-height:1.5;
-}
-
-/* SECTION HEADER */
-
-.section-head{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    margin-bottom:14px;
-}
-
-.section-title{
-    font-size:18px;
-    font-weight:bold;
-}
-
-.back-btn{
-    border:1px solid #254c68;
-    background:#0b1d2c;
-    color:#9fc1d8;
-    padding:8px 13px;
-    border-radius:7px;
-    cursor:pointer;
-    font-size:12px;
-}
-
-.back-btn:hover{
-    border-color:#319fdc;
-    color:#fff;
-}
-
-/* NODE LIST */
-
-.node-list{
-    display:flex;
-    flex-direction:column;
-    gap:9px;
-}
-
-.framework-node{
-    width:100%;
-    border:1px solid #193c56;
-    border-radius:8px;
-    background:#0b1b2a;
-    padding:14px;
-    display:flex;
-    align-items:center;
-    gap:13px;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.framework-node:hover{
-    border-color:#258dc5;
-    background:#0d2436;
-}
-
-.framework-node .node-icon{
-    width:38px;
-    min-width:38px;
-    height:38px;
-    margin:0;
-    border:1px solid #214b67;
-    border-radius:7px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    margin-right:6px;
     font-size:19px;
 }
 
-.node-content{
-    flex:1;
-}
-
-.node-name{
-    font-size:14px;
-    font-weight:bold;
-}
-
-.node-small{
-    color:#718ca0;
-    font-size:11px;
-    margin-top:3px;
-}
-
 .arrow{
-    color:#4b8caf;
-    font-size:18px;
+    margin-left:7px;
+    color:#ffffff;
+    font-size:12px;
 }
 
-/* SERVICE */
 
-.service-list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+/* ==============================
+   ROOT NODE
+   ============================== */
+
+.root-node{
+    left:500px;
+    top:20px;
+
+    width:200px;
+    min-width:200px;
+
+    min-height:75px;
+
+    font-size:20px;
+
+    border-width:4px;
+
+    border-radius:14px;
+
+    background:#000000;
+
+    box-shadow:
+        0 0 15px rgba(255,0,0,1),
+        0 0 35px rgba(255,0,0,.55);
+}
+    /* ==============================
+   ROOT NODE ANIMATION
+   ============================== */
+
+@keyframes rootGlow{
+
+    from{
+        box-shadow:
+            0 0 10px rgba(255,0,0,.8),
+            0 0 20px rgba(255,0,0,.35);
+    }
+
+    to{
+        box-shadow:
+            0 0 20px rgba(255,0,0,1),
+            0 0 45px rgba(255,0,0,.65);
+    }
 }
 
-.service-card{
-    border:1px solid #193c56;
-    background:#0b1b2a;
+.root-node{
+    animation:
+        rootGlow 2s ease-in-out infinite alternate;
+}
+
+
+/* ==============================
+   MAIN CATEGORY NODES
+   ============================== */
+
+.main-node{
+    width:180px;
+    min-width:180px;
+    min-height:62px;
+}
+
+
+/* ==============================
+   MAIN NODE POSITIONS
+   ============================== */
+
+.node-government{
+    left:80px;
+    top:180px;
+}
+
+.node-states{
+    left:300px;
+    top:180px;
+}
+
+.node-jobs{
+    left:520px;
+    top:180px;
+}
+
+.node-education{
+    left:740px;
+    top:180px;
+}
+
+.node-ai{
+    left:960px;
+    top:180px;
+}
+
+.node-banking{
+    left:80px;
+    top:300px;
+}
+
+.node-cyber{
+    left:300px;
+    top:300px;
+}
+
+.node-skills{
+    left:520px;
+    top:300px;
+}
+
+.node-shopping{
+    left:740px;
+    top:300px;
+}
+
+.node-editing{
+    left:960px;
+    top:300px;
+}
+
+
+/* ==============================
+   CHILD NODES
+   ============================== */
+
+.child-node{
+    width:185px;
+    min-width:185px;
+    min-height:50px;
+
+    font-size:14px;
+
+    background:#050505;
+}
+
+.child-node:hover{
+    background:#181818;
+}
+
+
+/* ==============================
+   HIDDEN CHILD NODES
+   ============================== */
+
+.node-hidden{
+    opacity:0;
+
+    transform:
+        scale(.7);
+
+    pointer-events:none;
+}
+
+.node-visible{
+    opacity:1;
+
+    transform:
+        scale(1);
+
+    pointer-events:auto;
+}
+
+
+/* ==============================
+   INFORMATION PANEL
+   ============================== */
+
+.info-panel{
+    position:fixed;
+
+    right:15px;
+    bottom:15px;
+
+    width:min(
+        380px,
+        calc(100% - 30px)
+    );
+
+    max-height:70vh;
+
+    overflow:auto;
+
+    z-index:100;
+
+    background:#050505;
+
+    border:
+        3px solid #ff1111;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    color:#ff2222;
+
+    box-shadow:
+        0 0 15px rgba(255,0,0,.9),
+        0 0 40px rgba(255,0,0,.4);
+
+    display:none;
+}
+
+.info-panel.show{
+    display:block;
+
+    animation:
+        panelIn .25s ease;
+}
+
+@keyframes panelIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.95);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ==============================
+   INFORMATION TITLE
+   ============================== */
+
+.info-title{
+    font-size:20px;
+    font-weight:1000;
+
+    color:#ff2222;
+
+    margin-bottom:8px;
+}
+
+
+/* ==============================
+   INFORMATION DESCRIPTION
+   ============================== */
+
+.info-description{
+    color:#ffffff;
+
+    font-size:14px;
+
+    line-height:1.55;
+
+    margin-bottom:12px;
+}
+
+
+/* ==============================
+   CLOSE BUTTON
+   ============================== */
+
+.info-close{
+    position:absolute;
+
+    top:7px;
+    right:10px;
+
+    border:0;
+
+    background:transparent;
+
+    color:#ff2222;
+
+    font-size:25px;
+
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+/* ==============================
+   OFFICIAL LINK BUTTON
+   ============================== */
+
+.open-link{
+    display:inline-block;
+
+    padding:10px 16px;
+
+    border:
+        2px solid #ff1111;
+
     border-radius:8px;
-    padding:14px;
-    display:flex;
-    align-items:center;
-    gap:13px;
+
+    background:#ff1111;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:900;
+
+    margin-top:5px;
 }
 
-.service-icon{
-    width:42px;
-    min-width:42px;
-    height:42px;
-    border-radius:8px;
-    border:1px solid #24506c;
-    background:#0d2233;
+.open-link:hover{
+    background:#000000;
+    color:#ff1111;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer{
+    width:100%;
+
+    text-align:center;
+
+    padding:25px 15px 35px;
+
+    color:#000000;
+
+    font-weight:900;
+
+    position:relative;
+
+    z-index:4;
+}
+
+.footer-line{
+    width:min(700px,90%);
+
+    height:2px;
+
+    margin:
+        0 auto 12px;
+
+    background:#ff1111;
+}
+
+.footer small{
+    font-size:12px;
+}
+
+
+/* ==============================
+   LOADING SCREEN
+   ============================== */
+
+.loading{
+    position:fixed;
+
+    inset:0;
+
+    z-index:999;
+
+    background:#087cff;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    font-size:20px;
+
+    flex-direction:column;
+
+    color:#ff1111;
+
+    transition:
+        opacity .5s ease;
 }
 
-.service-info{
-    flex:1;
+.loading.hide{
+    opacity:0;
+    pointer-events:none;
 }
 
-.service-name{
-    font-size:14px;
-    font-weight:bold;
+.loading-title{
+    font-size:28px;
+    font-weight:1000;
+    color:#ff1111;
 }
 
-.service-desc{
-    color:#718da1;
-    font-size:11px;
-    margin-top:4px;
-    line-height:1.4;
+.loading-bar{
+    width:220px;
+    height:5px;
+
+    background:
+        rgba(0,0,0,.25);
+
+    margin-top:15px;
+
+    border-radius:20px;
+
+    overflow:hidden;
 }
 
-.open-btn{
-    border:1px solid #2184b9;
-    background:#0c334b;
-    color:#dff4ff;
-    padding:9px 13px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:11px;
-    font-weight:bold;
-    white-space:nowrap;
+.loading-progress{
+    width:0%;
+    height:100%;
+
+    background:#ff1111;
+
+    animation:
+        loadingProgress 1.5s ease forwards;
 }
 
-.open-btn:hover{
-    background:#125273;
-    border-color:#3ab7f3;
-}
+@keyframes loadingProgress{
 
-/* SEARCH */
-
-.search-box{
-    margin-bottom:15px;
-}
-
-.search-box input{
-    width:100%;
-    padding:12px 14px;
-    border-radius:7px;
-    border:1px solid #1b405b;
-    background:#071522;
-    color:#fff;
-    outline:none;
-    font-size:13px;
-}
-
-.search-box input:focus{
-    border-color:#258ec7;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:25px 10px;
-    color:#536e82;
-    font-size:11px;
-}
-
-/* MOBILE */
-
-@media(max-width:650px){
-
-    .topbar{
-        padding:11px 13px;
+    from{
+        width:0%;
     }
 
-    .logo-text{
-        font-size:16px;
-    }
-
-    .wrapper{
-        padding:14px 10px 40px;
-    }
-
-    .hero{
-        padding:17px;
-    }
-
-    .hero h1{
-        font-size:21px;
-    }
-
-    .framework{
-        padding:12px;
-    }
-
-    .root-grid{
-        grid-template-columns:1fr;
-    }
-
-    .main-node{
-        min-height:95px;
-    }
-
-    .service-card{
-        align-items:flex-start;
-        flex-wrap:wrap;
-    }
-
-    .service-info{
-        min-width:calc(100% - 60px);
-    }
-
-    .open-btn{
+    to{
         width:100%;
-        margin-top:3px;
+    }
+    }
+    /* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media(max-width:700px){
+
+    .header{
+        padding-top:15px;
     }
 
-    .section-head{
-        align-items:flex-start;
+    .logo{
+        font-size:30px;
     }
 
+    .tagline{
+        font-size:13px;
+    }
+
+    .search-box{
+        height:45px;
+        font-size:14px;
+    }
+
+    .map-scroll{
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    .node{
+        font-size:14px;
+    }
+
+    .info-panel{
+        right:8px;
+        bottom:8px;
+
+        width:
+            calc(100% - 16px);
+    }
 }
 
-/* SMALL MOBILE */
 
-@media(max-width:380px){
+/* ==============================
+   SMALL MOBILE
+   ============================== */
 
-    .hero h1{
-        font-size:19px;
+@media(max-width:450px){
+
+    .logo{
+        font-size:26px;
     }
 
-    .section-title{
-        font-size:16px;
+    .status-item{
+        font-size:11px;
+        padding:5px 8px;
     }
 
-    .framework-node{
-        padding:11px;
+    .header-line{
+        width:85%;
     }
-
 }
+
+
+/* ==============================
+   ACCESSIBILITY
+   ============================== */
+
+button,
+input,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+.node:focus-visible{
+    outline:
+        3px solid #ffffff;
+
+    outline-offset:3px;
+}
+
+
+/* ==============================
+   END OF CSS
+   ============================== */
 
 </style>
+
 </head>
+
 
 <body>
 
-<header class="topbar">
 
-    <div class="logo">
+<!-- ==============================
+     ANIMATED BACKGROUND
+     ============================== -->
 
-        <div class="logo-icon">⌘</div>
+<div class="background">
 
-        <div>
-            <div class="logo-text">Smart Web India</div>
-            <div class="logo-sub">Government Services Framework</div>
-        </div>
+    <div class="glow glow-one"></div>
+
+    <div class="glow glow-two"></div>
+
+    <div class="glow glow-three"></div>
+
+
+    <div class="bg-word word-one">
+        सुविधा • सरकार • ऑनलाइन सेवा • भारत
+    </div>
+
+    <div class="bg-word word-two">
+        पूरा भारत • सरकारी सेवा • Digital India
+    </div>
+
+    <div class="bg-word word-three">
+        नागरिक सुविधा • सरकारी वेबसाइट • ऑनलाइन काम
+    </div>
+
+    <div class="bg-word word-four">
+        भारत • ऑनलाइन सेवा • शिक्षा • रोजगार
+    </div>
+
+    <div class="bg-word word-five">
+        Government • Jobs • Education • Services
+    </div>
+
+
+    <div class="particle particle-one"></div>
+
+    <div class="particle particle-two"></div>
+
+    <div class="particle particle-three"></div>
+
+    <div class="particle particle-four"></div>
+
+    <div class="particle particle-five"></div>
+
+    <div class="particle particle-six"></div>
+
+    <div class="particle particle-seven"></div>
+
+    <div class="particle particle-eight"></div>
+
+</div>
+
+
+<!-- ==============================
+     LOADING SCREEN
+     ============================== -->
+
+<div
+    class="loading"
+    id="loadingScreen"
+>
+
+    <div class="loading-title">
+        Smart Web India
+    </div>
+
+    <div class="loading-bar">
+
+        <div
+            class="loading-progress"
+        ></div>
 
     </div>
+
+</div>
+
+
+<!-- ==============================
+     HEADER
+     ============================== -->
+
+<header class="header">
+
+    <div class="logo">
+        Smart Web India
+    </div>
+
+    <div class="tagline">
+        🇮🇳 भारत की जरूरी ऑनलाइन सेवाएँ एक स्मार्ट नेटवर्क में
+    </div>
+
+    <div class="header-line"></div>
 
 </header>
 
 
-<main class="wrapper">
+<!-- ==============================
+     SEARCH
+     ============================== -->
 
-    <section class="hero">
+<div class="search-area">
 
-        <h1>Smart Web India</h1>
+    <input
+        type="search"
+        id="searchBox"
+        class="search-box"
+        placeholder="🔎 Government, State, Job, Scholarship या Service खोजें..."
+        autocomplete="off"
+    >
 
-        <p>
-            Government services, State और Union Territory के
-            important official portals को एक structured framework
-            में खोजें।
-        </p>
+    <div class="search-icon">
+        🔎
+    </div>
 
-    </section>
+</div>
 
 
-    <div class="breadcrumb" id="breadcrumb">
-        <span>HOME</span>
+<!-- ==============================
+     STATUS BAR
+     ============================== -->
+
+<div class="status-bar">
+
+    <div class="status-item">
+
+        <span class="status-dot"></span>
+
+        Smart Network Active
+
     </div>
 
 
-    <section class="framework">
-
-        <div class="framework-title">
-            SMART WEB INDIA / FRAMEWORK
-        </div>
+    <div class="status-item">
+        🇮🇳 28 States + 8 UTs
+    </div>
 
 
-        <!-- HOME LEVEL -->
-
-        <div id="mainLevel" class="level active">
-
-            <div class="root-grid">
-
-                <button class="main-node" onclick="openGovernment()">
-
-                    <div class="node-icon">🏛️</div>
-
-                    <div class="node-title">
-                        Government
-                    </div>
-
-                    <div class="node-desc">
-                        All India / Central Government
-                        services and official portals
-                    </div>
-
-                </button>
+    <div class="status-item">
+        🏛️ Government Services
+    </div>
 
 
-                <button class="main-node" onclick="openStates()">
+    <div class="status-item">
+        🔗 Official Links
+    </div>
 
-                    <div class="node-icon">🇮🇳</div>
-
-                    <div class="node-title">
-                        States & Union Territories
-                    </div>
-
-                    <div class="node-desc">
-                        28 States + 8 Union Territories
-                        की state-wise services
-                    </div>
-
-                </button>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <!-- GOVERNMENT LEVEL -->
+<!-- ==============================
+     MAIN MAP
+     ============================== -->
 
-        <div id="governmentLevel" class="level">
+<div class="map-wrapper">
 
-            <div class="section-head">
+    <div class="map-scroll">
 
-                <div class="section-title">
-                    🏛️ Central Government
-                </div>
+        <div
+            class="map"
+            id="networkMap"
+        >
 
-                <button class="back-btn" onclick="goHome()">
-                    ← HOME
-                </button>
+            <!-- SVG CONNECTIONS -->
 
-            </div>
+            <svg
+                class="connections"
+                id="connections"
+                viewBox="0 0 1200 1200"
+                preserveAspectRatio="none"
+            >
 
-            <div class="search-box">
+                <g
+                    id="mainConnections"
+                ></g>
 
-                <input
-                    type="search"
-                    id="governmentSearch"
-                    placeholder="Government service search करें..."
-                    oninput="searchGovernment()"
-                >
+                <g
+                    id="childConnections"
+                ></g>
 
-            </div>
+            </svg>
+
+
+            <!-- ROOT NODE -->
 
             <div
-                id="governmentServices"
-                class="service-list">
-            </div>
+                class="node root-node"
+                id="rootNode"
+                data-type="root"
+                tabindex="0"
+            >
 
-        </div>
+                <span class="node-icon">
+                    🇮🇳
+                </span>
 
+                <span>
+                    Smart Web India
+                </span>
 
-        <!-- STATES LEVEL -->
-
-        <div id="statesLevel" class="level">
-
-            <div class="section-head">
-
-                <div class="section-title">
-                    🇮🇳 States & Union Territories
-                </div>
-
-                <button class="back-btn" onclick="goHome()">
-                    ← HOME
-                </button>
+                <span class="arrow">
+                    ▼
+                </span>
 
             </div>
-
-            <div class="search-box">
-
-                <input
-                    type="search"
-                    id="stateSearch"
-                    placeholder="State / UT search करें..."
-                    oninput="searchStates()"
-                >
-
-            </div>
+                        <!-- ==============================
+                 MAIN CATEGORY NODES
+                 ============================== -->
 
             <div
-                id="statesList"
-                class="node-list">
+                class="node main-node node-government"
+                id="governmentNode"
+                data-branch="government"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🏛️
+                </span>
+
+                <span>
+                    Government
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
             </div>
 
-        </div>
+
+            <div
+                class="node main-node node-states"
+                id="statesNode"
+                data-branch="states"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🇮🇳
+                </span>
+
+                <span>
+                    States & UT
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
 
 
-        <!-- CATEGORY LEVEL -->
+            <div
+                class="node main-node node-jobs"
+                id="jobsNode"
+                data-branch="jobs"
+                tabindex="0"
+            >
 
-        <div id="categoryLevel" class="level">
+                <span class="node-icon">
+                    💼
+                </span>
 
-            <div class="section-head">
+                <span>
+                    Jobs & Career
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-education"
+                id="educationNode"
+                data-branch="education"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🎓
+                </span>
+
+                <span>
+                    Education
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-ai"
+                id="aiNode"
+                data-branch="ai"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🤖
+                </span>
+
+                <span>
+                    AI Tools
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-banking"
+                id="bankingNode"
+                data-branch="banking"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🏦
+                </span>
+
+                <span>
+                    Banking & Finance
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-cyber"
+                id="cyberNode"
+                data-branch="cyber"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🔐
+                </span>
+
+                <span>
+                    Cyber Security
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-skills"
+                id="skillsNode"
+                data-branch="skills"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🧠
+                </span>
+
+                <span>
+                    Skills & Learning
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-shopping"
+                id="shoppingNode"
+                data-branch="shopping"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    🛒
+                </span>
+
+                <span>
+                    Shopping
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+
+
+            <div
+                class="node main-node node-editing"
+                id="editingNode"
+                data-branch="editing"
+                tabindex="0"
+            >
+
+                <span class="node-icon">
+                    ✏️
+                </span>
+
+                <span>
+                    Editing Tools
+                </span>
+
+                <span class="arrow">
+                    ▶
+                </span>
+
+            </div>
+                        <!-- ==============================
+                 GOVERNMENT SERVICES
+                 ============================== -->
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="pm-kisan"
+                style="left:80px;top:430px;"
+                tabindex="0"
+            >
+                🌾 PM Kisan
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="digilocker"
+                style="left:290px;top:430px;"
+                tabindex="0"
+            >
+                📄 DigiLocker
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="aadhaar"
+                style="left:500px;top:430px;"
+                tabindex="0"
+            >
+                🪪 Aadhaar
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="income-tax"
+                style="left:710px;top:430px;"
+                tabindex="0"
+            >
+                💰 Income Tax
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="umang"
+                style="left:920px;top:430px;"
+                tabindex="0"
+            >
+                📱 UMANG
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="passport"
+                style="left:80px;top:510px;"
+                tabindex="0"
+            >
+                🛂 Passport
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="epfo"
+                style="left:290px;top:510px;"
+                tabindex="0"
+            >
+                👷 EPFO
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="gst"
+                style="left:500px;top:510px;"
+                tabindex="0"
+            >
+                🧾 GST
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="ayushman"
+                style="left:710px;top:510px;"
+                tabindex="0"
+            >
+                🏥 Ayushman Bharat
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="voter"
+                style="left:920px;top:510px;"
+                tabindex="0"
+            >
+                🗳️ Voter Services
+            </div>
+                        <div
+                class="node child-node"
+                data-parent="government"
+                data-service="driving"
+                style="left:80px;top:590px;"
+                tabindex="0"
+            >
+                🚗 Driving Licence
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="railways"
+                style="left:290px;top:590px;"
+                tabindex="0"
+            >
+                🚆 Indian Railways
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="schemes"
+                style="left:500px;top:590px;"
+                tabindex="0"
+            >
+                📋 Government Schemes
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="national-portal"
+                style="left:710px;top:590px;"
+                tabindex="0"
+            >
+                🇮🇳 National Portal
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="government"
+                data-service="government-services"
+                style="left:920px;top:590px;"
+                tabindex="0"
+            >
+                🏛️ Government Services
+            </div>
+                        <!-- ==============================
+                 STATES & UNION TERRITORIES
+                 ============================== -->
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="andhra-pradesh"
+                style="left:80px;top:700px;"
+                tabindex="0"
+            >
+                🌴 Andhra Pradesh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="arunachal-pradesh"
+                style="left:290px;top:700px;"
+                tabindex="0"
+            >
+                🏔️ Arunachal Pradesh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="assam"
+                style="left:500px;top:700px;"
+                tabindex="0"
+            >
+                🌿 Assam
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="bihar"
+                style="left:710px;top:700px;"
+                tabindex="0"
+            >
+                🏛️ Bihar
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="chhattisgarh"
+                style="left:920px;top:700px;"
+                tabindex="0"
+            >
+                🌾 Chhattisgarh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="goa"
+                style="left:80px;top:780px;"
+                tabindex="0"
+            >
+                🏖️ Goa
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="gujarat"
+                style="left:290px;top:780px;"
+                tabindex="0"
+            >
+                🦁 Gujarat
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="haryana"
+                style="left:500px;top:780px;"
+                tabindex="0"
+            >
+                🌾 Haryana
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="himachal-pradesh"
+                style="left:710px;top:780px;"
+                tabindex="0"
+            >
+                🏔️ Himachal Pradesh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="jharkhand"
+                style="left:920px;top:780px;"
+                tabindex="0"
+            >
+                🌳 Jharkhand
+            </div>
+                        <div
+                class="node child-node"
+                data-parent="states"
+                data-state="karnataka"
+                style="left:80px;top:860px;"
+                tabindex="0"
+            >
+                🌴 Karnataka
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="kerala"
+                style="left:290px;top:860px;"
+                tabindex="0"
+            >
+                🌴 Kerala
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="madhya-pradesh"
+                style="left:500px;top:860px;"
+                tabindex="0"
+            >
+                🏛️ Madhya Pradesh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="maharashtra"
+                style="left:710px;top:860px;"
+                tabindex="0"
+            >
+                🏙️ Maharashtra
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="manipur"
+                style="left:920px;top:860px;"
+                tabindex="0"
+            >
+                🌿 Manipur
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="meghalaya"
+                style="left:80px;top:940px;"
+                tabindex="0"
+            >
+                ⛰️ Meghalaya
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="mizoram"
+                style="left:290px;top:940px;"
+                tabindex="0"
+            >
+                🌄 Mizoram
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="nagaland"
+                style="left:500px;top:940px;"
+                tabindex="0"
+            >
+                🏔️ Nagaland
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="odisha"
+                style="left:710px;top:940px;"
+                tabindex="0"
+            >
+                🛕 Odisha
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="punjab"
+                style="left:920px;top:940px;"
+                tabindex="0"
+            >
+                🌾 Punjab
+            </div>
+                        <div
+                class="node child-node"
+                data-parent="states"
+                data-state="rajasthan"
+                style="left:80px;top:1020px;"
+                tabindex="0"
+            >
+                🏜️ Rajasthan
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="sikkim"
+                style="left:290px;top:1020px;"
+                tabindex="0"
+            >
+                🏔️ Sikkim
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="tamil-nadu"
+                style="left:500px;top:1020px;"
+                tabindex="0"
+            >
+                🛕 Tamil Nadu
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="telangana"
+                style="left:710px;top:1020px;"
+                tabindex="0"
+            >
+                🏙️ Telangana
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="tripura"
+                style="left:920px;top:1020px;"
+                tabindex="0"
+            >
+                🌿 Tripura
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="uttar-pradesh"
+                style="left:80px;top:1100px;"
+                tabindex="0"
+            >
+                🕌 Uttar Pradesh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="uttarakhand"
+                style="left:290px;top:1100px;"
+                tabindex="0"
+            >
+                🏔️ Uttarakhand
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="west-bengal"
+                style="left:500px;top:1100px;"
+                tabindex="0"
+            >
+                🌾 West Bengal
+            </div>
+                        <!-- ==============================
+                 UNION TERRITORIES
+                 ============================== -->
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="andaman-nicobar"
+                style="left:710px;top:1100px;"
+                tabindex="0"
+            >
+                🏝️ Andaman & Nicobar Islands
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="chandigarh"
+                style="left:920px;top:1100px;"
+                tabindex="0"
+            >
+                🏙️ Chandigarh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="dadra-nagar-haveli-daman-diu"
+                style="left:80px;top:1180px;"
+                tabindex="0"
+            >
+                🌊 Dadra & Nagar Haveli and Daman & Diu
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="delhi"
+                style="left:290px;top:1180px;"
+                tabindex="0"
+            >
+                🏛️ Delhi
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="jammu-kashmir"
+                style="left:500px;top:1180px;"
+                tabindex="0"
+            >
+                🏔️ Jammu & Kashmir
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="ladakh"
+                style="left:710px;top:1180px;"
+                tabindex="0"
+            >
+                🏔️ Ladakh
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="lakshadweep"
+                style="left:920px;top:1180px;"
+                tabindex="0"
+            >
+                🏝️ Lakshadweep
+            </div>
+
+
+            <div
+                class="node child-node"
+                data-parent="states"
+                data-state="puducherry"
+                style="left:80px;top:1260px;"
+                tabindex="0"
+            >
+                🌴 Puducherry
+            </div>
+                        <!-- ==============================
+                 STATE CATEGORIES
+                 ============================== -->
+
+            <div
+                class="node state-category-node"
+                data-parent="bihar"
+                data-category="government-jobs"
+                style="left:80px;top:1360px;"
+                tabindex="0"
+            >
+                💼 Government Jobs
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="bihar"
+                data-category="scholarship"
+                style="left:290px;top:1360px;"
+                tabindex="0"
+            >
+                🎓 Scholarship
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="bihar"
+                data-category="schemes"
+                style="left:500px;top:1360px;"
+                tabindex="0"
+            >
+                📋 Government Schemes
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="bihar"
+                data-category="certificates"
+                style="left:710px;top:1360px;"
+                tabindex="0"
+            >
+                📜 Certificates
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="bihar"
+                data-category="education"
+                style="left:920px;top:1360px;"
+                tabindex="0"
+            >
+                📚 Education
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="bihar"
+                data-category="official-websites"
+                style="left:80px;top:1440px;"
+                tabindex="0"
+            >
+                🌐 Official Websites
+            </div>
+                        <!-- ==============================
+                 OTHER STATE CATEGORY NODES
+                 ============================== -->
+
+            <div
+                class="node state-category-node"
+                data-parent="jharkhand"
+                data-category="government-jobs"
+                style="left:290px;top:1440px;"
+                tabindex="0"
+            >
+                💼 Government Jobs
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="jharkhand"
+                data-category="scholarship"
+                style="left:500px;top:1440px;"
+                tabindex="0"
+            >
+                🎓 Scholarship
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="jharkhand"
+                data-category="schemes"
+                style="left:710px;top:1440px;"
+                tabindex="0"
+            >
+                📋 Government Schemes
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="jharkhand"
+                data-category="certificates"
+                style="left:920px;top:1440px;"
+                tabindex="0"
+            >
+                📜 Certificates
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="jharkhand"
+                data-category="education"
+                style="left:80px;top:1520px;"
+                tabindex="0"
+            >
+                📚 Education
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="jharkhand"
+                data-category="official-websites"
+                style="left:290px;top:1520px;"
+                tabindex="0"
+            >
+                🌐 Official Websites
+            </div>
+                        <!-- ==============================
+                 OTHER STATE CATEGORIES
+                 ============================== -->
+
+            <div
+                class="node state-category-node"
+                data-parent="uttar-pradesh"
+                data-category="government-jobs"
+                style="left:500px;top:1520px;"
+                tabindex="0"
+            >
+                💼 Government Jobs
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="uttar-pradesh"
+                data-category="scholarship"
+                style="left:710px;top:1520px;"
+                tabindex="0"
+            >
+                🎓 Scholarship
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="uttar-pradesh"
+                data-category="schemes"
+                style="left:920px;top:1520px;"
+                tabindex="0"
+            >
+                📋 Government Schemes
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="uttar-pradesh"
+                data-category="certificates"
+                style="left:80px;top:1600px;"
+                tabindex="0"
+            >
+                📜 Certificates
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="uttar-pradesh"
+                data-category="education"
+                style="left:290px;top:1600px;"
+                tabindex="0"
+            >
+                📚 Education
+            </div>
+
+
+            <div
+                class="node state-category-node"
+                data-parent="uttar-pradesh"
+                data-category="official-websites"
+                style="left:500px;top:1600px;"
+                tabindex="0"
+            >
+                🌐 Official Websites
+            </div>
+                        <!-- ==============================
+                 MAIN CATEGORY INFORMATION
+                 ============================== -->
+
+            <div
+                class="node info-node"
+                data-parent="jobs"
+                data-service="jobs-info"
+                style="left:710px;top:1680px;"
+                tabindex="0"
+            >
+                💼 Jobs & Career
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="education"
+                data-service="education-info"
+                style="left:920px;top:1680px;"
+                tabindex="0"
+            >
+                📚 Education
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="ai-tools"
+                data-service="ai-info"
+                style="left:80px;top:1760px;"
+                tabindex="0"
+            >
+                🤖 AI Tools
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="banking"
+                data-service="banking-info"
+                style="left:290px;top:1760px;"
+                tabindex="0"
+            >
+                🏦 Banking & Finance
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="cyber"
+                data-service="cyber-info"
+                style="left:500px;top:1760px;"
+                tabindex="0"
+            >
+                🔐 Cyber Security
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="skills"
+                data-service="skills-info"
+                style="left:710px;top:1760px;"
+                tabindex="0"
+            >
+                🧠 Skills & Learning
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="shopping"
+                data-service="shopping-info"
+                style="left:920px;top:1760px;"
+                tabindex="0"
+            >
+                🛒 Shopping
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="editing"
+                data-service="editing-info"
+                style="left:80px;top:1840px;"
+                tabindex="0"
+            >
+                ✏️ Editing Tools
+            </div>
+                        <!-- ==============================
+                 EXTRA TOOLS & SERVICES
+                 ============================== -->
+
+            <div
+                class="node info-node"
+                data-parent="jobs"
+                data-service="ssc"
+                style="left:290px;top:1840px;"
+                tabindex="0"
+            >
+                📝 SSC
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="jobs"
+                data-service="railway-jobs"
+                style="left:500px;top:1840px;"
+                tabindex="0"
+            >
+                🚆 Railway Jobs
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="jobs"
+                data-service="gds"
+                style="left:710px;top:1840px;"
+                tabindex="0"
+            >
+                📮 India Post GDS
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="education"
+                data-service="scholarship"
+                style="left:920px;top:1840px;"
+                tabindex="0"
+            >
+                🎓 Scholarships
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="education"
+                data-service="admission"
+                style="left:80px;top:1920px;"
+                tabindex="0"
+            >
+                🏫 Admissions
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="ai-tools"
+                data-service="ai-writing"
+                style="left:290px;top:1920px;"
+                tabindex="0"
+            >
+                ✨ AI Writing Tools
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="ai-tools"
+                data-service="ai-image"
+                style="left:500px;top:1920px;"
+                tabindex="0"
+            >
+                🖼️ AI Image Tools
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="banking"
+                data-service="banking"
+                style="left:710px;top:1920px;"
+                tabindex="0"
+            >
+                🏦 Online Banking
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="editing"
+                data-service="pdf"
+                style="left:920px;top:1920px;"
+                tabindex="0"
+            >
+                📄 PDF Editing
+            </div>
+                        <!-- ==============================
+                 MORE TOOLS
+                 ============================== -->
+
+            <div
+                class="node info-node"
+                data-parent="editing"
+                data-service="audacity"
+                style="left:80px;top:2000px;"
+                tabindex="0"
+            >
+                🎙️ Audacity
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="editing"
+                data-service="adobe-podcast"
+                style="left:290px;top:2000px;"
+                tabindex="0"
+            >
+                🎧 Adobe Podcast
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="editing"
+                data-service="bandlab"
+                style="left:500px;top:2000px;"
+                tabindex="0"
+            >
+                🎵 BandLab
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="shopping"
+                data-service="flipkart"
+                style="left:710px;top:2000px;"
+                tabindex="0"
+            >
+                🛍️ Flipkart
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="shopping"
+                data-service="meesho"
+                style="left:920px;top:2000px;"
+                tabindex="0"
+            >
+                🛒 Meesho
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="cyber"
+                data-service="cyber-awareness"
+                style="left:80px;top:2080px;"
+                tabindex="0"
+            >
+                🛡️ Cyber Awareness
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="cyber"
+                data-service="cyber-complaint"
+                style="left:290px;top:2080px;"
+                tabindex="0"
+            >
+                🚨 Cyber Complaint
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="skills"
+                data-service="typing"
+                style="left:500px;top:2080px;"
+                tabindex="0"
+            >
+                ⌨️ Typing Skills
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="skills"
+                data-service="digital"
+                style="left:710px;top:2080px;"
+                tabindex="0"
+            >
+                💻 Digital Skills
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="education"
+                data-service="results"
+                style="left:920px;top:2080px;"
+                tabindex="0"
+            >
+                📊 Results
+            </div>
+                        <!-- ==============================
+                 FINAL INFORMATION NODES
+                 ============================== -->
+
+            <div
+                class="node info-node"
+                data-parent="government"
+                data-service="national-help"
+                style="left:80px;top:2160px;"
+                tabindex="0"
+            >
+                ℹ️ Government Help
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="states"
+                data-service="state-services"
+                style="left:290px;top:2160px;"
+                tabindex="0"
+            >
+                🇮🇳 State Services
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="education"
+                data-service="online-learning"
+                style="left:500px;top:2160px;"
+                tabindex="0"
+            >
+                🌐 Online Learning
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="ai-tools"
+                data-service="ai-productivity"
+                style="left:710px;top:2160px;"
+                tabindex="0"
+            >
+                ⚡ AI Productivity
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="banking"
+                data-service="finance-tools"
+                style="left:920px;top:2160px;"
+                tabindex="0"
+            >
+                💳 Finance Tools
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="cyber"
+                data-service="online-safety"
+                style="left:80px;top:2240px;"
+                tabindex="0"
+            >
+                🔒 Online Safety
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="skills"
+                data-service="career-skills"
+                style="left:290px;top:2240px;"
+                tabindex="0"
+            >
+                🚀 Career Skills
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="shopping"
+                data-service="online-shopping"
+                style="left:500px;top:2240px;"
+                tabindex="0"
+            >
+                🛍️ Online Shopping
+            </div>
+
+
+            <div
+                class="node info-node"
+                data-parent="editing"
+                data-service="all-editing"
+                style="left:710px;top:2240px;"
+                tabindex="0"
+            >
+                🛠️ All Editing Tools
+            </div>
+                        <!-- ==============================
+                 INFORMATION PANEL
+                 ============================== -->
+
+            <div
+                class="info-panel"
+                id="infoPanel"
+                aria-live="polite"
+            >
+
+                <div class="info-panel-header">
+                    <span id="infoIcon">🇮🇳</span>
+
+                    <div>
+                        <h2 id="infoTitle">
+                            Smart Web India
+                        </h2>
+
+                        <p id="infoSubtitle">
+                            सरकारी और जरूरी ऑनलाइन सेवाओं की जानकारी
+                        </p>
+                    </div>
+
+                    <button
+                        id="closeInfo"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        ✕
+                    </button>
+                </div>
+
 
                 <div
-                    class="section-title"
-                    id="categoryTitle">
+                    class="info-panel-content"
+                    id="infoContent"
+                >
+                    <p>
+                        किसी भी node पर क्लिक करके
+                        उसकी जानकारी और official website देखें।
+                    </p>
                 </div>
 
-                <button
-                    class="back-btn"
-                    onclick="backToStates()">
-                    ← STATES
-                </button>
-
-            </div>
-
-            <div
-                id="categoryList"
-                class="node-list">
-            </div>
-
-        </div>
-
-
-        <!-- SERVICE LEVEL -->
-
-        <div id="serviceLevel" class="level">
-
-            <div class="section-head">
 
                 <div
-                    class="section-title"
-                    id="serviceTitle">
+                    class="info-actions"
+                    id="infoActions"
+                >
                 </div>
 
-                <button
-                    class="back-btn"
-                    onclick="backToCategories()">
-                    ← CATEGORIES
-                </button>
-
             </div>
+                        <!-- ==============================
+                 MAP STATUS / FOOTER
+                 ============================== -->
 
             <div
-                id="serviceList"
-                class="service-list">
+                class="map-status"
+                id="mapStatus"
+            >
+                <span class="status-dot"></span>
+
+                <span id="statusText">
+                    Smart Web India — Official Services Directory
+                </span>
             </div>
 
-        </div>
 
-    </section>
-
-</main>
-
-
-<footer>
-    © 2026 Smart Web India • Official Links Directory
-</footer>
-
-
-<script>
-
-// ========================================
-// SMART WEB INDIA
-// PART 1 — BASIC FRAMEWORK
-// ========================================
-
-
-// सभी levels
-const mainLevel =
-    document.getElementById("mainLevel");
-
-const governmentLevel =
-    document.getElementById("governmentLevel");
-
-const statesLevel =
-    document.getElementById("statesLevel");
-
-const categoryLevel =
-    document.getElementById("categoryLevel");
-
-const serviceLevel =
-    document.getElementById("serviceLevel");
-
-const breadcrumb =
-    document.getElementById("breadcrumb");
-
-
-// सभी levels को hide करना
-function hideAllLevels(){
-
-    [
-        mainLevel,
-        governmentLevel,
-        statesLevel,
-        categoryLevel,
-        serviceLevel
-    ].forEach(level => {
-
-        if(level){
-            level.classList.remove("active");
-        }
-
-    });
-
-}
-
-
-// Breadcrumb update
-function updateBreadcrumb(items){
-
-    breadcrumb.innerHTML = "";
-
-    items.forEach((item,index)=>{
-
-        const span =
-            document.createElement("span");
-
-        span.textContent = item;
-
-        breadcrumb.appendChild(span);
-
-        if(index < items.length - 1){
-
-            const separator =
-                document.createElement("b");
-
-            separator.textContent = "/";
-
-            separator.style.color = "#31556d";
-
-            breadcrumb.appendChild(separator);
-
-        }
-
-    });
-
-}
-
-
-// Home
-function goHome(){
-
-    hideAllLevels();
-
-    mainLevel.classList.add("active");
-
-    updateBreadcrumb([
-        "HOME"
-    ]);
-
-}
-
-
-// Government
-function openGovernment(){
-
-    hideAllLevels();
-
-    governmentLevel.classList.add("active");
-
-    updateBreadcrumb([
-        "HOME",
-        "GOVERNMENT"
-    ]);
-
-}
-
-
-// States
-function openStates(){
-
-    hideAllLevels();
-
-    statesLevel.classList.add("active");
-
-    updateBreadcrumb([
-        "HOME",
-        "STATES & UT"
-    ]);
-
-}
-
-
-// ========================================
-// PART 2 — CENTRAL GOVERNMENT SERVICES
-// ========================================
-
-const centralGovernmentServices = [
-
-    {
-        name: "PM Kisan",
-        icon: "🌾",
-        description: "प्रधानमंत्री किसान सम्मान निधि",
-        url: "https://pmkisan.gov.in/"
-    },
-
-    {
-        name: "DigiLocker",
-        icon: "📁",
-        description: "Digital documents और certificates",
-        url: "https://www.digilocker.gov.in/"
-    },
-
-    {
-        name: "Aadhaar / UIDAI",
-        icon: "🪪",
-        description: "Aadhaar enrolment और online services",
-        url: "https://uidai.gov.in/"
-    },
-
-    {
-        name: "PAN / Income Tax",
-        icon: "💳",
-        description: "PAN और Income Tax की online services",
-        url: "https://www.incometax.gov.in/"
-    },
-
-    {
-        name: "UMANG",
-        icon: "📱",
-        description: "Central Government की विभिन्न online services",
-        url: "https://web.umang.gov.in/"
-    },
-
-    {
-        name: "Passport Seva",
-        icon: "🛂",
-        description: "Passport application और related services",
-        url: "https://www.passportindia.gov.in/"
-    },
-
-    {
-        name: "EPFO",
-        icon: "🏦",
-        description: "PF, pension और EPFO services",
-        url: "https://www.epfindia.gov.in/"
-    },
-
-    {
-        name: "GST Portal",
-        icon: "🧾",
-        description: "GST registration, return और tax services",
-        url: "https://www.gst.gov.in/"
-    },
-
-    {
-        name: "Ayushman Bharat",
-        icon: "🏥",
-        description: "Government health scheme services",
-        url: "https://pmjay.gov.in/"
-    },
-
-    {
-        name: "Voter Services",
-        icon: "🗳️",
-        description: "Voter registration और election services",
-        url: "https://voters.eci.gov.in/"
-    },
-
-    {
-        name: "Driving Licence / Parivahan",
-        icon: "🚗",
-        description: "Driving licence और vehicle services",
-        url: "https://parivahan.gov.in/"
-    },
-
-    {
-        name: "Indian Railways",
-        icon: "🚆",
-        description: "Indian Railways की official information",
-        url: "https://www.indianrail.gov.in/"
-    },
-
-    {
-        name: "Government Schemes",
-        icon: "📋",
-        description: "भारत सरकार की योजनाओं की जानकारी",
-        url: "https://www.myscheme.gov.in/"
-    },
-
-    {
-        name: "National Portal of India",
-        icon: "🇮🇳",
-        description: "भारत सरकार का National Portal",
-        url: "https://www.india.gov.in/"
-    }
-
-];
-
-
-// ========================================
-// GOVERNMENT SERVICES DISPLAY
-// ========================================
-
-function renderGovernmentServices(
-    services = centralGovernmentServices
-){
-
-    const container =
-        document.getElementById("governmentServices");
-
-    container.innerHTML = "";
-
-    if(services.length === 0){
-
-        container.innerHTML = `
-            <div class="framework-node">
-                <div class="node-icon">🔎</div>
-
-                <div class="node-content">
-                    <div class="node-name">
-                        कोई service नहीं मिली
-                    </div>
-
-                    <div class="node-small">
-                        दूसरा नाम search करके देखें।
-                    </div>
-                </div>
+            <div
+                class="map-footer"
+                id="mapFooter"
+            >
+                <span>
+                    🇮🇳 भारत की सरकारी और जरूरी ऑनलाइन सेवाएँ
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    Smart Web India
+                </span>
             </div>
-        `;
+                        <!-- ==============================
+                 JAVASCRIPT START
+                 ============================== -->
 
-        return;
-    }
+            <script>
 
+                const nodes = document.querySelectorAll(".node");
 
-    services.forEach((service, index) => {
+                const infoPanel = document.getElementById("infoPanel");
 
-        const card =
-            document.createElement("div");
+                const infoTitle = document.getElementById("infoTitle");
 
-        card.className = "service-card";
+                const infoSubtitle =
+                    document.getElementById("infoSubtitle");
 
-        card.innerHTML = `
+                const infoContent =
+                    document.getElementById("infoContent");
 
-            <div class="service-icon">
-                ${service.icon}
-            </div>
+                const infoIcon =
+                    document.getElementById("infoIcon");
 
-            <div class="service-info">
+                const infoActions =
+                    document.getElementById("infoActions");
 
-                <div class="service-name">
-                    ${index + 1}. ${service.name}
-                </div>
+                const closeInfo =
+                    document.getElementById("closeInfo");
 
-                <div class="service-desc">
-                    ${service.description}
-                </div>
+                const statusText =
+                    document.getElementById("statusText");
 
-            </div>
 
-            <button
-                class="open-btn"
-                onclick="openOfficialLink('${service.url}')">
+                function openInfo(title, icon, subtitle, content) {
 
-                OPEN LINK
+                    infoIcon.textContent = icon;
 
-            </button>
-        `;
+                    infoTitle.textContent = title;
 
-        container.appendChild(card);
+                    infoSubtitle.textContent = subtitle;
 
-    });
+                    infoContent.innerHTML = content;
 
-}
+                    infoActions.innerHTML = "";
 
+                    infoPanel.classList.add("active");
 
-// ========================================
-// OPEN OFFICIAL WEBSITE
-// ========================================
+                    statusText.textContent =
+                        title + " — जानकारी खुली है";
+                }
 
-function openOfficialLink(url){
 
-    window.open(
-        url,
-        "_blank",
-        "noopener,noreferrer"
-    );
+                function closeInfoPanel() {
 
-}
+                    infoPanel.classList.remove("active");
 
+                    statusText.textContent =
+                        "Smart Web India — Official Services Directory";
+                }
 
-// ========================================
-// GOVERNMENT SEARCH
-// ========================================
 
-function searchGovernment(){
+                closeInfo.addEventListener(
+                    "click",
+                    closeInfoPanel
+                );
 
-    const input =
-        document.getElementById("governmentSearch");
 
-    const searchText =
-        input.value.trim().toLowerCase();
+                nodes.forEach(function(node) {
 
+                    node.addEventListener(
+                        "click",
+                        function() {
 
-    if(searchText === ""){
+                            const service =
+                                node.dataset.service;
 
-        renderGovernmentServices();
+                            const state =
+                                node.dataset.state;
 
-        return;
-    }
+                            const category =
+                                node.dataset.category;
 
+                            const title =
+                                node.textContent.trim();
 
-    const filtered =
-        centralGovernmentServices.filter(service =>
+                            if (service) {
 
-            service.name.toLowerCase().includes(searchText) ||
+                                openInfo(
+                                    title,
+                                    "🇮🇳",
+                                    "Smart Web India",
+                                    "<p>इस सेवा की जानकारी यहाँ दिखाई जाएगी।</p>"
+                                );
 
-            service.description
-                .toLowerCase()
-                .includes(searchText)
+                            }
 
-        );
+                            else if (state) {
 
+                                openInfo(
+                                    title,
+                                    "📍",
+                                    "State / Union Territory",
+                                    "<p>इस राज्य के Government Jobs, Scholarship, Schemes, Certificates, Education और Official Websites यहाँ दिखाई जाएँगी।</p>"
+                                );
+
+                            }
+
+                            else if (category) {
+
+                                openInfo(
+                                    title,
+                                    "📂",
+                                    "State Service Category",
+                                    "<p>इस category से संबंधित सरकारी सेवाओं और official websites की जानकारी यहाँ दिखाई जाएगी।</p>"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                });
+
+            </script>
+                        <script>
+
+                const serviceData = {
+
+                    "pm-kisan": {
+                        title: "PM Kisan",
+                        icon: "🌾",
+                        text: "प्रधानमंत्री किसान सम्मान निधि से संबंधित official जानकारी और सेवाएँ।",
+                        url: "https://pmkisan.gov.in/"
+                    },
+
+                    "digilocker": {
+                        title: "DigiLocker",
+                        icon: "📄",
+                        text: "Digital documents और certificates के लिए official DigiLocker सेवा।",
+                        url: "https://www.digilocker.gov.in/"
+                    },
+
+                    "umang": {
+                        title: "UMANG",
+                        icon: "📱",
+                        text: "केंद्र और राज्य सरकार की विभिन्न online services एक जगह।",
+                        url: "https://web.umang.gov.in/"
+                    },
+
+                    "national-portal": {
+                        title: "National Portal",
+                        icon: "🇮🇳",
+                        text: "भारत सरकार की official information और services का National Portal।",
+                        url: "https://www.india.gov.in/"
+                    },
+
+                    "government-services": {
+                        title: "Government Services",
+                        icon: "🏛️",
+                        text: "भारत सरकार की online services की official directory।",
+                        url: "https://services.india.gov.in/"
+                    },
+
+                    "schemes": {
+                        title: "Government Schemes",
+                        icon: "📋",
+                        text: "सरकारी योजनाओं की official जानकारी और services।",
+                        url: "https://www.india.gov.in/"
+                    }
+
+                };
+
+
+                function showServiceData(key) {
+
+                    const data = serviceData[key];
+
+                    if (!data) {
+                        return false;
+                    }
+
+                    openInfo(
+                        data.title,
+                        data.icon,
+                        "Official Government Service",
+                        "<p>" +
+                        data.text +
+                        "</p>"
+                    );
 
-    renderGovernmentServices(filtered);
+                    infoActions.innerHTML =
+                        '<a class="open-button" href="' +
+                        data.url +
+                        '" target="_blank" rel="noopener noreferrer">' +
+                        'OPEN OFFICIAL WEBSITE' +
+                        '</a>';
 
-}
+                    return true;
+                }
 
+            </script>
+                        <script>
 
-// ========================================
-// GOVERNMENT BUTTON UPDATE
-// ========================================
-
-function openGovernment(){
-
-    hideAllLevels();
-
-    governmentLevel.classList.add("active");
-
-    updateBreadcrumb([
-        "HOME",
-        "GOVERNMENT"
-    ]);
-
-
-    const search =
-        document.getElementById("governmentSearch");
-
-    if(search){
-        search.value = "";
-    }
-
-
-    renderGovernmentServices();
-
-}
-      // ========================================
-// PART 3 — 28 STATES + 8 UNION TERRITORIES
-// ========================================
-
-const statesAndUTs = [
-
-    // 28 STATES
-    {
-        name: "Andhra Pradesh",
-        short: "AP",
-        icon: "📍"
-    },
-    {
-        name: "Arunachal Pradesh",
-        short: "AR",
-        icon: "📍"
-    },
-    {
-        name: "Assam",
-        short: "AS",
-        icon: "📍"
-    },
-    {
-        name: "Bihar",
-        short: "BR",
-        icon: "📍"
-    },
-    {
-        name: "Chhattisgarh",
-        short: "CG",
-        icon: "📍"
-    },
-    {
-        name: "Goa",
-        short: "GA",
-        icon: "📍"
-    },
-    {
-        name: "Gujarat",
-        short: "GJ",
-        icon: "📍"
-    },
-    {
-        name: "Haryana",
-        short: "HR",
-        icon: "📍"
-    },
-    {
-        name: "Himachal Pradesh",
-        short: "HP",
-        icon: "📍"
-    },
-    {
-        name: "Jharkhand",
-        short: "JH",
-        icon: "📍"
-    },
-    {
-        name: "Karnataka",
-        short: "KA",
-        icon: "📍"
-    },
-    {
-        name: "Kerala",
-        short: "KL",
-        icon: "📍"
-    },
-    {
-        name: "Madhya Pradesh",
-        short: "MP",
-        icon: "📍"
-    },
-    {
-        name: "Maharashtra",
-        short: "MH",
-        icon: "📍"
-    },
-    {
-        name: "Manipur",
-        short: "MN",
-        icon: "📍"
-    },
-    {
-        name: "Meghalaya",
-        short: "ML",
-        icon: "📍"
-    },
-    {
-        name: "Mizoram",
-        short: "MZ",
-        icon: "📍"
-    },
-    {
-        name: "Nagaland",
-        short: "NL",
-        icon: "📍"
-    },
-    {
-        name: "Odisha",
-        short: "OD",
-        icon: "📍"
-    },
-    {
-        name: "Punjab",
-        short: "PB",
-        icon: "📍"
-    },
-    {
-        name: "Rajasthan",
-        short: "RJ",
-        icon: "📍"
-    },
-    {
-        name: "Sikkim",
-        short: "SK",
-        icon: "📍"
-    },
-    {
-        name: "Tamil Nadu",
-        short: "TN",
-        icon: "📍"
-    },
-    {
-        name: "Telangana",
-        short: "TS",
-        icon: "📍"
-    },
-    {
-        name: "Tripura",
-        short: "TR",
-        icon: "📍"
-    },
-    {
-        name: "Uttar Pradesh",
-        short: "UP",
-        icon: "📍"
-    },
-    {
-        name: "Uttarakhand",
-        short: "UK",
-        icon: "📍"
-    },
-    {
-        name: "West Bengal",
-        short: "WB",
-        icon: "📍"
-    },
-
-
-    // 8 UNION TERRITORIES
-    {
-        name: "Andaman and Nicobar Islands",
-        short: "AN",
-        icon: "🏝️"
-    },
-    {
-        name: "Chandigarh",
-        short: "CH",
-        icon: "🏛️"
-    },
-    {
-        name: "Dadra and Nagar Haveli and Daman and Diu",
-        short: "DN",
-        icon: "📍"
-    },
-    {
-        name: "Delhi",
-        short: "DL",
-        icon: "🏛️"
-    },
-    {
-        name: "Jammu and Kashmir",
-        short: "JK",
-        icon: "🏔️"
-    },
-    {
-        name: "Ladakh",
-        short: "LA",
-        icon: "🏔️"
-    },
-    {
-        name: "Lakshadweep",
-        short: "LD",
-        icon: "🏝️"
-    },
-    {
-        name: "Puducherry",
-        short: "PY",
-        icon: "📍"
-    }
-
-];
-
-
-// ========================================
-// STATES LIST DISPLAY
-// ========================================
-
-function renderStatesList(
-    states = statesAndUTs
-){
-
-    const container =
-        document.getElementById("statesList");
-
-    container.innerHTML = "";
-
-
-    states.forEach((state, index) => {
-
-        const node =
-            document.createElement("div");
-
-        node.className = "framework-node";
-
-
-        node.innerHTML = `
-
-            <div class="node-icon">
-                ${state.icon}
-            </div>
-
-            <div class="node-content">
-
-                <div class="node-name">
-                    ${index + 1}. ${state.name}
-                </div>
-
-                <div class="node-small">
-                    ${state.short} • State / Union Territory Services
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        `;
-
-
-        node.onclick = function(){
-
-            openState(state);
-
-        };
-
-
-        container.appendChild(node);
-
-    });
-
-}
-
-
-// ========================================
-// OPEN STATES PAGE
-// ========================================
-
-function openStates(){
-
-    hideAllLevels();
-
-    statesLevel.classList.add("active");
-
-
-    updateBreadcrumb([
-        "HOME",
-        "STATES & UT"
-    ]);
-
-
-    const search =
-        document.getElementById("stateSearch");
-
-    if(search){
-        search.value = "";
-    }
-
-
-    renderStatesList();
-
-}
-
-
-// ========================================
-// STATE SEARCH
-// ========================================
-
-function searchStates(){
-
-    const input =
-        document.getElementById("stateSearch");
-
-    const searchText =
-        input.value.trim().toLowerCase();
-
-
-    if(searchText === ""){
-
-        renderStatesList();
-
-        return;
-
-    }
-
-
-    const filtered =
-        statesAndUTs.filter(state =>
-
-            state.name
-                .toLowerCase()
-                .includes(searchText)
-
-            ||
-
-            state.short
-                .toLowerCase()
-                .includes(searchText)
-
-        );
-
-
-    renderStatesList(filtered);
-
-}
-      
-// ========================================
-// PART 4 — STATE / UT CATEGORIES
-// ========================================
-
-let selectedState = null;
-let selectedCategory = null;
-
-
-// सभी States और UTs के लिए
-// एक जैसा category structure
-
-const stateCategories = [
-
-    {
-        name: "Government Jobs",
-        icon: "💼",
-        description: "State Government jobs, recruitment और exams"
-    },
-
-    {
-        name: "Scholarship",
-        icon: "🎓",
-        description: "Students के लिए scholarship और education सहायता"
-    },
-
-    {
-        name: "Government Schemes",
-        icon: "📋",
-        description: "State Government की योजनाएँ और लाभ"
-    },
-
-    {
-        name: "Certificates",
-        icon: "📄",
-        description: "Income, caste, residence और अन्य certificates"
-    },
-
-    {
-        name: "Education",
-        icon: "📚",
-        description: "Education boards, universities और admission services"
-    },
+                const categoryData = {
 
-    {
-        name: "Official Websites",
-        icon: "🌐",
-        description: "State Government के प्रमुख official portals"
-    }
+                    "government-jobs": {
+                        title: "Government Jobs",
+                        icon: "💼",
+                        text: "सरकारी नौकरी, भर्ती और official recruitment websites।"
+                    },
 
-];
+                    "scholarship": {
+                        title: "Scholarship",
+                        icon: "🎓",
+                        text: "छात्रवृत्ति और scholarship applications की जानकारी।"
+                    },
 
+                    "schemes": {
+                        title: "Government Schemes",
+                        icon: "📋",
+                        text: "राज्य और केंद्र सरकार की योजनाओं की जानकारी।"
+                    },
 
-// ========================================
-// OPEN STATE
-// ========================================
+                    "certificates": {
+                        title: "Certificates",
+                        icon: "📜",
+                        text: "आय, जाति, निवास और अन्य सरकारी certificates से संबंधित सेवाएँ।"
+                    },
 
-function openState(state){
+                    "education": {
+                        title: "Education",
+                        icon: "📚",
+                        text: "Education, admission, examination और results से संबंधित official services।"
+                    },
 
-    selectedState = state;
-    selectedCategory = null;
+                    "official-websites": {
+                        title: "Official Websites",
+                        icon: "🌐",
+                        text: "राज्य सरकार की official websites और government portals।"
+                    }
 
-    hideAllLevels();
+                };
 
-    categoryLevel.classList.add("active");
 
+                function showCategoryData(key) {
 
-    document.getElementById("categoryTitle").textContent =
-        state.icon + " " + state.name;
+                    const data = categoryData[key];
 
+                    if (!data) {
+                        return false;
+                    }
 
-    updateBreadcrumb([
-        "HOME",
-        "STATES & UT",
-        state.name
-    ]);
+                    openInfo(
+                        data.title,
+                        data.icon,
+                        "State Government Services",
+                        "<p>" +
+                        data.text +
+                        "</p>"
+                    );
 
+                    infoActions.innerHTML = "";
 
-    renderStateCategories();
+                    return true;
+                }
 
-}
 
+                nodes.forEach(function(node) {
 
-// ========================================
-// SHOW STATE CATEGORIES
-// ========================================
+                    node.addEventListener(
+                        "keydown",
+                        function(event) {
 
-function renderStateCategories(){
+                            if (
+                                event.key === "Enter" ||
+                                event.key === " "
+                            ) {
 
-    const container =
-        document.getElementById("categoryList");
+                                event.preventDefault();
 
-    container.innerHTML = "";
+                                node.click();
 
+                            }
 
-    stateCategories.forEach((category, index) => {
+                        }
+                    );
 
-        const node =
-            document.createElement("div");
+                });
 
-        node.className = "framework-node";
-
-
-        node.innerHTML = `
-
-            <div class="node-icon">
-                ${category.icon}
-            </div>
-
-            <div class="node-content">
-
-                <div class="node-name">
-                    ${index + 1}. ${category.name}
-                </div>
-
-                <div class="node-small">
-                    ${category.description}
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        `;
-
-
-        node.onclick = function(){
-
-            openCategory(category);
-
-        };
-
-
-        container.appendChild(node);
-
-    });
-
-}
-
-
-// ========================================
-// OPEN CATEGORY
-// ========================================
-
-function openCategory(category){
-
-    selectedCategory = category;
-
-    hideAllLevels();
-
-    serviceLevel.classList.add("active");
-
-
-    document.getElementById("serviceTitle").textContent =
-        selectedState.icon +
-        " " +
-        selectedState.name +
-        " / " +
-        category.name;
-
-
-    updateBreadcrumb([
-        "HOME",
-        "STATES & UT",
-        selectedState.name,
-        category.name
-    ]);
-
-
-    renderStateServices();
-
-}
-
-
-// ========================================
-// CATEGORY → SERVICES
-// ========================================
-
-function renderStateServices(){
-
-    const container =
-        document.getElementById("serviceList");
-
-    container.innerHTML = "";
-
-
-    /*
-       अभी सभी States के लिए services
-       Part 5 और Part 6 में official
-       state-wise data से भरी जाएँगी।
-    */
-
-    const message =
-        document.createElement("div");
-
-    message.className = "framework-node";
-
-
-    message.innerHTML = `
-
-        <div class="node-icon">
-            🔎
-        </div>
-
-        <div class="node-content">
-
-            <div class="node-name">
-                ${selectedCategory.name}
-            </div>
-
-            <div class="node-small">
-                ${selectedState.name} की
-                official services अगले data section में
-                उपलब्ध होंगी।
-            </div>
-
-        </div>
-
-    `;
-
-
-    container.appendChild(message);
-
-}
-
-
-// ========================================
-// BACK TO STATES
-// ========================================
-
-function backToStates(){
-
-    hideAllLevels();
-
-    statesLevel.classList.add("active");
-
-
-    updateBreadcrumb([
-        "HOME",
-        "STATES & UT"
-    ]);
-
-
-    renderStatesList();
-
-}
-
-
-// ========================================
-// BACK TO CATEGORIES
-// ========================================
-
-function backToCategories(){
-
-    if(!selectedState){
-
-        openStates();
-
-        return;
-
-    }
-
-
-    hideAllLevels();
-
-    categoryLevel.classList.add("active");
-
-
-    document.getElementById("categoryTitle").textContent =
-        selectedState.icon +
-        " " +
-        selectedState.name;
-
-
-    updateBreadcrumb([
-        "HOME",
-        "STATES & UT",
-        selectedState.name
-    ]);
-
-
-    renderStateCategories();
-
-}
-      // ========================================
-// PART 5 — BIHAR + JHARKHAND SERVICES
-// ========================================
-
-const stateServices = {
-
-    // ====================================
-    // BIHAR
-    // ====================================
-
-    "Bihar": {
-
-        "Government Jobs": [
-
-            {
-                name: "Bihar Rojgar Setu",
-                icon: "💼",
-                description: "Employment, job seeker registration और job services",
-                url: "https://detjob.bihar.gov.in/"
-            },
-
-            {
-                name: "Bihar Government",
-                icon: "🏛️",
-                description: "Bihar Government का official State Portal",
-                url: "https://state.bihar.gov.in/"
-            }
-
-        ],
-
-
-        "Scholarship": [
-
-            {
-                name: "Bihar Post Matric Scholarship",
-                icon: "🎓",
-                description: "Bihar Post Matric Scholarship official portal",
-                url: "https://pmsonline.bihar.gov.in/"
-            },
-
-            {
-                name: "Bihar SC-ST Post Matric Scholarship",
-                icon: "🎓",
-                description: "SC-ST Post Matric Scholarship official portal",
-                url: "https://scstpmsonline.bihar.gov.in/"
-            }
-
-        ],
-
-
-        "Government Schemes": [
-
-            {
-                name: "Bihar Government Portal",
-                icon: "📋",
-                description: "Bihar Government की योजनाएँ और official information",
-                url: "https://state.bihar.gov.in/"
-            },
-
-            {
-                name: "Bihar Rojgar Setu",
-                icon: "💼",
-                description: "Employment और skill related government services",
-                url: "https://detjob.bihar.gov.in/"
-            }
-
-        ],
-
-
-        "Certificates": [
-
-            {
-                name: "Bihar RTPS / ServicePlus",
-                icon: "📄",
-                description: "Income, Caste, Residence और अन्य certificates",
-                url: "https://serviceonline.bihar.gov.in/"
-            }
-
-        ],
-
-
-        "Education": [
-
-            {
-                name: "Bihar Education Department",
-                icon: "📚",
-                description: "Education Department की official information",
-                url: "https://education.bihar.gov.in/"
-            },
-
-            {
-                name: "Bihar RTE Portal",
-                icon: "🏫",
-                description: "Right to Education online services",
-                url: "https://edu-online.bihar.gov.in/"
-            }
-
-        ],
-
-
-        "Official Websites": [
-
-            {
-                name: "Bihar State Portal",
-                icon: "🌐",
-                description: "Government of Bihar official portal",
-                url: "https://state.bihar.gov.in/"
-            },
-
-            {
-                name: "Bihar RTPS / ServicePlus",
-                icon: "🌐",
-                description: "Online government citizen services",
-                url: "https://serviceonline.bihar.gov.in/"
-            }
-
-        ]
-
-    },
-
-
-    // ====================================
-    // JHARKHAND
-    // ====================================
-
-    "Jharkhand": {
-
-        "Government Jobs": [
-
-            {
-                name: "JPSC",
-                icon: "💼",
-                description: "Jharkhand Public Service Commission",
-                url: "https://www.jpsc.gov.in/"
-            },
-
-            {
-                name: "JSSC",
-                icon: "💼",
-                description: "Jharkhand Staff Selection Commission",
-                url: "https://jssc.nic.in/"
-            }
-
-        ],
-
-
-        "Scholarship": [
-
-            {
-                name: "e-Kalyan Jharkhand",
-                icon: "🎓",
-                description: "Jharkhand scholarship और welfare services",
-                url: "https://ekalyan.cgg.gov.in/"
-            },
-
-            {
-                name: "JAC Scholarship",
-                icon: "🎓",
-                description: "Jharkhand Academic Council scholarship services",
-                url: "https://jac.jharkhand.gov.in/"
-            }
-
-        ],
-
-
-        "Government Schemes": [
-
-            {
-                name: "Jharkhand State Portal",
-                icon: "📋",
-                description: "Jharkhand Government की official schemes और information",
-                url: "https://jharkhand.gov.in/"
-            }
-
-        ],
-
-
-        "Certificates": [
-
-            {
-                name: "JharSewa",
-                icon: "📄",
-                description: "Jharkhand citizen services और certificates",
-                url: "https://jharsewa.jharkhand.gov.in/"
-            }
-
-        ],
-
-
-        "Education": [
-
-            {
-                name: "Jharkhand Academic Council",
-                icon: "📚",
-                description: "JAC examinations, results और education services",
-                url: "https://jac.jharkhand.gov.in/"
-            },
-
-            {
-                name: "School Education & Literacy",
-                icon: "🏫",
-                description: "Jharkhand School Education Department",
-                url: "https://schooleducation.jharkhand.gov.in/"
-            }
-
-        ],
-
-
-        "Official Websites": [
-
-            {
-                name: "Jharkhand State Portal",
-                icon: "🌐",
-                description: "Government of Jharkhand official portal",
-                url: "https://jharkhand.gov.in/"
-            },
-
-            {
-                name: "Jharkhand Academic Council",
-                icon: "🌐",
-                description: "Official JAC portal",
-                url: "https://jac.jharkhand.gov.in/"
-            },
-
-            {
-                name: "School Education & Literacy",
-                icon: "🌐",
-                description: "Jharkhand School Education official portal",
-                url: "https://schooleducation.jharkhand.gov.in/"
-            }
-
-        ]
-
-    }
-
-};
-      // ========================================
-// PART 6 — OTHER STATES / UTs
-// OFFICIAL GOVERNMENT DIRECTORY
-// ========================================
-
-const officialStateDirectory =
-    "https://www.india.gov.in/directory/web-directory/state-uts";
-
-
-// ========================================
-// GENERIC STATE SERVICES
-// ========================================
-
-function getStateServices(stateName){
-
-    // Bihar और Jharkhand का detailed data
-    // Part 5 में पहले से मौजूद है
-
-    if(stateServices[stateName]){
-        return stateServices[stateName];
-    }
-
-
-    // बाकी States / UTs
-    // के लिए official Government directory
-
-    return {
-
-        "Government Jobs": [
-
-            {
-                name: stateName + " Government Jobs",
-                icon: "💼",
-                description:
-                    stateName +
-                    " के Government Jobs और recruitment websites",
-                url: officialStateDirectory
-            }
-
-        ],
-
-
-        "Scholarship": [
-
-            {
-                name: stateName + " Scholarship",
-                icon: "🎓",
-                description:
-                    stateName +
-                    " की official scholarship information",
-                url: officialStateDirectory
-            }
-
-        ],
-
-
-        "Government Schemes": [
-
-            {
-                name: stateName + " Government Schemes",
-                icon: "📋",
-                description:
-                    stateName +
-                    " की Government schemes और services",
-                url: officialStateDirectory
-            }
-
-        ],
-
-
-        "Certificates": [
-
-    {
-        name: stateName + " Certificates",
-        icon: "📄",
-        description:
-            stateName +
-            " के certificates और citizen services के official portals",
-        url: officialStateDirectory
-    }
-
-],
-
-
-        "Education": [
-
-            {
-                name: stateName + " Education",
-                icon: "📚",
-                description:
-                    education और student services के official portals",
-                url: officialStateDirectory
-            }
-
-        ],
-
-
-        "Official Websites": [
-
-            {
-                name: stateName + " Official Websites",
-                icon: "🌐",
-                description:
-                    state और UT government के official websites",
-                url: officialStateDirectory
-            }
-
-        ]
-
-    };
-
-}
-
-
-// ========================================
-// UPDATED STATE SERVICES DISPLAY
-// ========================================
-
-function renderStateServices(){
-
-    const container =
-        document.getElementById("serviceList");
-
-    container.innerHTML = "";
-
-
-    if(!selectedState || !selectedCategory){
-
-        return;
-
-    }
-
-
-    const services =
-        getStateServices(selectedState.name);
-
-
-    const categoryServices =
-        services[selectedCategory.name] || [];
-
-
-    if(categoryServices.length === 0){
-
-        container.innerHTML = `
-
-            <div class="framework-node">
-
-                <div class="node-icon">
-                    🔎
-                </div>
-
-                <div class="node-content">
-
-                    <div class="node-name">
-                        Service information available नहीं है
-                    </div>
-
-                    <div class="node-small">
-                        Official Government Directory से
-                        ${selectedState.name} की जानकारी देखें।
-                    </div>
-
-                </div>
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    categoryServices.forEach((service,index)=>{
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "service-card";
-
-
-        card.innerHTML = `
-
-            <div class="service-icon">
-                ${service.icon}
-            </div>
-
-            <div class="service-info">
-
-                <div class="service-name">
-                    ${index + 1}. ${service.name}
-                </div>
-
-                <div class="service-desc">
-                    ${service.description}
-                </div>
-
-            </div>
-
-            <button
-                class="open-btn"
-                onclick="openOfficialLink('${service.url}')">
-
-                OPEN LINK
-
-            </button>
-
-        `;
-
-
-        container.appendChild(card);
-
-    });
-
-}
-     // ========================================
-// PART 7 — FINAL FUNCTIONS
-// ========================================
-
-
-// ========================================
-// FINAL STATE CATEGORY OPEN FUNCTION
-// ========================================
-
-function openCategory(category){
-
-    selectedCategory = category;
-
-    hideAllLevels();
-
-    serviceLevel.classList.add("active");
-
-
-    const title =
-        document.getElementById("serviceTitle");
-
-
-    title.textContent =
-        selectedState.icon +
-        " " +
-        selectedState.name +
-        " / " +
-        category.name;
-
-
-    updateBreadcrumb([
-
-        "HOME",
-
-        "STATES & UT",
-
-        selectedState.name,
-
-        category.name
-
-    ]);
-
-
-    renderStateServices();
-
-}
-
-
-// ========================================
-// FINAL BACK TO STATES
-// ========================================
-
-function backToStates(){
-
-    hideAllLevels();
-
-    statesLevel.classList.add("active");
-
-
-    updateBreadcrumb([
-
-        "HOME",
-
-        "STATES & UT"
-
-    ]);
-
-
-    const search =
-        document.getElementById("stateSearch");
-
-
-    if(search){
-
-        search.value = "";
-
-    }
-
-
-    renderStatesList();
-
-}
-
-
-// ========================================
-// FINAL BACK TO CATEGORIES
-// ========================================
-
-function backToCategories(){
-
-    if(!selectedState){
-
-        openStates();
-
-        return;
-
-    }
-
-
-    hideAllLevels();
-
-    categoryLevel.classList.add("active");
-
-
-    document.getElementById("categoryTitle").textContent =
-
-        selectedState.icon +
-        " " +
-        selectedState.name;
-
-
-    updateBreadcrumb([
-
-        "HOME",
-
-        "STATES & UT",
-
-        selectedState.name
-
-    ]);
-
-
-    renderStateCategories();
-
-}
-
-
-// ========================================
-// FINAL INITIALIZATION
-// ========================================
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function(){
-
-        // Home page से शुरुआत
-
-        hideAllLevels();
-
-        mainLevel.classList.add("active");
-
-        updateBreadcrumb([
-            "HOME"
-        ]);
-
-    }
-);
-
-
-// ========================================
-// SMART WEB INDIA READY
-// ======================================== 
-      
-</script>
-
-</body>
-      </html>
-      
+            </script>
+            
